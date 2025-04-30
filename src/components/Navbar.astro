@@ -1,0 +1,120 @@
+<nav>
+  <div class="navbar-container">
+    <div class="logo">
+      <img src="/logo.png" alt="Logo" />
+    </div>
+    <ul>
+      <li><a href="/nosotros">Nosotros</a></li>
+      <li><a href="/servicios">Servicios</a></li>
+      <li><a href="/clientes">Clientes</a></li>
+      <li><a href="/certificaciones">Certificaciones y asociaciones</a></li>
+      <li><a href="/contacto">Contactanos</a></li>
+      <li><button>Iniciar sesion</button></li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  .navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  nav {
+    background-color: white;
+    width: 100%;
+    padding: 1rem 0;
+    border-radius: 0;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  ul li a {
+  font-family: 'Poppins', sans-serif; 
+  font-size: 1rem; 
+  text-decoration: none; 
+  }    
+
+  .logo img {
+    height: 40px;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem;
+  }
+
+  li {
+    white-space: nowrap;
+  }
+
+  a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+
+  a:hover {
+    color: #db8a1f;
+  }
+
+  button {
+    background-color: orange;
+    color: white;
+    border: 1px solid orange;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    white-space: nowrap;
+  }
+
+  button:hover {
+    background-color: white;
+    color: orange;
+  }
+
+  @media (max-width: 1024px) {
+    ul {
+      gap: 1rem;
+    }
+
+    a {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .navbar-container {
+      flex-direction: column;
+      padding: 1rem;
+    }
+
+    ul {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+      gap: 0.8rem;
+    }
+
+    li {
+      margin: 0.3rem;
+    }
+  }
+</style>

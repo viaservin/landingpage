@@ -1,0 +1,1205 @@
+---
+import Welcome from '../components/Welcome.astro';
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+
+// import bannerImage from '../assets/tu-imagen.jpg';
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<html>
+  <head>
+    <title>Viaservin Home</title>
+  </head>
+  <body>  
+    <main>
+      <section class="banner">
+        <Navbar />  
+        <img src="/banner.png" alt="Banner principal" />
+        <div class="banner-texto">
+          <h1>Protegemos lo que mas valoras con tecnologia de vanguardia
+            para ofrecerte la mejor <strong> seguridad privada del mercado </strong></h1>
+          <button class="banner-btn"> Descubre nuestras soluciones </button>
+        </div> 
+      </section>
+
+      <section class="nosotros">
+        <h1>Nosotros</h1>
+        <p>
+          En VIASERVIN, somos líderes en vigilancia y seguridad privada con una trayectoria de más de 40 años. 
+          Ofrecemos soluciones integrales que combinan experiencia, tecnología de vanguardia y un equipo capacitado 
+          para proteger lo que más valoras. Nuestro propósito es brindar tranquilidad y confianza a empresas, hogares 
+          y comunidades en toda la región.
+        </p>
+        <img src="/public/Nosotros.jpg" alt="Banner nosotros" class="nosotros-banner"/>
+      </section>
+
+      <section class="historia_trayectoria">
+        <h1>Historia y trayectoria</h1>
+        <p>
+          Fundada en 1981, en Barranquilla, VIASERVIN ha sido pionera en el sector de seguridad privada en la región. Fuimos la primera empresa
+          de vigilancia certificada por ICONTEC en la Costa Atlántica. A lo largo de los años, hemos innovado constantemente, incorporando tecnología
+          avanzada y expandiendo nuestros servicios a siete ciudades principales, consolidando nuestra reputación como un referente confiable.
+        </p>
+      </section>
+
+      <section class="mision-vision">
+        <div class="columna">
+          <h1>Mision</h1>
+          <p>Brindamos soluciones de seguridad y vigilancia privada en los diferentes sectores de la economía a nivel nacional,contribuimos a la protección
+           y bienestar de nuestros clientes mediante el desarrollo integral del talento humano y la utilización de fuentes tecnológicas</p>
+        </div>
+        <div class="columna">
+          <h1>Vision</h1>
+          <p>Seremos reconocidos como una organización líder en el sector seguridad y vigilancia privada, con un mayor posicionamiento a nivel nacional</p>
+        </div>
+      </section>
+
+      <section class="servicios">
+        <h1>Servicios</h1>
+        <div class="carrusel-container">
+          <div class="carrusel" id="carrusel">
+            <div class="slide">
+              <div class="tarjeta" style="background-image: url('/public/VIGILANCIA.jpg')">
+                <h1 class="texto-vertical">VIGILACIA FÍSICA</h1>
+              </div>
+              <div class="tarjeta" style="background-image: url('/public/ESCOLTAS PERSONAS.jpg')">
+                <h1 class="texto-vertical">ESCOLTA DE PERSONAS</h1>
+              </div>
+              <div class="tarjeta" style="background-image: url('public/ESCOLTA DE MERCA.jpg')">
+                <h1 class="texto-vertical">ESCOLTA DE MERCANCÍAS</h1>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="tarjeta" style="background-image: url('/public/MONITOREO DE ALARMAS.jpg')">
+                <h1 class="texto-vertical">MONITOREO DE ALARMAS</h1>
+              </div>
+              <div class="tarjeta" style="background-image: url('/public/INSTALACION DE SISTEMAS DE SEGURIDAD.jpg')">
+                <h1 class="texto-vertical">INSTALACION DE SISTEMAS DE SEGURIDAD</h1>
+              </div>
+              <div class="tarjeta" style="background-image: url('/public/Operacion de medios tech.jpg')">
+                <h1 class="texto-vertical">OPERACIÓN DE MEDIOS TECNOLÓGICOS</h1>
+              </div>
+            </div>
+          </div>
+
+          <button class="flecha-derecha" onclick="moverCarrusel('derecha')">➤</button>
+          <button class="flecha-izquierda" style="display: none;" onclick="moverCarrusel('izquierda')">➤</button>
+        </div>
+      </section>
+
+      <section class="nuestro-equipo">
+        <h1 class="titulo-seccion">Nuestro Equipo</h1>
+        <div class="grid-equipo">
+          <div class="equipo-item">
+            <div class="equipo-item-front" style="background-image: url('/public/VIGILANCIA.jpg');">
+              <div class="titulo-frente">Perfil del Personal Operativo</div>
+            </div>
+            <div class="equipo-item-back" style="background-image: url('/public/VIGILANCIA.jpg');">
+              <div class="overlay-gris"></div>
+              <div class="contenido-reverso">
+                <h1>Perfil del Personal Operativo</h1>
+                <p>Nuestro equipo operativo está altamente capacitado, cumpliendo con estrictos estándares de selección y entrenamiento.
+                  Cada vigilante es evaluado en aptitudes físicas, psicológicas y técnicas, asegurando un servicio de calidad.</p>
+              </div>
+            </div>
+          </div>
+          <div class="equipo-item">
+            <div class="equipo-item-front" style="background-image: url('/public/Responsabilidad Social.jpg');">
+              <div class="titulo-frente">Responsabilidad Social</div>
+            </div>
+            <div class="equipo-item-back" style="background-image: url('/public/Responsabilidad Social.jpg');">
+              <div class="overlay-gris"></div>
+              <div class="contenido-reverso">
+                <h1>Responsabilidad Social</h1>
+                <p>A través de herramientas tecnológicas nos apoyamos con recolección de información digital, disminuyendo el uso de papel,
+                  impactando positivamente el medio ambiente, bajando la huella carbono de la compañía</p>
+              </div>
+            </div>
+          </div>
+          <div class="equipo-item">
+            <div class="equipo-item-front" style="background-image: url('/public/capacitacion y seleccion.jpg');">
+              <div class="titulo-frente">Capacitación y Selección</div>
+            </div>
+            <div class="equipo-item-back" style="background-image: url('/public/capacitacion y seleccion.jpg');">
+              <div class="overlay-gris"></div>
+              <div class="contenido-reverso">
+                <h1>Capacitación y Selección</h1>
+                <p>VIASERVIN comprometido con la calidad y el desarrollo profesional continuo</p>
+              </div>
+            </div>
+          </div>
+          <div class="equipo-item">
+            <div class="equipo-item-front" style="background-image: url('/public/Programas de Bienestar Social.jpg');">
+              <div class="titulo-frente">Programas de Bienestar Social</div>
+            </div>
+            <div class="equipo-item-back" style="background-image: url('/public/Programas de Bienestar Social.jpg');">
+              <div class="overlay-gris"></div>
+              <div class="contenido-reverso">
+                <h1>Programas de Bienestar Social</h1>
+                <p>Apoyamos a nuestros colaboradores y sus familias con iniciativas sociales, convenios de crédito y actividades recreativas.</p>
+              </div>
+            </div>
+          </div>
+          <div class="equipo-item">
+            <div class="equipo-item-front" style="background-image: url('/public/DOTACION Y SUPERVISION.jpg');">
+              <div class="titulo-frente">Dotación y Supervisión</div>
+            </div>
+            <div class="equipo-item-back" style="background-image: url('/public/DOTACION Y SUPERVISION.jpg');">
+              <div class="overlay-gris"></div>
+              <div class="contenido-reverso">
+                <h1>Dotación y Supervisión</h1>
+                <p>Cada puesto de trabajo cuenta con dotación de vanguardia y adecuada a las necesidades del cliente.
+                  Aseguramos que los estándares de calidad se cumplan en todo momento.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="clientes">
+        <h1>Algunos de nuestros Clientes</h1>
+        <p class="clientes-desc">
+          Nuestra experiencia y compromiso nos posicionan como el aliado ideal para proteger su negocio.<br>
+          <strong>Empresas que confían en nosotros:</strong>
+        </p>
+        <div class="clientes-carrusel">
+          <div class="clientes-slides">
+            <!-- Slide 1 -->
+            <div class="clientes-logos">
+              <div class="cliente-logo"><img src="public/COUNTRY CLUB.jpg" alt="Country Club" /></div>
+              <div class="cliente-logo"><img src="public/atlantic_qi_logo.png" alt="Atlantic Qi" /></div>
+              <div class="cliente-logo"><img src="public/CLINICA PORTO AZUL.png" alt="Clínica Porto Azul" /></div>
+              <div class="cliente-logo"><img src="public/AUTOLITORAL.png" alt="Autolitoral" /></div>
+              <div class="cliente-logo"><img src="public/CECAC.jpg" alt="CECAC" /></div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="clientes-logos">
+              <div class="cliente-logo"><img src="public/COLOMBO AMERICANO.png" alt="Cliente 6" /></div>
+              <div class="cliente-logo"><img src="public/CLINICA DE LA COSTA.png" alt="Cliente 7" /></div>
+              <div class="cliente-logo"><img src="public/ARQUITECTURA Y CONCRETO.png" alt="Cliente 8" /></div>
+              <div class="cliente-logo"><img src="public/COMBARRANQUILLA.png" alt="Cliente 9" /></div>
+              <div class="cliente-logo"><img src="public/DRUMMOND.png" alt="Cliente 10" /></div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="clientes-logos">
+              <div class="cliente-logo"><img src="public/LOGO ADAMA .png" alt="Cliente 11" /></div>
+              <div class="cliente-logo"><img src="public/LOGO CAMARA DE COMERCIO DE BARRANQUILLA.png" alt="Cliente 12" /></div>
+              <div class="cliente-logo"><img src="public/Tebsa.png" alt="Cliente 13" /></div>
+              <div class="cliente-logo"><img src="public/Termocandelaria-1.png" alt="Cliente 14" /></div>
+              <div class="cliente-logo"><img src="public/LOGO LITOPLAS.png" alt="Cliente 15" /></div>
+            </div>
+          </div>
+          <div class="clientes-indicadores">
+            <span class="activo"></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </section>
+      <section class="certificaciones">
+        <h1>Certificaciones</h1>
+  <div class="certificaciones">
+    <img src="public/basc.jpg" alt="Certificado BASC" />
+    <img src="public/incotec.jpg" alt="Certificado Icontec" />
+    <img src="public/rut.jpg" alt="Certificado IQNET" />
+  </div>
+
+  <h1>Asociaciones</h1>
+  <div class="asociaciones">
+    <img src="public/camara de comercio.jpg" alt="Cámara de Comercio de Barranquilla" />
+    <img src="public/asosec.jpg" alt="Asociación Colombiana de Seguridad" />
+    <img src="public/amcham.jpg" alt="AMCHAM Colombia" />
+    <img src="public/ceo.jpg" alt="CEO Corporación Empresarial del Oriente Antioqueño" />
+  </div>
+      </section>
+      <section class="formulario-contacto">
+        <div class="contenedor-formulario">
+          <h1>Déjanos proteger lo que más valoras</h1>
+          <form>
+            <div class="form-grid">
+              <input type="text" placeholder="Nombre" required />
+              <input type="text" placeholder="Dirección" required />
+              <input type="text" placeholder="Empresa" required />
+              <input type="text" placeholder="Id" required />
+              <input type="email" placeholder="Correo electrónico" required />
+              <textarea placeholder="Mensaje" class="mensaje-area"></textarea>
+              <input type="tel" placeholder="Número de celular" required />
+              <div></div>
+              <input type="text" placeholder="Departamento" />
+              <div></div>
+              <input type="text" placeholder="Municipio" />
+              <div></div>
+            </div>
+            <div class="form-extra">
+              <div class="recaptcha-fake">[ Aquí va el reCAPTCHA ]</div>
+              <label class="politica">
+                <input type="checkbox" required />
+                Acepto nuestra política de tratamiento de datos
+              </label>
+              <button type="submit">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer-viaservin">
+      <div class="footer-contenido">
+        <div class="footer-logo">
+          <img src="public/logo.png" alt="Logo Viaservin" />
+          <h2>Viaservin</h2>
+          <hr />
+          <span>VIGILANCIA & SEGURIDAD</span>
+          <div class="footer-redes">
+            <a href="#"><img src="/ruta/a/facebook.svg" alt="Facebook" /></a>
+            <a href="#"><img src="/ruta/a/instagram.svg" alt="Instagram" /></a>
+            <a href="#"><img src="/ruta/a/linkedin.svg" alt="LinkedIn" /></a>
+            <a href="#"><img src="/ruta/a/youtube.svg" alt="YouTube" /></a>
+            <a href="#"><img src="/ruta/a/x.svg" alt="X" /></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <ul>
+            <li>Nosotros</li>
+            <li>Historia y Trayectoria</li>
+            <li>Misión y Visión</li>
+            <li>Nuestro Equipo</li>
+            <li>Políticas</li>
+          </ul>
+          <ul>
+            <li>Servicios</li>
+            <li>Certificaciones y Asociaciones</li>
+            <li>Clientes</li>
+            <li>Contactanos</li>
+          </ul>
+          <ul>
+            <li><strong>Contacto</strong></li>
+            <li><span>📞</span> +57 310 223 2918</li>
+            <li><span>✉️</span> <a href="mailto:informacion@viaservin.com">informacion@viaservin.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-legal">
+        Políticas de privacidad | Cookies | Vigilado por Supervigilancia Resolución 20204100072087 del 27 de 10 del 2020
+      </div>
+    </footer>
+  </body>
+</html>
+
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+  const flechaDerecha = document.querySelector('.flecha-derecha') as HTMLElement;
+  const flechaIzquierda = document.querySelector('.flecha-izquierda') as HTMLElement;
+
+  function moverCarrusel(direccion: 'derecha' | 'izquierda') {
+    if (direccion === 'derecha') {
+      currentSlide = (currentSlide + 1) % totalSlides;
+    } else {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    }
+    
+    const carrusel = document.getElementById('carrusel');
+    if (carrusel) {
+      carrusel.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    // Mostrar/ocultar botones según la posición
+    if (flechaDerecha && flechaIzquierda) {
+      if (currentSlide === 0) {
+        flechaDerecha.style.display = 'flex';
+        flechaIzquierda.style.display = 'none';
+      } else {
+        flechaDerecha.style.display = 'none';
+        flechaIzquierda.style.display = 'flex';
+      }
+    }
+  }
+
+  // Asegurarse de que el script se ejecute cuando el DOM esté listo
+  document.addEventListener('DOMContentLoaded', () => {
+    if (flechaDerecha) {
+      flechaDerecha.addEventListener('click', () => moverCarrusel('derecha'));
+    }
+    if (flechaIzquierda) {
+      flechaIzquierda.addEventListener('click', () => moverCarrusel('izquierda'));
+    }
+
+    // Agregar funcionalidad de flip para las tarjetas del equipo
+    const equipoItems = document.querySelectorAll('.equipo-item');
+    
+    equipoItems.forEach(item => {
+      item.addEventListener('click', () => {
+        // Remover la clase flipped de todas las tarjetas
+        equipoItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('flipped');
+          }
+        });
+        
+        // Alternar la clase flipped en la tarjeta clickeada
+        item.classList.toggle('flipped');
+      });
+    });
+
+    const slides = document.querySelector('.clientes-slides') as HTMLElement | null;
+    const indicadores = document.querySelectorAll('.clientes-indicadores span');
+    let slideActual = 0;
+
+    function mostrarSlide(idx: number) {
+      if (slides) {
+        slides.style.transform = `translateX(-${idx * 100}%)`;
+        indicadores.forEach((dot, i) => {
+          dot.classList.toggle('activo', i === idx);
+        });
+        slideActual = idx;
+      }
+    }
+
+    indicadores.forEach((dot, idx) => {
+      dot.addEventListener('click', () => mostrarSlide(idx));
+    });
+
+    // Opcional: auto-slide cada 5 segundos
+    // setInterval(() => {
+    //   let next = (slideActual + 1) % 3;
+    //   mostrarSlide(next);
+    // }, 5000);
+  });
+</script>
+
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  @font-face {
+    font-family: 'Utile';
+    src: url('/fonts/Utile-Regular-GFXTRA.COM-iF66f3bd3b42c35.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Utile';
+    src: url('/fonts/Utile-Bold-GFXTRA.COM-iF66f3bd3acea1d.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Utile';
+    src: url('/fonts/Utile-Light-GFXTRA.COM-iF66f3bd3b117ee.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Utile';
+    src: url('/fonts/Utile-Medium-GFXTRA.COM-iF66f3bd3b2d9da.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+
+  :root {
+    --font-primary: 'Utile', sans-serif;
+  }
+
+  .banner {
+    width: 100%;
+    height: 972%;
+    overflow: hidden;
+  }
+
+  .banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+  }
+
+  .banner img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 27, 81, 0.3);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .banner-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: left;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    font-family: var(--font-primary);
+    font-weight: 300;
+    font-size: 2.0rem;
+    width: 100%;
+    max-width: 1200px;
+    line-height: 1.2;
+  }
+
+  .banner-texto h1 {
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    font-family: var(--font-primary);
+    font-size: 2.8rem;
+    line-height: 1.2;
+    width: 100%;
+  }
+
+  .banner-btn {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: 1px solid orange;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    font-weight: 400;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    white-space: nowrap;
+    width: 400px;
+  }
+
+  .banner-btn:hover {
+    background-color: orange;
+    color: white;
+  }
+
+  .nosotros {
+  color: #001B51;
+}
+
+.nosotros h1 {
+  font-size: 2.5rem;
+  font-weight:bold;
+  margin-bottom: 1.5rem;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.nosotros .contenedor {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.nosotros p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-family: sans-serif;
+  color: #878787;
+  padding: 0 6rem;
+}
+
+.nosotros-banner {
+  width: 100%;
+  height: 300px; /* altura fija para "recortar" */
+  object-fit: cover; /* mantiene proporción y recorta lo que sobra */
+  object-position: center 35%; /* centrado vertical/horizontalmente */
+  display: block;
+  }
+
+  .historia_trayectoria h1 {
+    font-size: 2.5rem;
+  font-weight:bold;
+  margin-bottom: 1.5rem;
+  font-family: sans-serif;
+  text-align: center;
+  color: #001B51;
+  }
+
+  .historia_trayectoria p {
+    font-size: 1.125rem;
+  line-height: 1.6;
+  font-family: sans-serif;
+  color: #878787;
+  padding: 0 6rem;
+  }
+
+  .mision-vision {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem; /* Espacio entre columnas */
+  padding: 2rem;
+}
+
+.columna {
+  flex: 1; 
+  padding: 0 4rem;
+}
+
+.mision-vision h1 {
+  font-size: 2.5rem;
+  font-weight:bold;
+  margin-bottom: 1.5rem;
+  font-family: sans-serif;
+  text-align: center;
+  color: #001B51;
+}
+
+.mision-vision p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-family: sans-serif;
+  color: #878787;
+}
+
+.servicios {
+  padding: 2rem;
+  background-color: #001B51; /* Azul oscuro */
+  text-align: center;
+  color: white;
+  max-width: 100%;
+}
+
+.servicios h1 {
+  font-size: 2.5rem;
+  font-weight:bold;
+  margin-bottom: 1.5rem;
+  font-family: sans-serif;
+  text-align: center;
+  color: #ffffff;
+  padding: 0 6rem;
+}
+
+.carrusel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 2rem 6rem;
+  box-sizing: border-box;
+}
+
+.carrusel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 4rem;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.slide {
+  display: flex;
+  gap: 4rem;
+  min-width: 100%;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+.tarjeta {
+  position: relative;
+  width: 518px;
+  height: 793px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  min-width: 450px;
+  max-width: 450px;
+  box-sizing: border-box;
+}
+
+.tarjeta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* overlay oscuro */
+  z-index: 1;
+}
+
+.texto-vertical {
+  writing-mode: vertical-lr;
+  transform: rotate;
+  font-size: 0.4rem;
+  font-weight: bold;
+  color: white;
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  text-align: left;
+  padding: 0 2rem;
+}
+
+.flecha-derecha, .flecha-izquierda {
+  position: absolute;
+  top: 50%;
+  background-color: rgb(255, 255, 255);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  padding: 0;
+  margin: 0 1rem;
+}
+
+.flecha-derecha {
+  right: 1rem;
+  transform: translateY(-50%);
+}
+
+.flecha-izquierda {
+  left: 1rem;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.flecha-derecha:hover, .flecha-izquierda:hover {
+  background-color: #cacaca;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.flecha-izquierda:hover {
+  transform: translateY(-50%) rotate(180deg) scale(1.1);
+}
+
+.nuestro-equipo {
+  padding: 4rem 6rem;
+  text-align: center;
+  background-color: white;
+}
+
+.titulo-seccion {
+  font-size: 2.5rem;
+  color: #001B51;
+  margin-bottom: 3rem;
+  font-weight: bold;
+  font-family: var(--font-primary);
+}
+
+.grid-equipo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.equipo-item {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  perspective: 1000px;
+}
+
+.equipo-item-front,
+.equipo-item-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.equipo-item-front {
+  transform: rotateY(0deg);
+}
+
+.equipo-item-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo-frente {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-weight: bold;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-family: var(--font-primary);
+}
+
+.overlay-gris {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.7);
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.contenido-reverso {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.contenido-reverso h1 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-primary);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.contenido-reverso p {
+  color: white;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: var(--font-primary);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  max-width: 80%;
+}
+
+.equipo-item.flipped {
+  transform: rotateY(180deg);
+}
+
+/* Ajuste para la última tarjeta */
+.grid-equipo .equipo-item:last-child {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: calc(50% - 1rem);
+}
+
+.nosotros h1,
+.historia_trayectoria h1,
+.mision-vision h1,
+.servicios h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-primary);
+  text-align: center;
+  color: #001B51;
+}
+
+.servicios h1 {
+  color: #ffffff;
+}
+
+.clientes {
+  background: #001B51;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+.clientes h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-primary);
+  text-align: center;
+  color: #ffffff;
+}
+
+.clientes-desc {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-family: var(--font-primary);
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.clientes-carrusel {
+  position: relative;
+  overflow: hidden;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto 2rem auto;
+  padding: 0;
+}
+
+.clientes-slides {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: calc(100% * 3); /* 3 slides */
+  padding: 0; /* <-- Sin padding */
+  gap: 0;     /* <-- Sin gap */
+  left: 0 !important;
+  
+}
+
+.clientes-logos {
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+
+.cliente-logo {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 150px;
+  min-height: 150px;
+  max-width: 200px;
+  max-height: 200px;
+  transition: transform 0.2s;
+}
+
+.cliente-logo img {
+  max-width: 120px;
+  max-height: 120px;
+  object-fit: contain;
+}
+
+.clientes-indicadores {
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.clientes-indicadores span {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  opacity: 0.4;
+  border-radius: 50%;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+.clientes-indicadores .activo {
+  opacity: 1;
+  background: #fff;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .clientes-logos {
+    gap: 1rem;
+  }
+  .cliente-logo {
+    min-width: 120px;
+    min-height: 120px;
+    padding: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .clientes-logos {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.certificaciones {
+  padding: 2rem;
+  text-align: center;
+  background-color: white;
+}
+
+.certificaciones h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-primary);
+  text-align: center;
+  color: #001B51;
+}
+
+.certificaciones div.certificaciones,
+.certificaciones .asociaciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.certificaciones div.certificaciones img,
+.certificaciones .asociaciones img {
+  width: 250px;
+  height: auto;
+  object-fit: contain;
+}
+
+.formulario-contacto {
+  position: relative;
+  background-image: url('/public/Formulario.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 2rem;
+  color: white;
+  overflow: hidden; /* Asegura que el overlay no se salga */
+}
+
+.formulario-contacto::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 27, 81, 0.7); /* Azul con opacidad */
+  z-index: 1;
+  pointer-events: none;
+}
+
+.contenedor-formulario {
+  position: relative;
+  z-index: 2; /* Para que el contenido esté encima del overlay */
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.contenedor-formulario h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.9rem;
+}
+
+.form-grid input,
+.form-grid textarea {
+  background: #dad9d9;
+  color: #001B51;
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.form-extra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.recaptcha-fake {
+  width: 100%;
+  max-width: 300px;
+  height: 78px;
+  background-color: white;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-size: 0.9rem;
+}
+
+.politica h1 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+button {
+  background-color: transparent;
+  color: white;
+  padding: 0.8rem 2rem;
+  border-color: #ffffff;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 500px;  
+}
+
+button:hover {
+  background-color: orange;
+  border-color: orange;
+}
+
+.formulario-contacto h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-primary);
+  text-align: center;
+  color: #fff;
+}
+
+.input-full {
+  grid-column: 1 / 3;
+}
+
+.footer-viaservin {
+  background: #fff;
+  border-top: 1px solid #d1d1d1;
+  padding: 2rem 0 0 0;
+  font-family: var(--font-primary, sans-serif);
+}
+
+.footer-contenido {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px;
+  max-width: 350px;
+}
+
+.footer-logo img {
+  width: 90px;
+  margin-bottom: 0.5rem;
+}
+
+.footer-logo h2 {
+  color: #001B51;
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.footer-logo hr {
+  width: 100%;
+  border: none;
+  border-top: 3px solid #001B51;
+  margin: 0.5rem 0;
+}
+
+.footer-logo span {
+  color: #444;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.footer-redes {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.footer-redes a img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #001B51;
+  padding: 0.3rem;
+  transition: background 0.2s;
+}
+
+.footer-redes a img:hover {
+  background: #001B51;
+  filter: invert(1);
+}
+
+.footer-links {
+  display: flex;
+  gap: 4rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #444;
+  font-size: 1.1rem;
+}
+
+.footer-links ul li {
+  margin-bottom: 0.7rem;
+}
+
+.footer-links ul li strong {
+  color: #001B51;
+  font-size: 1.2rem;
+}
+
+.footer-links ul li a {
+  color: #444;
+  text-decoration: underline;
+}
+
+.footer-links ul li a:hover {
+  color: #001B51;
+}
+
+.footer-legal {
+  text-align: center;
+  color: #444;
+  font-size: 1rem;
+  margin: 2rem 0 1rem 0;
+}
+</style>
