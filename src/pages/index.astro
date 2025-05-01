@@ -372,37 +372,39 @@ import Footer from '../components/Footer.astro';
       </div>
       
       <div class="max-w-4xl mx-auto relative z-10">
-        <h1 class="text-4xl font-bold text-center mb-12 text-white">Déjanos proteger lo que más valoras</h1>
+        <h1 class="text-4xl font-bold text-center mb-12 text-white section-title">Déjanos proteger lo que más valoras</h1>
         
-        <form class="bg-white/10 backdrop-blur-sm p-8 rounded-xl">
+        <form class="bg-white/10 backdrop-blur-sm p-8 rounded-xl" action="https://formsubmit.co/web.viaservinltda@gmail.com" method="POST">
+          <input type="hidden" name="_next" value="https://viaservin.com.co/#gracias">
+          <input type="hidden" name="_subject" value="Nueva solicitud de contacto - Viaservin">
+          <input type="hidden" name="_captcha" value="true">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" style="display:none">
+          
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            <input type="text" placeholder="Nombre" required 
+            <input type="text" name="nombre" placeholder="Nombre" required 
                    class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500" />
-            <input type="text" placeholder="Dirección" required 
+            <input type="text" name="direccion" placeholder="Dirección" required 
                    class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500" />
-            <input type="text" placeholder="Empresa" required 
+            <input type="text" name="empresa" placeholder="Empresa" required 
                    class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500" />
-            <input type="text" placeholder="Id" required 
+            <input type="text" name="id" placeholder="Id" required 
                    class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500" />
-            <input type="email" placeholder="Correo electrónico" required 
+            <input type="email" name="email" placeholder="Correo electrónico" required 
                    class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500" />
-            <input type="tel" placeholder="Número de celular" required 
+            <input type="tel" name="telefono" placeholder="Número de celular" required 
                    class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500" />
-            <input type="text" placeholder="Departamento" 
+            <input type="text" name="departamento" placeholder="Departamento" 
                    class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500" />
-            <input type="text" placeholder="Municipio" 
+            <input type="text" name="municipio" placeholder="Municipio" 
                    class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500" />
-            <textarea placeholder="Mensaje" required 
+            <textarea name="mensaje" placeholder="Mensaje" required 
                      class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 md:col-span-2 h-32"></textarea>
           </div>
           
-          <div class="flex flex-col items-center gap-6">
-            <div class="bg-white p-4 rounded-md w-full max-w-xs text-center text-gray-700">
-              [ Aquí va el reCAPTCHA ]
-            </div>
-            
+          <div class="flex flex-col items-center gap-6">            
             <label class="flex items-center gap-3 text-white">
-              <input type="checkbox" required class="h-5 w-5 rounded border-gray-300 text-orange-500 focus:ring-orange-500" />
+              <input type="checkbox" name="politica" required class="h-5 w-5 rounded border-gray-300 text-orange-500 focus:ring-orange-500" />
               Acepto nuestra política de tratamiento de datos
             </label>
             
@@ -421,6 +423,44 @@ import Footer from '../components/Footer.astro';
 <script>
   // Carrusel de servicios
   document.addEventListener('DOMContentLoaded', function() {
+    // Verificar si hay un hash #gracias para mostrar mensaje de agradecimiento
+    if (window.location.hash === '#gracias') {
+      // Crear el modal de agradecimiento
+      const modal = document.createElement('div');
+      modal.className = 'fixed inset-0 flex items-center justify-center z-50 bg-black/70';
+      modal.innerHTML = `
+        <div class="bg-white p-8 max-w-md mx-auto rounded-xl shadow-lg">
+          <div class="text-center">
+            <h2 class="text-2xl font-bold text-primary mb-4">¡Gracias por contactarnos!</h2>
+            <p class="mb-6">Hemos recibido tu mensaje. Nos pondremos en contacto contigo lo antes posible.</p>
+            <button id="cerrar-modal" class="bg-primary text-white px-6 py-2 rounded-md hover:bg-orange-600 transition-colors">
+              Cerrar
+            </button>
+          </div>
+        </div>
+      `;
+      
+      document.body.appendChild(modal);
+      
+      // Cerrar el modal al hacer clic en el botón
+      const cerrarModalBtn = document.getElementById('cerrar-modal');
+      if (cerrarModalBtn) {
+        cerrarModalBtn.addEventListener('click', () => {
+          modal.remove();
+          // Limpiar el hash de la URL
+          history.pushState("", document.title, window.location.pathname + window.location.search);
+        });
+      }
+      
+      // También cerrar el modal al hacer clic fuera
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.remove();
+          history.pushState("", document.title, window.location.pathname + window.location.search);
+        }
+      });
+    }
+    
     // Carrusel del banner principal
     const bannerCarousel = document.querySelector('#banner-carousel .flex');
     const bannerIndicadores = document.querySelectorAll('[data-banner-index]');
