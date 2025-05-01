@@ -11,54 +11,104 @@ import Footer from '../components/Footer.astro';
 
 <Layout>
   <main class="w-full">
-    <section class="relative w-full h-screen">
+    <section class="relative w-full h-screen ">
       <Navbar />  
-      <img src="/banner.png" alt="Banner principal" class="w-full h-full object-cover" />
-      <div class="absolute inset-0 flex items-center justify-start px-8 md:px-16 lg:px-24 bg-black bg-opacity-40">
-        <div class="max-w-2xl">
-          <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            Protegemos lo que mas valoras con tecnologia de vanguardia
-            para ofrecerte la mejor <strong class="text-orange-500">seguridad privada del mercado</strong>
-          </h1>
-          <button class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-md transition-colors duration-300 text-lg">
-            Descubre nuestras soluciones
-          </button>
+      <div class="w-full h-full relative overflow-hidden bg-white" id="banner-carousel">
+        <div class="flex w-full h-full transition-transform duration-1000">
+          <!-- Banner 1 -->
+          <div class="w-full h-full flex-shrink-0 relative">
+            <img src="/banner.png" alt="Banner principal 1" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 flex items-center justify-start px-8 md:px-16 lg:px-24 bg-black bg-opacity-40">
+              <div class="w-full banner-content" data-banner-id="0">
+                <h1 class="text-white text-3xl md:text-4xl lg:text-7xl font-light mb-6">
+                  Protegemos lo que mas valoras con tecnologia de vanguardia<br>
+                  para ofrecerte la mejor <strong class="font-bold">seguridad privada del mercado</strong>
+                </h1>
+                <button onclick="document.getElementById('servicios').scrollIntoView({behavior: 'smooth'})" class="border border-orange-500 hover:bg-orange-600 text-white font-light py-3 px-6 rounded-md transition-colors duration-300 text-lg">
+                  Descubre nuestras soluciones
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Banner 2 -->
+          <div class="w-full h-full flex-shrink-0 relative">
+            <img src="/banner2.png" alt="Banner principal 2" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 flex items-center justify-start px-8 md:px-16 lg:px-24 bg-black bg-opacity-40">
+              <div class="w-full banner-content" data-banner-id="1">
+                <h1 class="text-white text-3xl md:text-4xl lg:text-7xl font-light mb-6">
+                 Tu tranquilidad es nuestra prioridad. Confia en los<br>
+                  expertos en <strong class="font-bold">vigilancia y protección</strong>
+                </h1>
+                <button onclick="document.getElementById('contacto').scrollIntoView({behavior: 'smooth'})"  class="border border-orange-500 hover:bg-orange-600 text-white font-light py-3 px-6 rounded-md transition-colors duration-300 text-lg">
+                  Contáctanos ahora
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Banner 3 -->
+          <div class="w-full h-full flex-shrink-0 relative">
+            <img src="/banner3.png" alt="Banner principal 3" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 flex items-center justify-start px-8 md:px-16 lg:px-24 bg-black bg-opacity-40">
+              <div class="w-full banner-content" data-banner-id="2">
+                <h1 class="text-white text-3xl md:text-4xl lg:text-7xl font-light mb-6">
+                  Contamos con mas de  <strong class="font-bold">43 años</strong><br>
+                  de experiencia <strong class="font-bold">respaldando tu tranquilidad</strong>
+                </h1>
+                <button onclick="document.getElementById('clientes').scrollIntoView({behavior: 'smooth'})" class="border border-orange-500 hover:bg-orange-600 text-white font-light py-3 px-6 rounded-md transition-colors duration-300 text-lg">
+                  Conoce nuestros aliados
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-      </div> 
+      </div>
+      
+      <!-- Indicadores del carrusel -->
+      <div class="absolute bottom-8 left-1/4 transform -translate-x-1/2 flex gap-3 z-10">
+        <button class="w-3 h-3 rounded-full bg-white opacity-100 transition-opacity" data-banner-index="0"></button>
+        <button class="w-3 h-3 rounded-full bg-white opacity-40 transition-opacity" data-banner-index="1"></button>
+        <button class="w-3 h-3 rounded-full bg-white opacity-40 transition-opacity" data-banner-index="2"></button>
+      </div>
+      
+      <!-- Botones de navegación del banner -->
+      <button class="absolute right-4 top-1/2 -translate-y-1/2 bg-white text-grey rounded-full w-16 h-16 flex items-center justify-center shadow-xl z-10 text-2xl hover:shadow-2xl transition-shadow" id="banner-btn-derecha">➤</button>
+      <button class="absolute left-4 top-1/2 -translate-y-1/2 bg-white text-grey rounded-full w-16 h-16 flex items-center justify-center shadow-xl z-10 hidden rotate-180 text-2xl hover:shadow-2xl transition-shadow" id="banner-btn-izquierda">➤</button>
     </section>
 
-    <section class="py-16 px-8 md:px-16 max-w-6xl mx-auto">
-      <h1 class="text-4xl font-bold text-center mb-8 text-[#001B51]">Nosotros</h1>
+    <section class="py-16 w-full" id="nosotros">
+      <h1 class="text-7xl font-bold text-center mb-8 text-[#001B51]">Nosotros</h1>
       <p class="text-lg text-gray-700 text-center mb-12 max-w-4xl mx-auto leading-relaxed">
         En VIASERVIN, somos líderes en vigilancia y seguridad privada con una trayectoria de más de 40 años. 
         Ofrecemos soluciones integrales que combinan experiencia, tecnología de vanguardia y un equipo capacitado 
         para proteger lo que más valoras. Nuestro propósito es brindar tranquilidad y confianza a empresas, hogares 
         y comunidades en toda la región.
       </p>
-      <img src="/Nosotros.jpg" alt="Banner nosotros" class="w-full max-h-[500px] object-cover rounded-xl shadow-lg"/>
+      <div class="w-full overflow-hidden">
+        <img src="/Nosotros.jpg" alt="Banner nosotros" class="w-full object-cover shadow-lg" style="height: 500px; object-position: center 30%;" />
+      </div>
     </section>
 
-    <section class="py-16 px-8 md:px-16 bg-gray-50">
-      <div class="max-w-6xl mx-auto">
-        <h1 class="text-4xl font-bold text-center mb-8 text-[#001B51]">Historia y trayectoria</h1>
-        <p class="text-lg text-gray-700 text-center mb-8 max-w-4xl mx-auto leading-relaxed">
-          Fundada en 1981, en Barranquilla, VIASERVIN ha sido pionera en el sector de seguridad privada en la región. Fuimos la primera empresa
-          de vigilancia certificada por ICONTEC en la Costa Atlántica. A lo largo de los años, hemos innovado constantemente, incorporando tecnología
-          avanzada y expandiendo nuestros servicios a siete ciudades principales, consolidando nuestra reputación como un referente confiable.
-        </p>
-      </div>
+    <section class="py-16 px-8 md:px-16 ">
+      <h1 class="text-7xl font-bold text-center mb-8 text-[#001B51]">Historia y trayectoria</h1>
+      <p class="text-lg text-gray-700 text-center mb-8 max-w-4xl mx-auto leading-relaxed">
+        Fundada en 1981, en Barranquilla, VIASERVIN ha sido pionera en el sector de seguridad privada en la región. Fuimos la primera empresa
+        de vigilancia certificada por ICONTEC en la Costa Atlántica. A lo largo de los años, hemos innovado constantemente, incorporando tecnología
+        avanzada y expandiendo nuestros servicios a siete ciudades principales, consolidando nuestra reputación como un referente confiable.
+      </p>
     </section>
 
     <section class="py-16 px-8 md:px-16 bg-white">
       <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-8">
-        <div class="flex-1 bg-orange-50 p-8 rounded-xl shadow">
+        <div class="flex-1  p-8 ">
           <h1 class="text-3xl font-bold mb-4 text-[#001B51]">Misión</h1>
           <p class="text-lg text-gray-700 leading-relaxed">
             Brindamos soluciones de seguridad y vigilancia privada en los diferentes sectores de la economía a nivel nacional, contribuimos a la protección
             y bienestar de nuestros clientes mediante el desarrollo integral del talento humano y la utilización de fuentes tecnológicas.
           </p>
         </div>
-        <div class="flex-1 bg-blue-50 p-8 rounded-xl shadow">
+        <div class="flex-1">
           <h1 class="text-3xl font-bold mb-4 text-[#001B51]">Visión</h1>
           <p class="text-lg text-gray-700 leading-relaxed">
             Seremos reconocidos como una organización líder en el sector seguridad y vigilancia privada, con un mayor posicionamiento a nivel nacional.
@@ -67,7 +117,7 @@ import Footer from '../components/Footer.astro';
       </div>
     </section>
 
-    <section class="py-16 px-8 md:px-16 bg-primary">
+    <section class="py-16 px-8 md:px-16 bg-primary" id="servicios">
       <div class="max-w-7xl mx-auto">
         <h1 class="text-5xl font-bold text-center mb-16 text-white">Servicios</h1>
         <div class="relative overflow-hidden px-4 md:px-12">
@@ -124,8 +174,8 @@ import Footer from '../components/Footer.astro';
           </div>
           
           <!-- Botones de navegación con estilos similares a los originales -->
-          <button class="absolute right-4 top-1/2 -translate-y-1/2 bg-white text-orange-500 rounded-full w-16 h-16 flex items-center justify-center shadow-lg z-10 text-2xl" id="btn-derecha">➤</button>
-          <button class="absolute left-4 top-1/2 -translate-y-1/2 bg-white text-orange-500 rounded-full w-16 h-16 flex items-center justify-center shadow-lg z-10 hidden rotate-180 text-2xl" id="btn-izquierda">➤</button>
+          <button class="absolute right-4 top-1/2 -translate-y-1/2 bg-white text-orange-500 rounded-full w-16 h-16 flex items-center justify-center shadow-xl z-10 text-2xl hover:shadow-2xl transition-shadow" id="btn-derecha">➤</button>
+          <button class="absolute left-4 top-1/2 -translate-y-1/2 bg-white text-orange-500 rounded-full w-16 h-16 flex items-center justify-center shadow-xl z-10 hidden rotate-180 text-2xl hover:shadow-2xl transition-shadow" id="btn-izquierda">➤</button>
         </div>
       </div>
     </section>
@@ -222,7 +272,7 @@ import Footer from '../components/Footer.astro';
         </div>
       </div>
     </section>
-    <section class="py-16 px-8 bg-primary text-white">
+    <section class="py-16 px-8 bg-primary text-white" id="clientes">
       <div class="max-w-6xl mx-auto">
         <h1 class="text-4xl font-bold text-center mb-6">Algunos de nuestros Clientes</h1>
         <p class="text-center text-lg mb-12 max-w-3xl mx-auto">
@@ -298,7 +348,7 @@ import Footer from '../components/Footer.astro';
         </div>
       </div>
     </section>
-    <section class="py-16 px-8 bg-white">
+    <section class="py-16 px-8 bg-white" id="certificaciones">
       <div class="max-w-6xl mx-auto">
         <h1 class="text-4xl font-bold text-center mb-12 text-primary">Certificaciones</h1>
         <div class="flex flex-wrap justify-center gap-8 mb-16">
@@ -316,7 +366,7 @@ import Footer from '../components/Footer.astro';
         </div>
       </div>
     </section>
-    <section class="py-16 px-8 relative">
+    <section class="py-16 px-8 relative" id="contacto">
       <div class="absolute inset-0 bg-cover bg-center z-0" style="background-image: url('/Formulario.jpg')">
         <div class="absolute inset-0 bg-primary bg-opacity-70"></div>
       </div>
@@ -371,6 +421,82 @@ import Footer from '../components/Footer.astro';
 <script>
   // Carrusel de servicios
   document.addEventListener('DOMContentLoaded', function() {
+    // Carrusel del banner principal
+    const bannerCarousel = document.querySelector('#banner-carousel .flex');
+    const bannerIndicadores = document.querySelectorAll('[data-banner-index]');
+    let bannerActual = 0;
+    
+    function mostrarBanner(index: number) {
+      if (bannerCarousel && bannerCarousel instanceof HTMLElement) {
+        bannerCarousel.style.transform = `translateX(-${index * 100}%)`;
+        
+        bannerIndicadores.forEach((indicador, i) => {
+          if (i === index) {
+            indicador.classList.add('opacity-100');
+            indicador.classList.remove('opacity-40');
+          } else {
+            indicador.classList.add('opacity-40');
+            indicador.classList.remove('opacity-100');
+          }
+        });
+        
+        bannerActual = index;
+      }
+    }
+    
+    // Inicializar el primer indicador como activo
+    if (bannerIndicadores.length > 0) {
+      bannerIndicadores[0].classList.add('opacity-100');
+      bannerIndicadores[0].classList.remove('opacity-40');
+    }
+    
+    // Cambiar banner automáticamente cada 5 segundos
+    setInterval(() => {
+      if (bannerCarousel) {
+        const slides = 3; // Tenemos 3 banners
+        const nextSlide = (bannerActual + 1) % slides;
+        mostrarBanner(nextSlide);
+      }
+    }, 6000);
+    
+    // Permitir clic en los indicadores del banner
+    bannerIndicadores.forEach((indicador, i) => {
+      indicador.addEventListener('click', () => {
+        mostrarBanner(i);
+      });
+    });
+    
+    // Botones de navegación del banner
+    const bannerBtnIzquierda = document.getElementById('banner-btn-izquierda');
+    const bannerBtnDerecha = document.getElementById('banner-btn-derecha');
+    
+    if (bannerBtnIzquierda && bannerBtnDerecha) {
+      bannerBtnDerecha.addEventListener('click', function() {
+        if (bannerActual < 2) { // Tenemos 3 banners (0, 1, 2)
+          const nextSlide = bannerActual + 1;
+          mostrarBanner(nextSlide);
+          bannerBtnIzquierda.classList.remove('hidden');
+          
+          if (nextSlide >= 2) {
+            bannerBtnDerecha.classList.add('hidden');
+          }
+        }
+      });
+      
+      bannerBtnIzquierda.addEventListener('click', function() {
+        if (bannerActual > 0) {
+          const prevSlide = bannerActual - 1;
+          mostrarBanner(prevSlide);
+          bannerBtnDerecha.classList.remove('hidden');
+          
+          if (prevSlide <= 0) {
+            bannerBtnIzquierda.classList.add('hidden');
+          }
+        }
+      });
+    }
+    
+    // Carrusel de servicios
     const carrusel = document.getElementById('carrusel');
     const btnIzquierda = document.getElementById('btn-izquierda');
     const btnDerecha = document.getElementById('btn-derecha');

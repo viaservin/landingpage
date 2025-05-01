@@ -4,12 +4,43 @@
       <img src="/logo.png" alt="Logo" class="h-10" />
     </div>
     <ul class="flex items-center gap-6 md:gap-4 flex-wrap md:flex-nowrap">
-      <li><a href="/nosotros" class="text-gray-800 font-medium hover:text-orange-500 transition-colors font-['Poppins'] text-base">Nosotros</a></li>
-      <li><a href="/servicios" class="text-gray-800 font-medium hover:text-orange-500 transition-colors font-['Poppins'] text-base">Servicios</a></li>
-      <li><a href="/clientes" class="text-gray-800 font-medium hover:text-orange-500 transition-colors font-['Poppins'] text-base">Clientes</a></li>
-      <li><a href="/certificaciones" class="text-gray-800 font-medium hover:text-orange-500 transition-colors font-['Poppins'] text-base">Certificaciones y asociaciones</a></li>
-      <li><a href="/contacto" class="text-gray-800 font-medium hover:text-orange-500 transition-colors font-['Poppins'] text-base">Contactanos</a></li>
-      <li><button class="bg-orange-500 text-white border border-orange-500 py-2 px-4 rounded-md font-bold cursor-pointer transition-all hover:bg-white hover:text-orange-500 whitespace-nowrap">Iniciar sesion</button></li>
+      <li><a href="#nosotros" data-section="nosotros" class="text-gray-800 font-medium hover:text-orange-500 transition-colors font-['Poppins'] text-base">Nosotros</a></li>
+      <li><a href="#servicios" data-section="servicios" class="text-gray-800 font-medium hover:text-orange-500 transition-colors font-['Poppins'] text-base">Servicios</a></li>
+      <li><a href="#clientes" data-section="clientes" class="text-gray-800 font-medium hover:text-orange-500 transition-colors font-['Poppins'] text-base">Clientes</a></li>
+      <li><a href="#certificaciones" data-section="certificaciones" class="text-gray-800 font-medium hover:text-orange-500 transition-colors font-['Poppins'] text-base">Certificaciones y asociaciones</a></li>
+      <li><a href="#contacto" data-section="contacto" class="text-gray-800 font-medium hover:text-orange-500 transition-colors font-['Poppins'] text-base">Contáctanos</a></li>
+      <li><button class="bg-orange-500 text-white border border-orange-500 py-2 px-4 rounded-md font-bold cursor-pointer transition-all hover:bg-white hover:text-orange-500 whitespace-nowrap">Iniciar sesión</button></li>
     </ul>
   </div>
 </nav>
+
+<script>
+  // Agregar manejador de clic para los enlaces de navegación
+  document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('nav a[data-section]');
+    
+    navLinks.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const sectionId = this.getAttribute('data-section');
+        
+        if (!sectionId) return;
+        
+        // Buscar la sección por ID
+        const targetSection = document.getElementById(sectionId);
+        
+        // Si encontramos la sección, hacemos scroll
+        if (targetSection) {
+          const headerOffset = 80; // Compensar el navbar fijo
+          const elementPosition = targetSection.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  });
+</script>
