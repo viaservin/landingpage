@@ -1,0 +1,201 @@
+---
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+
+
+// import bannerImage from '../assets/tu-imagen.jpg';
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+  <main class="w-full">
+    <section class="relative w-full">
+      <Navbar />
+    </section>
+
+    <section class="py-16 px-0 bg-white" id="politicas">
+      <div class="w-full relative">
+        <img 
+          src="/Nuestras politicas header.jpg" 
+          alt="Nuestras Políticas" 
+          class="w-full object-cover"
+          style="height: 400px; object-position: center 50%;"
+        />
+        <div 
+          class="absolute inset-0"
+          style="background: linear-gradient(89.94deg, rgba(0, 27, 81, 0.3) 1.12%, rgba(26, 103, 185, 0.3) 99.95%);"
+        ></div>
+        <h1 class="absolute inset-0 flex items-center justify-center text-white font-bolt text-[65px] leading-[94%] tracking-[0%] font-bold uppercase">
+          Nuestras Políticas
+        </h1>
+      </div>
+      <div class="max-w-6xl mx-auto px-8 mt-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <!-- Gestión Integrada 2025 -->
+          <div class="bg-gray-100 p-6 rounded-lg flex items-center">
+            <div class="mr-4">
+              <img src="/PDF.svg" alt="PDF Icon" class="w-20 h-auto" />
+            </div>
+            <div class="flex-1">
+              <h2 class="text-[#001B51] text-2xl font-bold mb-2">GESTIÓN INTEGRADA 2025</h2>
+              <a 
+                href="/assets/docs/GESTION-INTEGRADA-2025.pdf" 
+                download
+                class="inline-flex items-center text-white bg-[#ee9d26] hover:bg-[#d08a1d] px-6 py-2 rounded-md"
+              >
+                <span>Descargar</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+    
+          <!-- Privacidad y Tratamiento de Datos -->
+          <div class="bg-gray-100 p-6 rounded-lg flex items-center">
+            <div class="mr-4">
+              <img src="/PDF.svg" alt="PDF Icon" class="w-20 h-auto" />
+            </div>
+            <div class="flex-1">
+              <h2 class="text-[#001B51] text-2xl font-bold mb-2">PRIVACIDAD Y TRATAMIENTO DE DATOS</h2>
+              <a 
+                href="/assets/docs/PRIVACIDAD-Y-TRATAMIENTO-DE-DATOS.pdf" 
+                download
+                class="inline-flex items-center text-white bg-[#ee9d26] hover:bg-[#d08a1d] px-6 py-2 rounded-md"
+              >
+                <span>Descargar</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+    
+          <!-- Consumo de Alcohol Drogas y Cigarrillo 2025 -->
+          <div class="bg-gray-100 p-6 rounded-lg flex items-center">
+            <div class="mr-4">
+              <img src="/PDF.svg" alt="PDF Icon" class="w-20 h-auto" />
+            </div>
+            <div class="flex-1">
+              <h2 class="text-[#001B51] text-2xl font-bold mb-2">CONSUMO DE ALCOHOL DROGAS Y CIGARRILLO 2025</h2>
+              <a 
+                href="/assets/docs/CONSUMO-DE-ALCOHOL-DROGAS-Y-CIGARRILLO-2025.pdf" 
+                download
+                class="inline-flex items-center text-white bg-[#ee9d26] hover:bg-[#d08a1d] px-6 py-2 rounded-md"
+              >
+                <span>Descargar</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+    
+          <!-- Seguridad Vial 2025 -->
+          <div class="bg-gray-100 p-6 rounded-lg flex items-center">
+            <div class="mr-4">
+              <img src="/PDF.svg" alt="PDF Icon" class="w-20 h-auto" />
+            </div>
+            <div class="flex-1">
+              <h2 class="text-[#001B51] text-2xl font-bold mb-2">SEGURIDAD VIAL 2025</h2>
+              <a 
+                href="/assets/docs/SEGURIDAD-VIAL-2025.pdf" 
+                download
+                class="inline-flex items-center text-white bg-[#ee9d26] hover:bg-[#d08a1d] px-6 py-2 rounded-md"
+              >
+                <span>Descargar</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+    
+          <!-- PESV -->
+          <div class="bg-gray-100 p-6 rounded-lg flex items-center">
+            <div class="mr-4">
+              <img src="/PDF.svg" alt="PDF Icon" class="w-20 h-auto" />
+            </div>
+            <div class="flex-1">
+              <h2 class="text-[#001B51] text-2xl font-bold mb-2">PESV</h2>
+              <a 
+                href="/assets/docs/PESV.pdf" 
+                download
+                class="inline-flex items-center text-white bg-[#ee9d26] hover:bg-[#d08a1d] px-6 py-2 rounded-md"
+              >
+                <span>Descargar</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+    
+          <!-- Reglamento de Higiene Seguridad Industrial -->
+          <div class="bg-gray-100 p-6 rounded-lg flex items-center">
+            <div class="mr-4">
+              <img src="/PDF.svg" alt="PDF Icon" class="w-20 h-auto" />
+            </div>
+            <div class="flex-1">
+              <h2 class="text-[#001B51] text-2xl font-bold mb-2">REGLAMENTO DE HIGIENE SEGURIDAD INDUSTRIAL</h2>
+              <a 
+                href="/assets/docs/SEGURIDAD-INDUSTRIAL.pdf" 
+                download
+                class="inline-flex items-center text-white bg-[#ee9d26] hover:bg-[#d08a1d] px-6 py-2 rounded-md"
+              >
+                <span>Descargar</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+    
+          <!-- Responsabilidad Social y Prácticas Empresariales -->
+          <div class="bg-gray-100 p-6 rounded-lg flex items-center">
+            <div class="mr-4">
+              <img src="/PDF.svg" alt="PDF Icon" class="w-20 h-auto" />
+            </div>
+            <div class="flex-1">
+              <h2 class="text-[#001B51] text-2xl font-bold mb-2">RESPONSABILIDAD SOCIAL Y PRÁCTICAS EMPRESARIALES</h2>
+              <a 
+                href="/assets/docs/RESPONSABILIDAS-SOCIAL-Y-PRACTICAS-EMPRESARIALES.pdf" 
+                download
+                class="inline-flex items-center text-white bg-[#ee9d26] hover:bg-[#d08a1d] px-6 py-2 rounded-md"
+              >
+                <span>Descargar</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+    
+          <!-- Seguridad de la Información -->
+          <div class="bg-gray-100 p-6 rounded-lg flex items-center">
+            <div class="mr-4">
+              <img src="/PDF.svg" alt="PDF Icon" class="w-20 h-auto" />
+            </div>
+            <div class="flex-1">
+              <h2 class="text-[#001B51] text-2xl font-bold mb-2">SEGURIDAD DE LA INFORMACIÓN</h2>
+              <a 
+                href="/assets/docs/SEGURIDAD-DE-LA-INFORMACIÓN.pdf" 
+                download
+                class="inline-flex items-center text-white bg-[#ee9d26] hover:bg-[#d08a1d] px-6 py-2 rounded-md"
+              >
+                <span>Descargar</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer bgColor="bg-[#D9D9D9]" />
+</Layout>
