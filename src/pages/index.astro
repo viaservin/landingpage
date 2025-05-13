@@ -4,7 +4,6 @@ import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 
-
 // import bannerImage from '../assets/tu-imagen.jpg';
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -29,18 +28,22 @@ import Footer from "../components/Footer.astro";
             <div
               class="absolute inset-0 transition-opacity duration-300 group-hover:opacity-0"
               style="background: linear-gradient(90.6deg, rgba(0, 27, 81, 0.75) 0.36%, rgba(41, 84, 136, 0.75) 148.54%);"
-            ></div>
+            >
+            </div>
             <div
               class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               style="background: rgba(0, 0, 0, 0.6);"
-            ></div>
-            <div class="absolute inset-0 flex items-center justify-start px-8 md:px-16 lg:px-24">
+            >
+            </div>
+            <div
+              class="absolute inset-0 flex items-center justify-start px-8 md:px-16 lg:px-24"
+            >
               <div class="w-full banner-content" data-banner-id="0">
                 <h1
                   class="text-white text-3xl md:text-4xl lg:text-6xl font-light mb-6 ps-4"
                 >
-                  Protegemos lo que más valoras con tecnología de vanguardia<br />
-                  para ofrecerte la mejor <strong class="font-bold">seguridad privada del mercado</strong>
+                  <strong class="font-bold">Viaservin,</strong> vigilancia y seguridad
+                  privada<br />
                 </h1>
                 <button
                   onclick="document.getElementById('servicios').scrollIntoView({behavior: 'smooth'})"
@@ -62,12 +65,16 @@ import Footer from "../components/Footer.astro";
             <div
               class="absolute inset-0 transition-opacity duration-300 group-hover:opacity-0"
               style="background: linear-gradient(90.6deg, rgba(0, 27, 81, 0.75) 0.36%, rgba(41, 84, 136, 0.75) 148.54%);"
-            ></div>
+            >
+            </div>
             <div
               class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               style="background: rgba(0, 0, 0, 0.6);"
-            ></div>
-            <div class="absolute inset-0 flex items-center justify-start px-8 md:px-16 lg:px-24">
+            >
+            </div>
+            <div
+              class="absolute inset-0 flex items-center justify-start px-8 md:px-16 lg:px-24"
+            >
               <div class="w-full banner-content" data-banner-id="1">
                 <h1
                   class="text-white text-3xl md:text-4xl lg:text-7xl font-light mb-6"
@@ -97,12 +104,16 @@ import Footer from "../components/Footer.astro";
             <div
               class="absolute inset-0 transition-opacity duration-300 group-hover:opacity-0"
               style="background: linear-gradient(90.6deg, rgba(0, 27, 81, 0.75) 0.36%, rgba(41, 84, 136, 0.75) 148.54%);"
-            ></div>
+            >
+            </div>
             <div
               class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               style="background: rgba(0, 0, 0, 0.6);"
-            ></div>
-            <div class="absolute inset-0 flex items-center justify-start px-8 md:px-16 lg:px-24">
+            >
+            </div>
+            <div
+              class="absolute inset-0 flex items-center justify-start px-8 md:px-16 lg:px-24"
+            >
               <div class="w-full banner-content" data-banner-id="2">
                 <h1
                   class="text-white text-3xl md:text-4xl lg:text-7xl font-light mb-6"
@@ -141,6 +152,12 @@ import Footer from "../components/Footer.astro";
       </div>
 
       <!-- Botones de navegación del banner -->
+      <button
+        class="absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full flex items-center justify-center shadow-xl z-10 hover:shadow-2xl transition-shadow opacity-0"
+        style="width: 62px; height: 62px;"
+        id="banner-btn-izquierda">
+        <img src="/Arrow.svg" alt="Anterior" class="w-[20px] h-[40px] rotate-180" />
+      </button>
       <button
         class="absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full flex items-center justify-center shadow-xl z-10 hover:shadow-2xl transition-shadow"
         style="width: 62px; height: 62px;"
@@ -270,10 +287,14 @@ import Footer from "../components/Footer.astro";
                 <div
                   class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-12 py-8 z-20"
                 >
-                  <h2 class="text-white font-bold text-3xl mb-6 text-center break-words whitespace-normal">
+                  <h2
+                    class="text-white font-bold text-3xl mb-6 text-center break-words whitespace-normal"
+                  >
                     VIGILANCIA FÍSICA
                   </h2>
-                  <p class="text-white text-center text-[30px] mb-8 break-words whitespace-normal">
+                  <p
+                    class="text-white text-center text-[30px] mb-8 break-words whitespace-normal"
+                  >
                     Protegemos instalaciones y hogares con servicios de
                     vigilancia física. Nuestro equipo capacitado ofrece
                     presencia constante y monitoreo detallado, garantizando un
@@ -319,10 +340,14 @@ import Footer from "../components/Footer.astro";
                 <div
                   class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-12 py-8 z-20"
                 >
-                  <h2 class="text-white font-bold text-3xl mb-6 text-center break-words whitespace-normal">
+                  <h2
+                    class="text-white font-bold text-3xl mb-6 text-center break-words whitespace-normal"
+                  >
                     ESCOLTA DE PERSONAS
                   </h2>
-                  <p class="text-white text-center text-[30px] mb-8 break-words whitespace-normal">
+                  <p
+                    class="text-white text-center text-[30px] mb-8 break-words whitespace-normal"
+                  >
                     Nuestros escoltas operan rutas seguras, con apoyo
                     tecnológico y reacción inmediata, minimizando cualquier
                     riesgo. Protegemos tu cadena logística desde el origen hasta
@@ -369,10 +394,14 @@ import Footer from "../components/Footer.astro";
                 <div
                   class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-12 py-8 z-20"
                 >
-                  <h2 class="text-white font-bold text-3xl mb-6 text-center break-words whitespace-normal">
+                  <h2
+                    class="text-white font-bold text-3xl mb-6 text-center break-words whitespace-normal"
+                  >
                     ESCOLTA DE MERCANCÍAS
                   </h2>
-                  <p class="text-white text-center text-[30px] mb-8 break-words whitespace-normal">
+                  <p
+                    class="text-white text-center text-[30px] mb-8 break-words whitespace-normal"
+                  >
                     Nuestro servicio, respaldado por estándares de vigilancia y
                     seguridad privada, se adapta a cada entorno y nivel de
                     riesgo. Actuamos con discreción, precisión y experiencia
@@ -424,10 +453,14 @@ import Footer from "../components/Footer.astro";
                 <div
                   class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-12 py-8 z-20"
                 >
-                  <h2 class="text-white font-bold text-3xl mb-6 text-center break-words whitespace-normal">
+                  <h2
+                    class="text-white font-bold text-3xl mb-6 text-center break-words whitespace-normal"
+                  >
                     MONITOREO DE ALARMAS
                   </h2>
-                  <p class="text-white text-center text-[30px] mb-8 break-words whitespace-normal">
+                  <p
+                    class="text-white text-center text-[30px] mb-8 break-words whitespace-normal"
+                  >
                     Detecta y responde a eventos en tiempo real. Las alarmas
                     conectadas a nuestra central activan patrullas de reacción
                     inmediata, apoyadas por tecnología GPS y comunicación
@@ -473,10 +506,14 @@ import Footer from "../components/Footer.astro";
                 <div
                   class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-12 py-8 z-20"
                 >
-                  <h2 class="text-white font-bold text-3xl mb-6 text-center break-words whitespace-normal">
+                  <h2
+                    class="text-white font-bold text-3xl mb-6 text-center break-words whitespace-normal"
+                  >
                     INSTALACIÓN DE SISTEMAS DE SEGURIDAD
                   </h2>
-                  <p class="text-white text-center text-[30px] mb-8 break-words whitespace-normal">
+                  <p
+                    class="text-white text-center text-[30px] mb-8 break-words whitespace-normal"
+                  >
                     Somos expertos en la instalación y mantenimiento de sistemas
                     electrónicos como CCTV, controles biométricos y alarmas
                     inteligentes. Trabajamos con las mejores marcas del mercado,
@@ -522,10 +559,14 @@ import Footer from "../components/Footer.astro";
                 <div
                   class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-12 py-8 z-20"
                 >
-                  <h2 class="text-white font-bold text-3xl mb-6 text-center break-words whitespace-normal">
+                  <h2
+                    class="text-white font-bold text-3xl mb-6 text-center break-words whitespace-normal"
+                  >
                     OPERACIÓN DE MEDIOS TECNOLÓGICOS
                   </h2>
-                  <p class="text-white text-center text-[30px] mb-8 break-words whitespace-normal">
+                  <p
+                    class="text-white text-center text-[30px] mb-8 break-words whitespace-normal"
+                  >
                     Gestionamos centros de control con tecnología de vanguardia
                     que integran monitoreo de cámaras, acceso remoto y sistemas
                     de rastreo GPS. Optimizamos los protocolos de vigilancia y
@@ -1125,7 +1166,9 @@ import Footer from "../components/Footer.astro";
           </div>
 
           <div class="flex flex-col items-center gap-6">
-            <label class="flex items-center gap-3 text-white text-sm sm:text-base">
+            <label
+              class="flex items-center gap-3 text-white text-sm sm:text-base"
+            >
               <input
                 type="checkbox"
                 name="politica"
@@ -1252,6 +1295,8 @@ import Footer from "../components/Footer.astro";
     // Carrusel del banner principal
     const bannerCarousel = document.querySelector("#banner-carousel .flex");
     const bannerIndicadores = document.querySelectorAll("[data-banner-index]");
+    const btnIzquierda = document.getElementById("banner-btn-izquierda");
+    const btnDerecha = document.getElementById("banner-btn-derecha");
     let bannerActual = 0;
 
     function mostrarBanner(index: number) {
@@ -1267,6 +1312,17 @@ import Footer from "../components/Footer.astro";
             indicador.classList.remove("opacity-100");
           }
         });
+
+        // Mostrar/ocultar botones según la posición
+        if (btnIzquierda) {
+          if (index === 0) {
+            btnIzquierda.classList.add("opacity-0");
+            btnIzquierda.classList.add("pointer-events-none");
+          } else {
+            btnIzquierda.classList.remove("opacity-0");
+            btnIzquierda.classList.remove("pointer-events-none");
+          }
+        }
 
         bannerActual = index;
       }
@@ -1294,25 +1350,31 @@ import Footer from "../components/Footer.astro";
       });
     });
 
-    // Botón de navegación del banner
-    const bannerBtnDerecha = document.getElementById("banner-btn-derecha");
-
-    if (bannerBtnDerecha) {
-      bannerBtnDerecha.addEventListener("click", function () {
+    // Botones de navegación del banner
+    if (btnDerecha) {
+      btnDerecha.addEventListener("click", function () {
         const totalSlides = 3; // Tenemos 3 banners
         const nextSlide = (bannerActual + 1) % totalSlides;
         mostrarBanner(nextSlide);
       });
     }
 
+    if (btnIzquierda) {
+      btnIzquierda.addEventListener("click", function () {
+        const totalSlides = 3; // Tenemos 3 banners
+        const prevSlide = (bannerActual - 1 + totalSlides) % totalSlides;
+        mostrarBanner(prevSlide);
+      });
+    }
+
     // Carrusel de servicios
     const carrusel = document.getElementById("carrusel");
-    const btnDerecha = document.getElementById("btn-derecha");
+    const btnDerechaServicios = document.getElementById("btn-derecha");
     let posicionActual = 0;
     const totalSlidesServicios = 2; // Tenemos 2 slides de servicios
 
-    if (carrusel && btnDerecha) {
-      btnDerecha.addEventListener("click", function () {
+    if (carrusel && btnDerechaServicios) {
+      btnDerechaServicios.addEventListener("click", function () {
         posicionActual = (posicionActual + 1) % totalSlidesServicios;
         actualizarPosicionCarrusel();
       });
