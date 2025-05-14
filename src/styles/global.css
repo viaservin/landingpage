@@ -5,7 +5,7 @@
 /* Fuentes personalizadas */
 @font-face {
   font-family: 'Utile';
-  src: url('/fonts/Utile-Regular-GFXTRA.COM-iF66f3bd3b42c35.ttf') format('truetype');
+  src: url('/fonts/Utile-Regular-woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -13,15 +13,15 @@
 
 @font-face {
   font-family: 'Utile';
-  src: url('/fonts/Utile-Bold-GFXTRA.COM-iF66f3bd3acea1d.ttf') format('truetype');
-  font-weight: bold;
+  src: url('/fonts/Utile-Bold-woff2') format('woff2');
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Utile';
-  src: url('/fonts/Utile-Light-GFXTRA.COM-iF66f3bd3b117ee.ttf') format('truetype');
+  src: url('/fonts/Utile-Light-woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -29,8 +29,17 @@
 
 @font-face {
   font-family: 'Utile';
-  src: url('/fonts/Utile-Medium-GFXTRA.COM-iF66f3bd3b2d9da.ttf') format('truetype');
+  src: url('/fonts/Utile-Medium-woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
+}
+
+/* Estilos globales para la fuente Utile */
+.utile-bold {
+  font-family: 'Utile', sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 94%;
+  letter-spacing: 0%;
 }

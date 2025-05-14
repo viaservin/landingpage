@@ -40,7 +40,7 @@ import Footer from "../components/Footer.astro";
             >
               <div class="w-full banner-content" data-banner-id="0">
                 <h1
-                  class="text-white text-3xl md:text-4xl lg:text-6xl font-light mb-6 ps-4"
+                  class="text-white text-[65px] font-light mb-6 ps-4"
                 >
                   <strong class="font-bold">Viaservin,</strong> vigilancia y seguridad
                   privada<br />
@@ -77,9 +77,9 @@ import Footer from "../components/Footer.astro";
             >
               <div class="w-full banner-content" data-banner-id="1">
                 <h1
-                  class="text-white text-3xl md:text-4xl lg:text-7xl font-light mb-6"
+                  class="text-white text-[65px] font-light mb-6"
                 >
-                  Tu tranquilidad es nuestra prioridad. Confia en los<br />
+                  Tu tranquilidad es nuestra prioridad. Confía en los<br />
                   expertos en <strong class="font-bold"
                     >vigilancia y protección</strong
                   >
@@ -116,9 +116,9 @@ import Footer from "../components/Footer.astro";
             >
               <div class="w-full banner-content" data-banner-id="2">
                 <h1
-                  class="text-white text-3xl md:text-4xl lg:text-7xl font-light mb-6"
+                  class="text-white text-[65px] font-light mb-6"
                 >
-                  Contamos con mas de <strong class="font-bold">43 años</strong
+                  Contamos con más de <strong class="font-bold">43 años</strong
                   ><br />
                   de experiencia <strong class="font-bold"
                     >respaldando tu tranquilidad</strong
@@ -154,7 +154,7 @@ import Footer from "../components/Footer.astro";
       <!-- Botones de navegación del banner -->
       <button
         class="absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full flex items-center justify-center shadow-xl z-10 hover:shadow-2xl transition-shadow opacity-0"
-        style="width: 62px; height: 62px;"
+        style="width: 62px; height: 62px; left: 14px;"
         id="banner-btn-izquierda">
         <img src="/Arrow.svg" alt="Anterior" class="w-[20px] h-[40px] rotate-180" />
       </button>
@@ -169,13 +169,14 @@ import Footer from "../components/Footer.astro";
     <!-- Seccion Nosotros -->
 
     <section class="py-16 w-full mx-auto" id="nosotros">
-      <h1 class="text-5xl font-bold text-center mb-8 text-[#001B51]">
+      <h1 class="text-[50px] font-bold text-center mb-12 text-primary">
         Nosotros
       </h1>
       <p
-        class="mb-12 max-w-[1440px] mx-auto leading-[130%] text-[28px] font-['Franklin Gothic Book'] text-[#878787] text-justify font-normal"
+        class="mt-[25px] mb-[50px] w-[1665px] h-[108px] mx-[128px] text-[#878787]"
+        style="font-weight: 400; font-size: 28px; line-height: 130%; letter-spacing: 0%; text-align: justify;"
       >
-        En VIASERVIN, somos líderes en vigilancia y seguridad privada con una
+        En Viaservin, somos líderes en vigilancia y seguridad privada con una
         trayectoria de más de 40 años. Ofrecemos soluciones integrales que
         combinan experiencia, tecnología de vanguardia y un equipo capacitado
         para proteger lo que más valoras. Nuestro propósito es brindar
@@ -183,25 +184,28 @@ import Footer from "../components/Footer.astro";
         región.
       </p>
       <div class="w-full overflow-hidden">
-        <img
-          src="/Nosotros.jpg"
-          alt="Banner nosotros"
-          class="w-full object-cover shadow-lg"
-          style="height: 400px; object-position: center 25%;"
-        />
+        <div class="relative">
+          <img
+            src="/Nosotros.jpg"
+            alt="Banner nosotros"
+            class="w-full object-cover shadow-lg"
+            style="height: 400px; object-position: center 25%;"
+          />
+          <div class="absolute inset-0" style="background: linear-gradient(89.94deg, rgba(0, 27, 81, 0.3) 1.12%, rgba(26, 103, 185, 0.3) 99.95%);"></div>
+        </div>
       </div>
     </section>
 
     <!-- Seccion Historia, trayectoria, mision y vision -->
 
-    <section class="py-10 px-8 md:px-16">
-      <h1 class="text-5xl font-bold text-center mb-8 text-[#001B51]">
+    <section class="pb-[50px] px-8 md:px-16">
+      <h1 class="text-[50px] font-bold text-center mb-12 text-primary">
         Historia y trayectoria
       </h1>
       <p
-        class="mb-6 max-w-[1440px] mx-auto leading-[130%] text-[28px] font-['Franklin Gothic Book'] text-[#878787] text-justify font-normal"
+        style="width: 1665px; height: 156px; margin: 0 200px 6px 70px; font-weight: 400; font-size: 28px; line-height: 130%; letter-spacing: 0%; text-align: justify; color: #878787;"
       >
-        Fundada en 1981, en Barranquilla, VIASERVIN ha sido pionera en el sector
+        Fundada en 1981, en Barranquilla, Viaservin ha sido pionera en el sector
         de seguridad privada en la región. Fuimos la primera empresa de
         vigilancia certificada por ICONTEC en la Costa Atlántica. A lo largo de
         los años, hemos innovado constantemente, incorporando tecnología
@@ -209,18 +213,20 @@ import Footer from "../components/Footer.astro";
         consolidando nuestra reputación como un referente confiable.
       </p>
     </section>
-    <hr class=" max-w-[1440px] mx-auto px-8 md:px-16" />
+    <hr class="max-w-[1014px] mx-auto px-8 md:px-16 -mt-[50px]" />
 
     <section class="py-8 px-8 md:px-16 bg-white mt-8">
       <div
         class="max-w-6xl mx-auto flex flex-col md:flex-row gap-20 max-w-[1440px]"
+        id="mision-vision"
       >
         <div class="flex-1">
-          <h1 class="text-5xl font-bold text-center mb-8 text-[#001B51]">
+          <h1 class="text-[#001B51] text-center mb-8 -ml-[100px] -mt-[20px]" style="font-weight: 700; font-size: 50px; line-height: 94%; letter-spacing: 0%;">
             Misión
           </h1>
           <p
-            class="mb-12 max-w-[1440px] mx-auto leading-[130%] text-[28px] font-['Franklin Gothic Book'] text-[#878787] text-justify font-normal"
+            class="mb-12 leading-[130%] text-[28px] text-[#878787] text-justify font-normal"
+            style="font-weight: 400; line-height: 130%; letter-spacing: 0%; margin-left: -120px;"
           >
             Brindamos soluciones de seguridad y vigilancia privada en los
             diferentes sectores de la economía a nivel nacional, contribuimos a
@@ -230,11 +236,12 @@ import Footer from "../components/Footer.astro";
           </p>
         </div>
         <div class="flex-1">
-          <h1 class="text-5xl font-bold text-center mb-8 text-[#001B51]">
+          <h1 class="text-[#001B51] text-center mb-8 -mr-[100px] -mt-[20px]" style="font-weight: 700; font-size: 50px; line-height: 94%; letter-spacing: 0%;">
             Visión
           </h1>
           <p
-            class="mb-12 max-w-[1440px] mx-auto leading-[130%] text-[28px] font-['Franklin Gothic Book'] text-[#878787] text-justify font-normal"
+            class="mb-12 leading-[130%] text-[28px] text-[#878787] text-justify font-normal"
+            style="font-weight: 400; line-height: 130%; letter-spacing: 0%; margin-right: -110px;"
           >
             Seremos reconocidos como una organización líder en el sector
             seguridad y vigilancia privada, con un mayor posicionamiento a nivel
@@ -246,7 +253,7 @@ import Footer from "../components/Footer.astro";
 
     <section class="py-16 px-8 md:px-16 bg-primary" id="servicios">
       <div class="text-[50px] mx-auto">
-        <h1 class="text-5xl font-bold text-center mb-6 text-white">
+        <h1 class="text-center mb-6 text-white" style="font-weight: 700; font-size: 50px; line-height: 94%; letter-spacing: 0%;">
           Servicios
         </h1>
         <div class="relative overflow-hidden px-4 md:px-12">
@@ -260,7 +267,7 @@ import Footer from "../components/Footer.astro";
               >
                 <div
                   class="absolute inset-0 bg-cover bg-center"
-                  style="background-image: url('/VIGILANCIA.jpg')"
+                  style="background-image: url('/VIGILANCIA.jpg'); object-position: 20% center;"
                 >
                   <!-- Color overlay without blur -->
                   <div class="absolute inset-0" style="background: rgba(0, 27, 81, 0.3);"></div>
@@ -279,7 +286,7 @@ import Footer from "../components/Footer.astro";
                   class="absolute h-full w-0 left-10 top-1/2flex items-center group-hover:opacity-0 transition-opacity duration-300"
                 >
                   <h2
-                    class="text-white font-bold text-6xl rotate-90 origin-left whitespace-nowrap"
+                    class="text-white font-bold font-size-[65px] rotate-90 origin-left whitespace-nowrap"
                   >
                     VIGILANCIA FÍSICA
                   </h2>
@@ -288,13 +295,9 @@ import Footer from "../components/Footer.astro";
                 <div
                   class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-12 py-8 z-20"
                 >
-                  <h2
-                    class="text-white font-bold text-3xl mb-6 text-center break-words whitespace-normal"
-                  >
-                    VIGILANCIA FÍSICA
-                  </h2>
                   <p
-                    class="text-white text-center text-[30px] mb-8 break-words whitespace-normal"
+                    class="text-center break-words whitespace-normal mb-8"
+                    style="width: 459px; height: 202px; top: 259px; left: 29px; font-weight: 400; font-size: 29px; line-height: 94%; letter-spacing: 0%; text-align: center; color: #D9D9D9;"
                   >
                     Protegemos instalaciones y hogares con servicios de
                     vigilancia física. Nuestro equipo capacitado ofrece
@@ -303,7 +306,8 @@ import Footer from "../components/Footer.astro";
                   </p>
                   <a
                     href="#contacto"
-                    class="text-white text-[30px] hover:bg-[#EE9D26] hover:text-white px-6 py-3 rounded-md font-light transition-colors border-[2px] border-[#EE9D26] select-trigger"
+                    class="text-white hover:bg-[#EE9D26] hover:text-white rounded-md font-light transition-colors border-[2px] border-[#EE9D26] select-trigger flex items-center justify-center"
+                    style="width: 205px; height: 51px; font-weight: 400; font-size: 30px; line-height: 94%; letter-spacing: 0%;"
                   >
                     Contáctanos
                   </a>
@@ -333,7 +337,7 @@ import Footer from "../components/Footer.astro";
                   class="absolute h-full w-0 left-10 top-1/2flex items-center group-hover:opacity-0 transition-opacity duration-300"
                 >
                   <h2
-                    class="text-white font-bold text-6xl rotate-90 origin-left whitespace-nowrap"
+                    class="text-white font-bold font-size-[65px] rotate-90 origin-left whitespace-nowrap"
                   >
                     ESCOLTA DE PERSONAS
                   </h2>
@@ -342,13 +346,9 @@ import Footer from "../components/Footer.astro";
                 <div
                   class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-12 py-8 z-20"
                 >
-                  <h2
-                    class="text-white font-bold text-3xl mb-6 text-center break-words whitespace-normal"
-                  >
-                    ESCOLTA DE PERSONAS
-                  </h2>
                   <p
-                    class="text-white text-center text-[30px] mb-8 break-words whitespace-normal"
+                    class="text-center break-words whitespace-normal mb-8"
+                    style="width: 459px; height: 202px; top: 259px; left: 29px; font-weight: 400; font-size: 29px; line-height: 94%; letter-spacing: 0%; text-align: center; color: #D9D9D9;"
                   >
                     Nuestros escoltas operan rutas seguras, con apoyo
                     tecnológico y reacción inmediata, minimizando cualquier
@@ -358,7 +358,8 @@ import Footer from "../components/Footer.astro";
                   </p>
                   <a
                     href="#contacto"
-                    class="text-white text-[30px] hover:bg-[#EE9D26] hover:text-white px-6 py-3 rounded-md font-light transition-colors border-[2px] border-[#EE9D26] select-trigger"
+                    class="text-white hover:bg-[#EE9D26] hover:text-white rounded-md font-light transition-colors border-[2px] border-[#EE9D26] select-trigger flex items-center justify-center"
+                    style="width: 205px; height: 51px; font-weight: 400; font-size: 30px; line-height: 94%; letter-spacing: 0%;"
                   >
                     Contáctanos
                   </a>
@@ -388,7 +389,7 @@ import Footer from "../components/Footer.astro";
                   class="absolute h-full w-full left-10 top-1/2flex items-center group-hover:opacity-0 transition-opacity duration-300"
                 >
                   <h2
-                    class="text-white font-bold text-6xl rotate-90 origin-left ml-8 w-min"
+                    class="text-white font-bold font-size-[65px] rotate-90 origin-left ml-8 w-min mt-[-30px]"
                   >
                     ESCOLTA DE MERCANCÍAS
                   </h2>
@@ -397,13 +398,9 @@ import Footer from "../components/Footer.astro";
                 <div
                   class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-12 py-8 z-20"
                 >
-                  <h2
-                    class="text-white font-bold text-6xl rotate-90 origin-left whitespace-nowrap"
-                  >
-                    ESCOLTA DE MERCANCÍAS
-                  </h2>
                   <p
-                    class="text-white text-center text-[30px] mb-8 break-words whitespace-normal"
+                    class="text-center break-words whitespace-normal mb-8"
+                    style="width: 459px; height: 202px; top: 259px; left: 29px; font-weight: 400; font-size: 29px; line-height: 94%; letter-spacing: 0%; text-align: center; color: #D9D9D9;"
                   >
                     Nuestro servicio, respaldado por estándares de vigilancia y
                     seguridad privada, se adapta a cada entorno y nivel de
@@ -412,7 +409,8 @@ import Footer from "../components/Footer.astro";
                   </p>
                   <a
                     href="#contacto"
-                    class="text-white text-[30px] hover:bg-[#EE9D26] hover:text-white px-6 py-3 rounded-md font-light transition-colors border-[2px] border-[#EE9D26] select-trigger"
+                    class="text-white hover:bg-[#EE9D26] hover:text-white rounded-md font-light transition-colors border-[2px] border-[#EE9D26] select-trigger flex items-center justify-center"
+                    style="width: 205px; height: 51px; font-weight: 400; font-size: 30px; line-height: 94%; letter-spacing: 0%;"
                   >
                     Contáctanos
                   </a>
@@ -448,7 +446,7 @@ import Footer from "../components/Footer.astro";
                   class="absolute h-full w-0 left-10 top-1/2fflex items-center group-hover:opacity-0 transition-opacity duration-300"
                 >
                   <h2
-                    class="text-white font-bold text-6xl rotate-90 origin-left whitespace-nowrap ml-10"
+                    class="text-white font-bold font-size-[65px] rotate-90 origin-left whitespace-nowrap ml-10 mt-[-30px]"
                   >
                     MONITOREO DE <br/>ALARMAS
                   </h2>
@@ -457,13 +455,9 @@ import Footer from "../components/Footer.astro";
                 <div
                   class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-12 py-8 z-20"
                 >
-                  <h2
-                    class="text-white font-bold text-3xl mb-6 text-center break-words whitespace-normal"
-                  >
-                    MONITOREO DE ALARMAS
-                  </h2>
                   <p
-                    class="text-white text-center text-[30px] mb-8 break-words whitespace-normal"
+                    class="text-center break-words whitespace-normal mb-8"
+                    style="width: 459px; height: 202px; top: 259px; left: 29px; font-weight: 400; font-size: 29px; line-height: 94%; letter-spacing: 0%; text-align: center; color: #D9D9D9;"
                   >
                     Detecta y responde a eventos en tiempo real. Las alarmas
                     conectadas a nuestra central activan patrullas de reacción
@@ -472,7 +466,8 @@ import Footer from "../components/Footer.astro";
                   </p>
                   <a
                     href="#contacto"
-                    class="text-white text-[30px] hover:bg-[#EE9D26] hover:text-white px-6 py-3 rounded-md font-light transition-colors border-[2px] border-[#EE9D26] select-trigger"
+                    class="text-white hover:bg-[#EE9D26] hover:text-white rounded-md font-light transition-colors border-[2px] border-[#EE9D26] select-trigger flex items-center justify-center"
+                    style="width: 205px; height: 51px; font-weight: 400; font-size: 30px; line-height: 94%; letter-spacing: 0%;"
                   >
                     Contáctanos
                   </a>
@@ -502,7 +497,7 @@ import Footer from "../components/Footer.astro";
                   class="absolute h-full w-full left-10 top-1/2flex items-center group-hover:opacity-0 transition-opacity duration-300"
                 >
                   <h2
-                    class="text-white font-bold text-6xl rotate-90 origin-left whitespace-nowrap ml-10"
+                    class="text-white font-bold font-size-[65px] rotate-90 origin-left whitespace-nowrap ml-10 mt-[-30px]"
                   >
                     INSTALACIÓN DE <br/>SISTEMAS DE SEGURIDAD
                   </h2>
@@ -511,13 +506,9 @@ import Footer from "../components/Footer.astro";
                 <div
                   class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-12 py-8 z-20"
                 >
-                  <h2
-                    class="text-white font-bold text-3xl mb-6 text-center break-words whitespace-normal"
-                  >
-                    INSTALACIÓN DE SISTEMAS DE SEGURIDAD
-                  </h2>
                   <p
-                    class="text-white text-center text-[30px] mb-8 break-words whitespace-normal"
+                    class="text-center break-words whitespace-normal mb-8"
+                    style="width: 459px; height: 202px; top: 259px; left: 29px; font-weight: 400; font-size: 29px; line-height: 94%; letter-spacing: 0%; text-align: center; color: #D9D9D9;"
                   >
                     Somos expertos en la instalación y mantenimiento de sistemas
                     electrónicos como CCTV, controles biométricos y alarmas
@@ -526,7 +517,8 @@ import Footer from "../components/Footer.astro";
                   </p>
                   <a
                     href="#contacto"
-                    class="text-white text-[30px] hover:bg-[#EE9D26] hover:text-white px-6 py-3 rounded-md font-light transition-colors border-[2px] border-[#EE9D26] select-trigger"
+                    class="text-white hover:bg-[#EE9D26] hover:text-white rounded-md font-light transition-colors border-[2px] border-[#EE9D26] select-trigger flex items-center justify-center"
+                    style="width: 205px; height: 51px; font-weight: 400; font-size: 30px; line-height: 94%; letter-spacing: 0%;"
                   >
                     Contáctanos
                   </a>
@@ -556,7 +548,7 @@ import Footer from "../components/Footer.astro";
                   class="absolute h-full w-full left-10 top-1/2flex items-center group-hover:opacity-0 transition-opacity duration-300"
                 >
                   <h2
-                     class="text-white font-bold text-6xl rotate-90 origin-left whitespace-nowrap ml-10"
+                     class="text-white font-bold font-size-[65px] rotate-90 origin-left whitespace-nowrap ml-10 mt-[-30px]"
                   >
                     OPERACIÓN DE MEDIOS <br/> TECNOLÓGICOS
                   </h2>
@@ -565,13 +557,9 @@ import Footer from "../components/Footer.astro";
                 <div
                   class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-12 py-8 z-20"
                 >
-                  <h2
-                    class="text-white font-bold text-3xl mb-6 text-center break-words whitespace-normal"
-                  >
-                    OPERACIÓN DE MEDIOS TECNOLÓGICOS
-                  </h2>
                   <p
-                    class="text-white text-center text-[30px] mb-8 break-words whitespace-normal"
+                    class="text-center break-words whitespace-normal mb-8"
+                    style="width: 459px; height: 202px; top: 259px; left: 29px; font-weight: 400; font-size: 29px; line-height: 94%; letter-spacing: 0%; text-align: center; color: #D9D9D9;"
                   >
                     Gestionamos centros de control con tecnología de vanguardia
                     que integran monitoreo de cámaras, acceso remoto y sistemas
@@ -580,7 +568,8 @@ import Footer from "../components/Footer.astro";
                   </p>
                   <a
                     href="#contacto"
-                    class="text-white text-[30px] hover:bg-[#EE9D26] hover:text-white px-6 py-3 rounded-md font-light transition-colors border-[2px] border-[#EE9D26] select-trigger"
+                    class="text-white hover:bg-[#EE9D26] hover:text-white rounded-md font-light transition-colors border-[2px] border-[#EE9D26] select-trigger flex items-center justify-center"
+                    style="width: 205px; height: 51px; font-weight: 400; font-size: 30px; line-height: 94%; letter-spacing: 0%;"
                   >
                     Contáctanos
                   </a>
@@ -590,6 +579,13 @@ import Footer from "../components/Footer.astro";
           </div>
 
           <!-- Botones de navegación con estilos similares a los originales -->
+          <button
+            class="absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full flex items-center justify-center shadow-xl z-10 hover:shadow-2xl transition-shadow opacity-0"
+            style="width: 62px; height: 62px; left: 60px;"
+            id="btn-izquierda"
+          >
+            <img src="/Arrow.svg" alt="Anterior" class="w-[20px] h-[40px] rotate-180" />
+          </button>
           <button
             class="absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full flex items-center justify-center shadow-xl z-10 hover:shadow-2xl transition-shadow"
             style="width: 62px; height: 62px;"
@@ -601,53 +597,60 @@ import Footer from "../components/Footer.astro";
       </div>
     </section>
 
-    <section class="py-16 px-8 md:px-16 bg-white">
-      <h1 class="text-4xl font-bold text-center mb-12 text-primary">
+    <section class="py-16 px-8 md:px-16 bg-white" id="equipo">
+      <h1 class="text-[50px] font-bold text-center mb-12 text-primary">
         Nuestro Equipo
       </h1>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[1400px] mx-auto">
         <!-- Tarjeta 1 -->
-        <div class="relative h-[400px] overflow-hidden group" id="flip-card-1">
+        <div class="relative h-[424px] overflow-hidden group rounded-[10px]" id="flip-card-1">
           <div
-            class="w-full h-full transition-transform duration-700 transform-style-preserve-3d cursor-pointer"
+            class="w-full h-full transition-transform duration-700 transform-style-preserve-3d cursor-pointer rounded-[10px]"
           >
             <!-- Frente de la tarjeta -->
-            <div class="absolute inset-0 backface-hidden">
+            <div class="absolute inset-0 backface-hidden rounded-[10px]">
               <div
-                class="absolute inset-0 bg-cover bg-center"
-                style="background-image: url('/VIGILANCIA.jpg');"
+                class="absolute inset-0 bg-cover bg-center rounded-[10px]"
+                style="width: 100%; height: 424px; background-image: url('/Personal operativo.jpg');"
               >
                 <div
-                  class="absolute inset-0 bg-gradient-to-b from-transparent to-[rgba(0,27,81,0.7)] transition-all duration-300"
+                  class="absolute inset-0 transition-all duration-300 rounded-[10px]"
+                  style="background: linear-gradient(180deg, rgba(0, 27, 81, 0) 0%, rgba(0, 27, 81, 0.7) 100%);"
                 >
                 </div>
               </div>
-              <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
-                <h2 class="text-3xl font-bold text-center">
-                  Perfil del Personal Operativo
-                </h2>
+              <div class="absolute inset-0 flex items-center justify-center">
+                  <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                    <h2 class="text-[35px] font-bold text-center text-white whitespace-nowrap">
+                      Responsabilidad Social
+                    </h2>
+                  </div>
               </div>
             </div>
             <!-- Reverso de la tarjeta -->
-            <div class="absolute inset-0 backface-hidden rotate-y-180">
+            <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-[10px]">
               <div
-                class="absolute inset-0 bg-cover bg-center"
-                style="background-image: url('/VIGILANCIA.jpg');"
+                class="absolute inset-0 bg-cover bg-center rounded-[10px]"
+                style="width: 100%; height: 424px; background-image: url('/Personal operativo.jpg');"
               >
-                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                <div class="absolute inset-0 rounded-[10px]" style="background: #2E2E2ECC;"></div>
               </div>
               <div class="absolute inset-0 flex items-center justify-center">
                 <div class="text-center px-8">
-                  <h2 class="text-3xl font-bold text-white mb-4">
-                    Perfil del Personal Operativo
-                  </h2>
-                  <p class="text-white text-lg">
-                    Nuestro equipo operativo está altamente capacitado,
-                    cumpliendo con estrictos estándares de selección y
-                    entrenamiento. Cada vigilante es evaluado en aptitudes
-                    físicas, psicológicas y técnicas, asegurando un servicio de
-                    calidad.
-                  </p>
+                  <div class="absolute inset-x-0" style="height: 33px; top: 103px;">
+                    <h2 class="text-[35px] font-bold text-center text-white whitespace-nowrap">
+                      Perfil del Personal Operativo
+                    </h2>
+                  </div>
+                  <div class="absolute" style="width: 512px; height: 161px; top: 161px; left: 61px;">
+                    <p class="text-white text-center" style="font-weight: 400; font-size: 28px; line-height: 94%; letter-spacing: 0%;">
+                      Nuestro equipo operativo está altamente capacitado,
+                      cumpliendo con estrictos estándares de selección y
+                      entrenamiento. Cada vigilante es evaluado en aptitudes
+                      físicas, psicológicas y técnicas, asegurando un servicio de
+                      calidad.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -655,46 +658,51 @@ import Footer from "../components/Footer.astro";
         </div>
 
         <!-- Tarjeta 2 -->
-        <div class="relative h-[400px] overflow-hidden group" id="flip-card-2">
+        <div class="relative h-[424px] overflow-hidden group rounded-[10px]" id="flip-card-2">
           <div
-            class="w-full h-full transition-transform duration-700 transform-style-preserve-3d cursor-pointer"
+            class="w-full h-full transition-transform duration-700 transform-style-preserve-3d cursor-pointer rounded-[10px]"
           >
             <!-- Frente de la tarjeta -->
-            <div class="absolute inset-0 backface-hidden">
+            <div class="absolute inset-0 backface-hidden rounded-[10px]">
               <div
-                class="absolute inset-0 bg-cover bg-center"
-                style="background-image: url('/Responsabilidad Social.jpg');"
+                class="absolute inset-0 bg-cover bg-center rounded-[10px]"
+                style="width: 100%; height: 424px; background-image: url('/Responsabilidad Social.jpg');"
               >
                 <div
-                  class="absolute inset-0 bg-gradient-to-b from-transparent to-[rgba(0,27,81,0.7)] transition-all duration-300"
+                  class="absolute inset-0 transition-all duration-300 rounded-[10px]"
+                  style="background: linear-gradient(180deg, rgba(0, 27, 81, 0) 0%, rgba(0, 27, 81, 0.7) 100%);"
                 >
                 </div>
               </div>
               <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
-                <h2 class="text-3xl font-bold text-center">
+                <h2 class="text-[35px] font-bold text-center text-white whitespace-nowrap">
                   Responsabilidad Social
                 </h2>
               </div>
             </div>
             <!-- Reverso de la tarjeta -->
-            <div class="absolute inset-0 backface-hidden rotate-y-180">
+            <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-[10px]">
               <div
-                class="absolute inset-0 bg-cover bg-center"
-                style="background-image: url('/Responsabilidad Social.jpg');"
+                class="absolute inset-0 bg-cover bg-center rounded-[10px]"
+                style="width: 100%; height: 424px; background-image: url('/Responsabilidad Social.jpg');"
               >
-                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                <div class="absolute inset-0 rounded-[10px]" style="background: #2E2E2ECC;"></div>
               </div>
               <div class="absolute inset-0 flex items-center justify-center">
                 <div class="text-center px-8">
-                  <h2 class="text-2xl font-bold text-white mb-4">
-                    Responsabilidad Social
-                  </h2>
-                  <p class="text-white text-lg">
-                    A través de herramientas tecnológicas nos apoyamos con
-                    recolección de información digital, disminuyendo el uso de
-                    papel, impactando positivamente el medio ambiente, bajando
-                    la huella carbono de la compañía.
-                  </p>
+                  <div class="absolute inset-x-0" style="height: 33px; top: 103px;">
+                    <h2 class="text-[35px] font-bold text-center text-white whitespace-nowrap">
+                      Responsabilidad Social
+                    </h2>
+                  </div>
+                  <div class="absolute" style="width: 512px; height: 161px; top: 161px; left: 61px;">
+                    <p class="text-white text-center" style="font-weight: 400; font-size: 28px; line-height: 94%; letter-spacing: 0%;">
+                      A través de herramientas tecnológicas nos apoyamos con
+                      recolección de información digital, disminuyendo el uso de
+                      papel, impactando positivamente el medio ambiente, bajando
+                      la huella carbono de la compañía.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -702,44 +710,49 @@ import Footer from "../components/Footer.astro";
         </div>
 
         <!-- Tarjeta 3 -->
-        <div class="relative h-[400px] overflow-hidden group" id="flip-card-3">
+        <div class="relative h-[424px] overflow-hidden group rounded-[10px]" id="flip-card-3">
           <div
-            class="w-full h-full transition-transform duration-700 transform-style-preserve-3d cursor-pointer"
+            class="w-full h-full transition-transform duration-700 transform-style-preserve-3d cursor-pointer rounded-[10px]"
           >
             <!-- Frente de la tarjeta -->
-            <div class="absolute inset-0 backface-hidden">
+            <div class="absolute inset-0 backface-hidden rounded-[10px]">
               <div
-                class="absolute inset-0 bg-cover bg-center"
-                style="background-image: url('/capacitacion y seleccion.jpg');"
+                class="absolute inset-0 bg-cover bg-center rounded-[10px]"
+                style="width: 100%; height: 424px; background-image: url('/capacitacion y seleccion.jpg');"
               >
                 <div
-                  class="absolute inset-0 bg-gradient-to-b from-transparent to-[rgba(0,27,81,0.7)] transition-all duration-300"
+                  class="absolute inset-0 transition-all duration-300 rounded-[10px]"
+                  style="background: linear-gradient(180deg, rgba(0, 27, 81, 0) 0%, rgba(0, 27, 81, 0.7) 100%);"
                 >
                 </div>
               </div>
               <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
-                <h2 class="text-3xl font-bold text-center">
+                <h2 class="text-[35px] font-bold text-center text-white whitespace-nowrap">
                   Capacitación y Selección
                 </h2>
               </div>
             </div>
             <!-- Reverso de la tarjeta -->
-            <div class="absolute inset-0 backface-hidden rotate-y-180">
+            <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-[10px]">
               <div
-                class="absolute inset-0 bg-cover bg-center"
-                style="background-image: url('/capacitacion y seleccion.jpg');"
+                class="absolute inset-0 bg-cover bg-center rounded-[10px]"
+                style="width: 100%; height: 424px; background-image: url('/capacitacion y seleccion.jpg');"
               >
-                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                <div class="absolute inset-0 rounded-[10px]" style="background: #2E2E2ECC;"></div>
               </div>
               <div class="absolute inset-0 flex items-center justify-center">
                 <div class="text-center px-8">
-                  <h2 class="text-2xl font-bold text-white mb-4">
-                    Capacitación y Selección
-                  </h2>
-                  <p class="text-white text-lg">
-                    VIASERVIN comprometido con la calidad y el desarrollo
-                    profesional continuo.
-                  </p>
+                  <div class="absolute inset-x-0" style="height: 33px; top: 103px;">
+                    <h2 class="text-[35px] font-bold text-center text-white whitespace-nowrap">
+                      Capacitación y Selección
+                    </h2>
+                  </div>
+                  <div class="absolute" style="width: 512px; height: 161px; top: 161px; left: 61px;">
+                    <p class="text-white text-center" style="font-weight: 400; font-size: 28px; line-height: 94%; letter-spacing: 0%;">
+                      Viaservin comprometido con la calidad y el desarrollo
+                      profesional continuo.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -747,45 +760,50 @@ import Footer from "../components/Footer.astro";
         </div>
 
         <!-- Tarjeta 4 -->
-        <div class="relative h-[400px] overflow-hidden group" id="flip-card-4">
+        <div class="relative h-[424px] overflow-hidden group rounded-[10px]" id="flip-card-4">
           <div
-            class="w-full h-full transition-transform duration-700 transform-style-preserve-3d cursor-pointer"
+            class="w-full h-full transition-transform duration-700 transform-style-preserve-3d cursor-pointer rounded-[10px]"
           >
             <!-- Frente de la tarjeta -->
-            <div class="absolute inset-0 backface-hidden">
+            <div class="absolute inset-0 backface-hidden rounded-[10px]">
               <div
-                class="absolute inset-0 bg-cover bg-center"
-                style="background-image: url('/Programas de Bienestar Social.jpg');"
+                class="absolute inset-0 bg-cover bg-center rounded-[10px]"
+                style="width: 100%; height: 424px; background-image: url('/Programas de Bienestar Social.jpg');"
               >
                 <div
-                  class="absolute inset-0 bg-gradient-to-b from-transparent to-[rgba(0,27,81,0.7)] transition-all duration-300"
+                  class="absolute inset-0 transition-all duration-300 rounded-[10px]"
+                  style="background: linear-gradient(180deg, rgba(0, 27, 81, 0) 0%, rgba(0, 27, 81, 0.7) 100%);"
                 >
                 </div>
               </div>
               <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
-                <h2 class="text-3xl font-bold text-center">
+                <h2 class="text-[35px] font-bold text-center text-white whitespace-nowrap">
                   Programas de Bienestar Social
                 </h2>
               </div>
             </div>
             <!-- Reverso de la tarjeta -->
-            <div class="absolute inset-0 backface-hidden rotate-y-180">
+            <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-[10px]">
               <div
-                class="absolute inset-0 bg-cover bg-center"
-                style="background-image: url('/Programas de Bienestar Social.jpg');"
+                class="absolute inset-0 bg-cover bg-center rounded-[10px]"
+                style="width: 100%; height: 424px; background-image: url('/Programas de Bienestar Social.jpg');"
               >
-                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                <div class="absolute inset-0 rounded-[10px]" style="background: #2E2E2ECC;"></div>
               </div>
               <div class="absolute inset-0 flex items-center justify-center">
                 <div class="text-center px-8">
-                  <h2 class="text-2xl font-bold text-white mb-4">
-                    Programas de Bienestar Social
-                  </h2>
-                  <p class="text-white text-lg">
-                    Apoyamos a nuestros colaboradores y sus familias con
-                    iniciativas sociales, convenios de crédito y actividades
-                    recreativas.
-                  </p>
+                  <div class="absolute inset-x-0" style="height: 33px; top: 103px;">
+                    <h2 class="text-[35px] font-bold text-center text-white whitespace-nowrap">
+                      Programas de Bienestar Social
+                    </h2>
+                  </div>
+                  <div class="absolute" style="width: 512px; height: 161px; top: 161px; left: 61px;">
+                    <p class="text-white text-center" style="font-weight: 400; font-size: 28px; line-height: 94%; letter-spacing: 0%;">
+                      Apoyamos a nuestros colaboradores y sus familias con
+                      iniciativas sociales, convenios de crédito y actividades
+                      recreativas.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -794,47 +812,52 @@ import Footer from "../components/Footer.astro";
 
         <!-- Tarjeta 5 -->
         <div
-          class="relative h-[400px] overflow-hidden group md:col-span-2 md:w-1/2 md:mx-auto"
+          class="relative h-[424px] overflow-hidden group md:col-span-2 md:w-1/2 md:mx-auto rounded-[10px]"
           id="flip-card-5"
         >
           <div
-            class="w-full h-full transition-transform duration-700 transform-style-preserve-3d cursor-pointer"
+            class="w-full h-full transition-transform duration-700 transform-style-preserve-3d cursor-pointer rounded-[10px]"
           >
             <!-- Frente de la tarjeta -->
-            <div class="absolute inset-0 backface-hidden">
+            <div class="absolute inset-0 backface-hidden rounded-[10px]">
               <div
-                class="absolute inset-0 bg-cover bg-center"
-                style="background-image: url('/DOTACION Y SUPERVISION.jpg');"
+                class="absolute inset-0 bg-cover bg-center rounded-[10px]"
+                style="width: 100%; height: 424px; background-image: url('/DOTACION Y SUPERVISION.jpg');"
               >
                 <div
-                  class="absolute inset-0 bg-gradient-to-b from-transparent to-[rgba(0,27,81,0.7)] transition-all duration-300"
+                  class="absolute inset-0 transition-all duration-300 rounded-[10px]"
+                  style="background: linear-gradient(180deg, rgba(0, 27, 81, 0) 0%, rgba(0, 27, 81, 0.7) 100%);"
                 >
                 </div>
               </div>
               <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
-                <h2 class="text-3xl font-bold text-center">
+                <h2 class="text-[35px] font-bold text-center text-white whitespace-nowrap">
                   Dotación y Supervisión
                 </h2>
               </div>
             </div>
             <!-- Reverso de la tarjeta -->
-            <div class="absolute inset-0 backface-hidden rotate-y-180">
+            <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-[10px]">
               <div
-                class="absolute inset-0 bg-cover bg-center"
-                style="background-image: url('/DOTACION Y SUPERVISION.jpg');"
+                class="absolute inset-0 bg-cover bg-center rounded-[10px]"
+                style="width: 100%; height: 424px; background-image: url('/DOTACION Y SUPERVISION.jpg');"
               >
-                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                <div class="absolute inset-0 rounded-[10px]" style="background: #2E2E2ECC;"></div>
               </div>
               <div class="absolute inset-0 flex items-center justify-center">
                 <div class="text-center px-8">
-                  <h2 class="text-2xl font-bold text-white mb-4">
-                    Dotación y Supervisión
-                  </h2>
-                  <p class="text-white text-lg">
-                    Cada puesto de trabajo cuenta con dotación de vanguardia y
-                    adecuada a las necesidades del cliente. Aseguramos que los
-                    estándares de calidad se cumplan en todo momento.
-                  </p>
+                  <div class="absolute inset-x-0" style="height: 33px; top: 103px;">
+                    <h2 class="text-[35px] font-bold text-center text-white whitespace-nowrap">
+                      Dotación y Supervisión
+                    </h2>
+                  </div>
+                  <div class="absolute" style="width: 512px; height: 161px; top: 161px; left: 61px;">
+                    <p class="text-white text-center" style="font-weight: 400; font-size: 28px; line-height: 94%; letter-spacing: 0%;">
+                      Cada puesto de trabajo cuenta con dotación de vanguardia y
+                      adecuada a las necesidades del cliente. Aseguramos que los
+                      estándares de calidad se cumplan en todo momento.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -842,15 +865,16 @@ import Footer from "../components/Footer.astro";
         </div>
       </div>
     </section>
-    <section class="py-16 px-8 bg-primary text-white" id="clientes">
+    
+    <section class="py-16 px-8 text-white" id="clientes" style="background: linear-gradient(97.5deg, #001B51 16.76%, #003DB7 271.25%);">
       <div class="max-w-6xl mx-auto">
-        <h1 class="text-4xl font-bold text-center mb-6">
+        <h1 class="text-[50px] font-bold text-center mb-6">
           Algunos de nuestros Clientes
         </h1>
-        <p class="text-center text-lg mb-12 max-w-3xl mx-auto">
+        <p class="text-center text-lg mb-12 max-w-3xl mx-auto text-[28px]">
           Nuestra experiencia y compromiso nos posicionan como el aliado ideal
           para proteger su negocio.<br />
-          <strong class="text-orange-300"
+          <strong class="text-white"
             >Empresas que confían en nosotros:</strong
           >
         </p>
@@ -865,48 +889,52 @@ import Footer from "../components/Footer.astro";
               class="w-full flex-shrink-0 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 justify-items-center"
             >
               <div
-                class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-40 h-40"
+                class="bg-white rounded-2xl shadow-lg w-40 h-40 overflow-hidden m-0 p-0"
+                style="margin: 0; padding: 0;"
               >
                 <img
                   src="/COUNTRY CLUB.jpg"
                   alt="Country Club"
-                  class="max-w-full max-h-full object-contain"
+                  class="w-full h-full object-cover m-0 p-0"
+                  style="display: block; margin: 0; padding: 0; width: 100%; height: 100%; object-fit: cover;"
                 />
               </div>
               <div
-                class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-40 h-40"
+                class="bg-white rounded-2xl shadow-lg w-40 h-40 overflow-hidden m-0 p-0"
+                style="margin: 0; padding: 0;"
               >
                 <img
                   src="/atlantic_qi_logo.png"
                   alt="Atlantic Qi"
-                  class="max-w-full max-h-full object-contain"
+                  class="w-full h-full object-cover m-0 p-0"
+                  style="display: block; margin: 0; padding: 0; width: 100%; height: 100%; object-fit: cover;"
                 />
               </div>
               <div
-                class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-40 h-40"
+                class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-40 h-40 overflow-hidden"
               >
                 <img
                   src="/CLINICA PORTO AZUL.png"
                   alt="Clínica Porto Azul"
-                  class="max-w-full max-h-full object-contain"
+                  class="w-full h-full object-cover scale-150"
                 />
               </div>
               <div
-                class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-40 h-40"
+                class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-40 h-40 overflow-hidden"
               >
                 <img
                   src="/AUTOLITORAL.png"
                   alt="Autolitoral"
-                  class="max-w-full max-h-full object-contain"
+                  class="w-full h-full object-contain"
                 />
               </div>
               <div
-                class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-40 h-40"
+                class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-40 h-40 overflow-hidden"
               >
                 <img
                   src="/CECAC.jpg"
                   alt="CECAC"
-                  class="max-w-full max-h-full object-contain"
+                  class="w-full h-full object-cover"
                 />
               </div>
             </div>
@@ -934,21 +962,25 @@ import Footer from "../components/Footer.astro";
                 />
               </div>
               <div
-                class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-40 h-40"
+                class="bg-white rounded-2xl shadow-lg w-40 h-40 overflow-hidden m-0 p-0"
+                style="margin: 0; padding: 0;"
               >
                 <img
                   src="/ARQUITECTURA Y CONCRETO.png"
                   alt="Cliente 8"
-                  class="max-w-full max-h-full object-contain"
+                  class="w-full h-full object-cover m-0 p-0"
+                  style="display: block; margin: 0; padding: 0; width: 100%; height: 100%; object-fit: cover;"
                 />
               </div>
               <div
-                class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-40 h-40"
+                class="bg-white rounded-2xl shadow-lg w-40 h-40 overflow-hidden m-0 p-0"
+                style="margin: 0; padding: 0;"
               >
                 <img
                   src="/COMBARRANQUILLA.png"
                   alt="Cliente 9"
-                  class="max-w-full max-h-full object-contain"
+                  class="w-full h-full object-cover m-0 p-0"
+                  style="display: block; margin: 0; padding: 0; width: 100%; height: 100%; object-fit: cover;"
                 />
               </div>
               <div
@@ -1028,56 +1060,60 @@ import Footer from "../components/Footer.astro";
         </div>
       </div>
     </section>
+    
     <section class="py-16 px-8 bg-white" id="certificaciones">
       <div class="max-w-6xl mx-auto">
-        <h1 class="text-4xl font-bold text-center mb-12 text-primary">
+        <h1 class="text-[50px] font-bold text-center mb-12 text-primary">
           Certificaciones
         </h1>
-        <div class="flex flex-wrap justify-center gap-10 mb-16">
+        <div class="flex justify-center items-center gap-20 mb-16">
           <img
             src="/basc.jpg"
             alt="Certificado BASC"
             class="w-[150px] h-auto object-contain"
+            style="margin-right: -10rem;"
           />
           <img
             src="/incotec.jpg"
             alt="Certificado Icontec"
-            class="w-[200px] h-auto object-contain"
+            class="w-[300px] h-auto object-contain"
+            style="margin-left: 15.5rem;"
           />
           <img
             src="/rut.jpg"
             alt="Certificado IQNET"
-            class="w-[200px] h-auto object-contain"
+            class="w-[350px] h-auto object-contain"
           />
         </div>
 
-        <h1 class="text-4xl font-bold text-center mb-12 text-primary">
+        <h1 class="text-[50px] font-bold text-center mb-12 text-primary">
           Asociaciones
         </h1>
-        <div class="flex flex-wrap justify-center gap-10">
+        <div class="flex flex-nowrap justify-center items-center gap-16 max-w-[1600px] mx-auto">
           <img
             src="/camara de comercio.jpg"
             alt="Cámara de Comercio de Barranquilla"
-            class="w-[200px] h-auto object-contain"
+            class="w-[350px] h-auto object-contain"
           />
           <img
             src="/asosec.jpg"
             alt="Asociación Colombiana de Seguridad"
-            class="w-[200px] h-auto object-contain"
+            class="w-[350px] h-auto object-contain"
           />
           <img
             src="/amcham.jpg"
             alt="AMCHAM Colombia"
-            class="w-[200px] h-auto object-contain"
+            class="w-[300px] h-auto object-contain"
           />
           <img
             src="/ceo.jpg"
             alt="CEO Corporación Empresarial del Oriente Antioqueño"
-            class="w-[200px] h-auto object-contain"
+            class="w-[350px] h-auto object-contain"
           />
         </div>
       </div>
     </section>
+    
     <section class="py-16 px-8 relative mt-[80px] md:mt-0" id="contacto">
       <div
         class="absolute inset-0 bg-cover bg-center z-0"
@@ -1088,7 +1124,7 @@ import Footer from "../components/Footer.astro";
 
       <div class="max-w-4xl w-full mx-auto relative px-2 sm:px-4 md:px-8">
         <h1
-          class="text-4xl font-bold text-center mb-12 text-white section-title"
+          class="text-[50px] font-bold text-center mb-12 text-white section-title whitespace-nowrap"
         >
           Déjanos proteger lo que más valoras
         </h1>
@@ -1194,6 +1230,7 @@ import Footer from "../components/Footer.astro";
         </form>
       </div>
     </section>
+    
   </main>
   <Footer bgColor="bg-white" />
 </Layout>
@@ -1330,6 +1367,17 @@ import Footer from "../components/Footer.astro";
           }
         }
 
+        // Ocultar flecha derecha en el último banner
+        if (btnDerecha) {
+          if (index === 2) { // 2 es el índice del último banner (0-based)
+            btnDerecha.classList.add("opacity-0");
+            btnDerecha.classList.add("pointer-events-none");
+          } else {
+            btnDerecha.classList.remove("opacity-0");
+            btnDerecha.classList.remove("pointer-events-none");
+          }
+        }
+
         bannerActual = index;
       }
     }
@@ -1376,22 +1424,42 @@ import Footer from "../components/Footer.astro";
     // Carrusel de servicios
     const carrusel = document.getElementById("carrusel");
     const btnDerechaServicios = document.getElementById("btn-derecha");
+    const btnIzquierdaServicios = document.getElementById("btn-izquierda");
     let posicionActual = 0;
     const totalSlidesServicios = 2; // Tenemos 2 slides de servicios
 
-    if (carrusel && btnDerechaServicios) {
+    if (carrusel && btnDerechaServicios && btnIzquierdaServicios) {
+      // Inicializar estado de los botones
+      btnIzquierdaServicios.classList.add('opacity-0');
+      btnIzquierdaServicios.classList.add('pointer-events-none');
+      btnDerechaServicios.classList.remove('opacity-0');
+      btnDerechaServicios.classList.remove('pointer-events-none');
+
       btnDerechaServicios.addEventListener("click", function () {
         posicionActual = (posicionActual + 1) % totalSlidesServicios;
         actualizarPosicionCarrusel();
       });
 
+      btnIzquierdaServicios.addEventListener("click", function () {
+        posicionActual = (posicionActual - 1 + totalSlidesServicios) % totalSlidesServicios;
+        actualizarPosicionCarrusel();
+      });
+
       function actualizarPosicionCarrusel() {
-        if (!carrusel) return;
+        if (!carrusel || !btnIzquierdaServicios || !btnDerechaServicios) return;
 
         if (posicionActual === 0) {
           carrusel.style.transform = `translateX(0%)`;
+          btnIzquierdaServicios.classList.add('opacity-0');
+          btnIzquierdaServicios.classList.add('pointer-events-none');
+          btnDerechaServicios.classList.remove('opacity-0');
+          btnDerechaServicios.classList.remove('pointer-events-none');
         } else {
           carrusel.style.transform = `translateX(calc(-${posicionActual * 100}% - 3rem))`;
+          btnIzquierdaServicios.classList.remove('opacity-0');
+          btnIzquierdaServicios.classList.remove('pointer-events-none');
+          btnDerechaServicios.classList.add('opacity-0');
+          btnDerechaServicios.classList.add('pointer-events-none');
         }
       }
     }

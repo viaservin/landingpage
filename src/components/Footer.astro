@@ -10,7 +10,11 @@ const { bgColor = "bg-[#D9D9D9]" } = Astro.props;
   <div class="px-4">
     <div class="flex justify-center flex-col md:flex-row items-center mb-10">
       <div class="flex flex-col items-center mb-6 md:mb-0 w-[50%]">
-        <img src="/logo.png" alt="Viaservin Logo" class="h-16" />
+        <img 
+          src="/Logo.svg" 
+          alt="Viaservin Logo" 
+          class="w-[225px] h-[150px]" 
+        />
         <!--   <p class="text-gray-700 mt-3 max-w-md text-sm">
           Llevamos más de 40 años ofreciendo soluciones integrales de seguridad privada 
           con la mejor tecnología y personal capacitado.
@@ -27,7 +31,8 @@ const { bgColor = "bg-[#D9D9D9]" } = Astro.props;
             />
           </a>
           <a
-            href="#"
+            href="https://www.instagram.com/viaservinltda/"
+            target="_blank"
             class="hover:transform hover:scale-110 transition-transform"
           >
             <img
@@ -37,7 +42,8 @@ const { bgColor = "bg-[#D9D9D9]" } = Astro.props;
             />
           </a>
           <a
-            href="#"
+            href="https://www.linkedin.com/company/viaservin/"
+            target="_blank"
             class="hover:transform hover:scale-110 transition-transform"
           >
             <img
@@ -47,7 +53,8 @@ const { bgColor = "bg-[#D9D9D9]" } = Astro.props;
             />
           </a>
           <a
-            href="#"
+            href="https://www.youtube.com/@viaservinltda5549"
+            target="_blank"
             class="hover:transform hover:scale-110 transition-transform"
           >
             <img
@@ -71,92 +78,42 @@ const { bgColor = "bg-[#D9D9D9]" } = Astro.props;
 
       <div class="flex gap-16 justify-center w-[50%]">
         <ul class="list-none p-0 m-0 text-gray-600 text-lg whitespace-nowrap">
-          <li class="mb-2">
-            <span class="text-gray-600 hover:text-[#001B51]">Nosotros</span>
+          <li class="mb-1">
+            <a href="/#nosotros" class="text-gray-600 hover:text-[#001B51]">Nosotros</a>
           </li>
-          <li class="mb-2">
-            <span class="text-gray-600 hover:text-[#001B51]">Historia y Trayectoria</span>
+          <li class="mb-1">
+            <a href="/#nosotros" class="text-gray-600 hover:text-[#001B51]">Historia y Trayectoria</a>
           </li>
-          <li class="mb-2">
-            <a
-              href="/nosotros"
-              class="text-gray-600 hover:text-[#001B51]"
-              >Misión y Visión</a
-            >
+          <li class="mb-1">
+            <a href="/#mision-vision" class="text-gray-600 hover:text-[#001B51]">Misión y Visión</a>
           </li>
-          <li class="mb-2">
-            <span class="text-gray-600 hover:text-[#001B51]">Nuestro Equipo</span>
+          <li class="mb-1">
+            <a href="/#equipo" class="text-gray-600 hover:text-[#001B51]">Nuestro Equipo</a>
           </li>
-          <li class="mb-2">
-            <a
-              href="/politicas"
-              class="text-gray-600 hover:text-[#001B51]">Políticas</a
-            >
+          <li class="mb-1">
+            <a href="/politicas" class="text-gray-600 hover:text-[#001B51]">Políticas</a>
           </li>
-
-          <!-- <li class="mb-2">
-            <a
-              href="/servicios"
-              class="text-gray-600 underline hover:text-[#001B51]">Servicios</a
-            >
-          </li>
-          <li class="mb-2">
-            <a
-              href="/contacto"
-              class="text-gray-600 underline hover:text-[#001B51]">Contacto</a
-            >
-          </li> -->
         </ul>
 
         <ul class="list-none p-0 m-0 text-gray-600 text-lg whitespace-nowrap">
-          <li class="mb-2">
-            <span class="text-gray-600 hover:text-[#001B51]">Servicios</span>
+          <li class="mb-1">
+            <a href="/#servicios" class="text-gray-600 hover:text-[#001B51]">Servicios</a>
           </li>
-
-          <li class="mb-2">
-            <a
-              href="/servicios/escoltas"
-              class="text-gray-600 hover:text-[#001B51]"
-              >Escolta de Personas</a
-            >
+          <li class="mb-1">
+            <a href="/#clientes" class="text-gray-600 hover:text-[#001B51]">Clientes</a>
           </li>
-          <li class="mb-2">
-            <span class="text-gray-600 hover:text-[#001B51]">Clientes</span>
+          <li class="mb-1">
+            <a href="/#contacto" class="text-gray-600 hover:text-[#001B51]">Contáctanos</a>
           </li>
-          <li class="mb-2">
-            <span class="text-gray-600 hover:text-[#001B51]">Contactanos</span>
-          </li>
-
-          <!-- <li class="mb-2">
-            <a
-              href="/servicios/vigilancia"
-              class="text-gray-600 underline hover:text-[#001B51]"
-              >Vigilancia Física</a
-            >
-          </li>
-          <li class="mb-2">
-            <a
-              href="/servicios/escoltas"
-              class="text-gray-600 underline hover:text-[#001B51]"
-              >Escolta de Personas</a
-            >
-          </li>
-          <li class="mb-2">
-            <a
-              href="/servicios/alarmas"
-              class="text-gray-600 underline hover:text-[#001B51]"
-              >Monitoreo de Alarmas</a
-            >
-          </li> -->
         </ul>
 
         <ul class="list-none p-0 m-0 text-gray-600 text-lg">
-          <li class="mb-3">
+          <li class="mb-2">
             <strong class="text-[#001B51] text-xl">Contacto</strong>
           </li>
-          <li class="mb-2">informacion@viaservin.com</li>
-          <li class="mb-2">(+57) 310 223 2918</li>
-          <li class="mb-2">Barranquilla, Colombia</li>
+          <li class="mb-1">informacion@viaservin.com</li>
+          <li class="mb-1">(+57) 310 223 2918</li>
+          <li class="mb-1">Barranquilla, Colombia</li>
         </ul>
       </div>
     </div>
