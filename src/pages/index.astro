@@ -17,11 +17,12 @@ import Footer from "../components/Footer.astro";
         class="w-full h-full relative overflow-hidden bg-white"
         id="banner-carousel"
       >
+      <!-- Banners -->
         <div class="flex w-full h-full transition-transform duration-1000">
           <!-- Banner 1 -->
           <div class="w-full h-full flex-shrink-0 relative group">
             <img
-              src="/banner.jpg"
+              src="/images/banners/BANNER.jpg"
               alt="Banner principal 1"
               class="w-full h-full object-cover"
             />
@@ -58,7 +59,7 @@ import Footer from "../components/Footer.astro";
           <!-- Banner 2 -->
           <div class="w-full h-full flex-shrink-0 relative group">
             <img
-              src="/banner2.jpg"
+              src="/images/banners/BANNER2.jpg"
               alt="Banner principal 2"
               class="w-full h-full object-cover"
             />
@@ -97,7 +98,7 @@ import Footer from "../components/Footer.astro";
           <!-- Banner 3 -->
           <div class="w-full h-full flex-shrink-0 relative group">
             <img
-              src="/banner3.jpg"
+              src="/images/banners/BANNER3.jpg"
               alt="Banner principal 3"
               class="w-full h-full object-cover"
             />
@@ -156,13 +157,13 @@ import Footer from "../components/Footer.astro";
         class="absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full flex items-center justify-center shadow-xl z-10 hover:shadow-2xl transition-shadow opacity-0"
         style="width: 62px; height: 62px; left: 14px;"
         id="banner-btn-izquierda">
-        <img src="/Arrow.svg" alt="Anterior" class="w-[20px] h-[40px] rotate-180" />
+        <img src="/images/vectors/ARROW.svg" alt="Anterior" class="w-[20px] h-[40px] rotate-180" />
       </button>
       <button
         class="absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full flex items-center justify-center shadow-xl z-10 hover:shadow-2xl transition-shadow"
         style="width: 62px; height: 62px;"
         id="banner-btn-derecha">
-        <img src="/Arrow.svg" alt="Siguiente" class="w-[20px] h-[40px]" />
+        <img src="/images/vectors/ARROW.svg" alt="Siguiente" class="w-[20px] h-[40px]" />
       </button>
     </section>
 
@@ -186,7 +187,7 @@ import Footer from "../components/Footer.astro";
       <div class="w-full overflow-hidden">
         <div class="relative">
           <img
-            src="/Nosotros.jpg"
+            src="/images/team/NOSOTROS.jpg"
             alt="Banner nosotros"
             class="w-full object-cover shadow-lg"
             style="height: 400px; object-position: center 25%;"
@@ -198,20 +199,22 @@ import Footer from "../components/Footer.astro";
 
     <!-- Seccion Historia, trayectoria, mision y vision -->
 
-    <section class="pb-[50px] px-8 md:px-16">
-      <h1 class="text-[50px] font-bold text-center mb-12 text-primary">
-        Historia y trayectoria
-      </h1>
-      <p
-        style="width: 1665px; height: 156px; margin: 0 200px 6px 70px; font-weight: 400; font-size: 28px; line-height: 130%; letter-spacing: 0%; text-align: justify; color: #878787;"
-      >
-        Fundada en 1981, en Barranquilla, Viaservin ha sido pionera en el sector
-        de seguridad privada en la región. Fuimos la primera empresa de
-        vigilancia certificada por ICONTEC en la Costa Atlántica. A lo largo de
-        los años, hemos innovado constantemente, incorporando tecnología
-        avanzada y expandiendo nuestros servicios a siete ciudades principales,
-        consolidando nuestra reputación como un referente confiable.
-      </p>
+    <section class="pb-[50px] px-8 md:px-16" id="historia">
+      <div class="pt-[100px]">
+        <h1 class="text-[50px] font-bold text-center mb-12 text-primary">
+          Historia y trayectoria
+        </h1>
+        <p
+          style="width: 1665px; height: 156px; margin: 0 200px 6px 70px; font-weight: 400; font-size: 28px; line-height: 130%; letter-spacing: 0%; text-align: justify; color: #878787;"
+        >
+          Fundada en 1981, en Barranquilla, Viaservin ha sido pionera en el sector
+          de seguridad privada en la región. Fuimos la primera empresa de
+          vigilancia certificada por ICONTEC en la Costa Atlántica. A lo largo de
+          los años, hemos innovado constantemente, incorporando tecnología
+          avanzada y expandiendo nuestros servicios a siete ciudades principales,
+          consolidando nuestra reputación como un referente confiable.
+        </p>
+      </div>
     </section>
     <hr class="max-w-[1014px] mx-auto px-8 md:px-16 -mt-[50px]" />
 
@@ -226,7 +229,7 @@ import Footer from "../components/Footer.astro";
           </h1>
           <p
             class="mb-12 leading-[130%] text-[28px] text-[#878787] text-justify font-normal"
-            style="font-weight: 400; line-height: 130%; letter-spacing: 0%; margin-left: -120px;"
+            style="font-weight: 400; line-height: 130%; letter-spacing: 0%; margin-left: -100px;"
           >
             Brindamos soluciones de seguridad y vigilancia privada en los
             diferentes sectores de la economía a nivel nacional, contribuimos a
@@ -251,7 +254,7 @@ import Footer from "../components/Footer.astro";
       </div>
     </section>
 
-    <section class="py-16 px-8 md:px-16 bg-primary" id="servicios">
+    <section class="py-16 px-8 md:px-12" id="servicios" style="background: linear-gradient(103.74deg, #001B51 53.95%, #003DB7 201.51%);">
       <div class="text-[50px] mx-auto">
         <h1 class="text-center mb-6 text-white" style="font-weight: 700; font-size: 50px; line-height: 94%; letter-spacing: 0%;">
           Servicios
@@ -267,7 +270,7 @@ import Footer from "../components/Footer.astro";
               >
                 <div
                   class="absolute inset-0 bg-cover bg-center"
-                  style="background-image: url('/VIGILANCIA.jpg'); object-position: 20% center;"
+                  style="background-image: url('/images/services/VIGILANCIA.jpg'); object-position: 20% center;"
                 >
                   <!-- Color overlay without blur -->
                   <div class="absolute inset-0" style="background: rgba(0, 27, 81, 0.3);"></div>
@@ -283,14 +286,14 @@ import Footer from "../components/Footer.astro";
                 >
                 </div>
                 <div
-                  class="absolute h-full w-0 left-10 top-1/2flex items-center group-hover:opacity-0 transition-opacity duration-300"
+                class="absolute h-full left-10 top-1/2flex items-center group-hover:opacity-0 transition-opacity duration-300"
+              >
+                <h2
+                  class="text-white font-bold font-size-[65px] rotate-90 origin-left whitespace-nowrap"
                 >
-                  <h2
-                    class="text-white font-bold font-size-[65px] rotate-90 origin-left whitespace-nowrap"
-                  >
-                    VIGILANCIA FÍSICA
-                  </h2>
-                </div>
+                  VIGILANCIA FÍSICA
+                </h2>
+              </div>
                 <!-- Contenido que aparece en hover -->
                 <div
                   class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-12 py-8 z-20"
@@ -318,7 +321,7 @@ import Footer from "../components/Footer.astro";
               >
                 <div
                   class="absolute inset-0 bg-cover bg-center"
-                  style="background-image: url('/ESCOLTAS PERSONAS.jpg')"
+                  style="background-image: url('/images/services/ESCOLTAS PERSONAS.jpg')"
                 >
                   <!-- Color overlay without blur -->
                   <div class="absolute inset-0" style="background: rgba(0, 27, 81, 0.3);"></div>
@@ -334,14 +337,14 @@ import Footer from "../components/Footer.astro";
                 >
                 </div>
                 <div
-                  class="absolute h-full w-0 left-10 top-1/2flex items-center group-hover:opacity-0 transition-opacity duration-300"
+                class="absolute h-full left-10 top-1/2flex items-center group-hover:opacity-0 transition-opacity duration-300"
+              >
+                <h2
+                  class="text-white font-bold font-size-[65px] rotate-90 origin-left whitespace-nowrap"
                 >
-                  <h2
-                    class="text-white font-bold font-size-[65px] rotate-90 origin-left whitespace-nowrap"
-                  >
-                    ESCOLTA DE PERSONAS
-                  </h2>
-                </div>
+                  ESCOLTA DE PERSONAS
+                </h2>
+              </div>
                 <!-- Contenido que aparece en hover -->
                 <div
                   class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-12 py-8 z-20"
@@ -370,7 +373,7 @@ import Footer from "../components/Footer.astro";
               >
                 <div
                   class="absolute inset-0 bg-cover bg-center"
-                  style="background-image: url('/ESCOLTA DE MERCA.jpg')"
+                  style="background-image: url('/images/services/ESCOLTA DE MERCA.jpg')"
                 >
                   <!-- Color overlay without blur -->
                   <div class="absolute inset-0" style="background: rgba(0, 27, 81, 0.3);"></div>
@@ -386,7 +389,7 @@ import Footer from "../components/Footer.astro";
                 >
                 </div>
                 <div
-                  class="absolute h-full w-full left-10 top-1/2flex items-center group-hover:opacity-0 transition-opacity duration-300"
+                  class="absolute h-full left-10 top-1/2flex items-center group-hover:opacity-0 transition-opacity duration-300"
                 >
                   <h2
                     class="text-white font-bold font-size-[65px] rotate-90 origin-left ml-8 w-min mt-[-30px]"
@@ -427,7 +430,7 @@ import Footer from "../components/Footer.astro";
               >
                 <div
                   class="absolute inset-0 bg-cover bg-center"
-                  style="background-image: url('/MONITOREO DE ALARMAS.jpg')"
+                  style="background-image: url('/images/services/MONITOREO DE ALARMAS.jpg')"
                 >
                   <!-- Color overlay without blur -->
                   <div class="absolute inset-0" style="background: rgba(0, 27, 81, 0.3);"></div>
@@ -443,7 +446,7 @@ import Footer from "../components/Footer.astro";
                 >
                 </div>
                 <div
-                  class="absolute h-full w-0 left-10 top-1/2fflex items-center group-hover:opacity-0 transition-opacity duration-300"
+                  class="absolute h-full left-10 top-1/2fflex items-center group-hover:opacity-0 transition-opacity duration-300"
                 >
                   <h2
                     class="text-white font-bold font-size-[65px] rotate-90 origin-left whitespace-nowrap ml-10 mt-[-30px]"
@@ -478,7 +481,7 @@ import Footer from "../components/Footer.astro";
               >
                 <div
                   class="absolute inset-0 bg-cover bg-center"
-                  style="background-image: url('/INSTALACION DE SISTEMAS DE SEGURIDAD.jpg')"
+                  style="background-image: url('/images/services/INSTALACION DE SISTEMAS DE SEGURIDAD.jpg')"
                 >
                   <!-- Color overlay without blur -->
                   <div class="absolute inset-0" style="background: rgba(0, 27, 81, 0.3);"></div>
@@ -494,7 +497,7 @@ import Footer from "../components/Footer.astro";
                 >
                 </div>
                 <div
-                  class="absolute h-full w-full left-10 top-1/2flex items-center group-hover:opacity-0 transition-opacity duration-300"
+                  class="absolute h-full left-10 top-1/2flex items-center group-hover:opacity-0 transition-opacity duration-300"
                 >
                   <h2
                     class="text-white font-bold font-size-[65px] rotate-90 origin-left whitespace-nowrap ml-10 mt-[-30px]"
@@ -529,7 +532,7 @@ import Footer from "../components/Footer.astro";
               >
                 <div
                   class="absolute inset-0 bg-cover bg-center"
-                  style="background-image: url('/Operacion de medios tech.jpg')"
+                  style="background-image: url('/images/services/OPERACION DE MEDIOS EN TECH.jpg')"
                 >
                   <!-- Color overlay without blur -->
                   <div class="absolute inset-0" style="background: rgba(0, 27, 81, 0.3);"></div>
@@ -545,7 +548,7 @@ import Footer from "../components/Footer.astro";
                 >
                 </div>
                 <div
-                  class="absolute h-full w-full left-10 top-1/2flex items-center group-hover:opacity-0 transition-opacity duration-300"
+                  class="absolute h-full left-10 top-1/2flex items-center group-hover:opacity-0 transition-opacity duration-300"
                 >
                   <h2
                      class="text-white font-bold font-size-[65px] rotate-90 origin-left whitespace-nowrap ml-10 mt-[-30px]"
@@ -584,14 +587,14 @@ import Footer from "../components/Footer.astro";
             style="width: 62px; height: 62px; left: 60px;"
             id="btn-izquierda"
           >
-            <img src="/Arrow.svg" alt="Anterior" class="w-[20px] h-[40px] rotate-180" />
+            <img src="/images/vectors/ARROW.svg" alt="Anterior" class="w-[20px] h-[40px] rotate-180" />
           </button>
           <button
             class="absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full flex items-center justify-center shadow-xl z-10 hover:shadow-2xl transition-shadow"
             style="width: 62px; height: 62px;"
             id="btn-derecha"
           >
-            <img src="/Arrow.svg" alt="Siguiente" class="w-[20px] h-[40px]" />
+            <img src="/images/vectors/ARROW.svg" alt="Siguiente" class="w-[20px] h-[40px]" />
           </button>
         </div>
       </div>
@@ -611,7 +614,7 @@ import Footer from "../components/Footer.astro";
             <div class="absolute inset-0 backface-hidden rounded-[10px]">
               <div
                 class="absolute inset-0 bg-cover bg-center rounded-[10px]"
-                style="width: 100%; height: 424px; background-image: url('/Personal operativo.jpg');"
+                style="width: 100%; height: 424px; background-image: url('/images/team/PERSONAL OPERATIVO.jpg');"
               >
                 <div
                   class="absolute inset-0 transition-all duration-300 rounded-[10px]"
@@ -622,7 +625,7 @@ import Footer from "../components/Footer.astro";
               <div class="absolute inset-0 flex items-center justify-center">
                   <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
                     <h2 class="text-[35px] font-bold text-center text-white whitespace-nowrap">
-                      Responsabilidad Social
+                      Perfil del Personal Operativo
                     </h2>
                   </div>
               </div>
@@ -631,7 +634,7 @@ import Footer from "../components/Footer.astro";
             <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-[10px]">
               <div
                 class="absolute inset-0 bg-cover bg-center rounded-[10px]"
-                style="width: 100%; height: 424px; background-image: url('/Personal operativo.jpg');"
+                style="width: 100%; height: 424px; background-image: url('/images/team/PERSONAL OPERATIVO.jpg');"
               >
                 <div class="absolute inset-0 rounded-[10px]" style="background: #2E2E2ECC;"></div>
               </div>
@@ -666,7 +669,7 @@ import Footer from "../components/Footer.astro";
             <div class="absolute inset-0 backface-hidden rounded-[10px]">
               <div
                 class="absolute inset-0 bg-cover bg-center rounded-[10px]"
-                style="width: 100%; height: 424px; background-image: url('/Responsabilidad Social.jpg');"
+                style="width: 100%; height: 424px; background-image: url('/images/team/RESPONSABILIDAD SOCIAL.jpg');"
               >
                 <div
                   class="absolute inset-0 transition-all duration-300 rounded-[10px]"
@@ -684,7 +687,7 @@ import Footer from "../components/Footer.astro";
             <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-[10px]">
               <div
                 class="absolute inset-0 bg-cover bg-center rounded-[10px]"
-                style="width: 100%; height: 424px; background-image: url('/Responsabilidad Social.jpg');"
+                style="width: 100%; height: 424px; background-image: url('/images/team/RESPONSABILIDAD SOCIAL.jpg');"
               >
                 <div class="absolute inset-0 rounded-[10px]" style="background: #2E2E2ECC;"></div>
               </div>
@@ -718,7 +721,7 @@ import Footer from "../components/Footer.astro";
             <div class="absolute inset-0 backface-hidden rounded-[10px]">
               <div
                 class="absolute inset-0 bg-cover bg-center rounded-[10px]"
-                style="width: 100%; height: 424px; background-image: url('/capacitacion y seleccion.jpg');"
+                style="width: 100%; height: 424px; background-image: url('/images/team/CAPACITACION Y SELECCION.jpg');"
               >
                 <div
                   class="absolute inset-0 transition-all duration-300 rounded-[10px]"
@@ -736,7 +739,7 @@ import Footer from "../components/Footer.astro";
             <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-[10px]">
               <div
                 class="absolute inset-0 bg-cover bg-center rounded-[10px]"
-                style="width: 100%; height: 424px; background-image: url('/capacitacion y seleccion.jpg');"
+                style="width: 100%; height: 424px; background-image: url('/images/team/CAPACITACION Y SELECCION.jpg');"
               >
                 <div class="absolute inset-0 rounded-[10px]" style="background: #2E2E2ECC;"></div>
               </div>
@@ -768,7 +771,7 @@ import Footer from "../components/Footer.astro";
             <div class="absolute inset-0 backface-hidden rounded-[10px]">
               <div
                 class="absolute inset-0 bg-cover bg-center rounded-[10px]"
-                style="width: 100%; height: 424px; background-image: url('/Programas de Bienestar Social.jpg');"
+                style="width: 100%; height: 424px; background-image: url('/images/team/PROGRAMAS DE BIENESTAR SOCIAL.jpg');"
               >
                 <div
                   class="absolute inset-0 transition-all duration-300 rounded-[10px]"
@@ -786,7 +789,7 @@ import Footer from "../components/Footer.astro";
             <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-[10px]">
               <div
                 class="absolute inset-0 bg-cover bg-center rounded-[10px]"
-                style="width: 100%; height: 424px; background-image: url('/Programas de Bienestar Social.jpg');"
+                style="width: 100%; height: 424px; background-image: url('/images/team/PROGRAMAS DE BIENESTAR SOCIAL.jpg');"
               >
                 <div class="absolute inset-0 rounded-[10px]" style="background: #2E2E2ECC;"></div>
               </div>
@@ -822,7 +825,7 @@ import Footer from "../components/Footer.astro";
             <div class="absolute inset-0 backface-hidden rounded-[10px]">
               <div
                 class="absolute inset-0 bg-cover bg-center rounded-[10px]"
-                style="width: 100%; height: 424px; background-image: url('/DOTACION Y SUPERVISION.jpg');"
+                style="width: 100%; height: 424px; background-image: url('/images/team/DOTACION Y SUPERVISION.jpg');"
               >
                 <div
                   class="absolute inset-0 transition-all duration-300 rounded-[10px]"
@@ -840,7 +843,7 @@ import Footer from "../components/Footer.astro";
             <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-[10px]">
               <div
                 class="absolute inset-0 bg-cover bg-center rounded-[10px]"
-                style="width: 100%; height: 424px; background-image: url('/DOTACION Y SUPERVISION.jpg');"
+                style="width: 100%; height: 424px; background-image: url('/images/team/DOTACION Y SUPERVISION.jpg');"
               >
                 <div class="absolute inset-0 rounded-[10px]" style="background: #2E2E2ECC;"></div>
               </div>
@@ -893,7 +896,7 @@ import Footer from "../components/Footer.astro";
                 style="margin: 0; padding: 0;"
               >
                 <img
-                  src="/COUNTRY CLUB.jpg"
+                  src="/images/clients/COUNTRY CLUB.jpg"
                   alt="Country Club"
                   class="w-full h-full object-cover m-0 p-0"
                   style="display: block; margin: 0; padding: 0; width: 100%; height: 100%; object-fit: cover;"
@@ -904,7 +907,7 @@ import Footer from "../components/Footer.astro";
                 style="margin: 0; padding: 0;"
               >
                 <img
-                  src="/atlantic_qi_logo.png"
+                  src="/images/clients/ATLANTIC.png"
                   alt="Atlantic Qi"
                   class="w-full h-full object-cover m-0 p-0"
                   style="display: block; margin: 0; padding: 0; width: 100%; height: 100%; object-fit: cover;"
@@ -914,7 +917,7 @@ import Footer from "../components/Footer.astro";
                 class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-40 h-40 overflow-hidden"
               >
                 <img
-                  src="/CLINICA PORTO AZUL.png"
+                  src="/images/clients/CLINICA PORTO AZUL.png"
                   alt="Clínica Porto Azul"
                   class="w-full h-full object-cover scale-150"
                 />
@@ -923,7 +926,7 @@ import Footer from "../components/Footer.astro";
                 class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-40 h-40 overflow-hidden"
               >
                 <img
-                  src="/AUTOLITORAL.png"
+                  src="/images/clients/AUTOLITORAL.png"
                   alt="Autolitoral"
                   class="w-full h-full object-contain"
                 />
@@ -932,7 +935,7 @@ import Footer from "../components/Footer.astro";
                 class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-40 h-40 overflow-hidden"
               >
                 <img
-                  src="/CECAC.jpg"
+                  src="/images/clients/CECAC.jpg"
                   alt="CECAC"
                   class="w-full h-full object-cover"
                 />
@@ -947,7 +950,7 @@ import Footer from "../components/Footer.astro";
                 class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-40 h-40"
               >
                 <img
-                  src="/COLOMBO AMERICANO.png"
+                  src="/images/clients/COLOMBO AMERICANO.png"
                   alt="Cliente 6"
                   class="max-w-full max-h-full object-contain"
                 />
@@ -956,7 +959,7 @@ import Footer from "../components/Footer.astro";
                 class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-40 h-40"
               >
                 <img
-                  src="/CLINICA DE LA COSTA.png"
+                  src="/images/clients/CLINICA DE LA COSTA.png"
                   alt="Cliente 7"
                   class="max-w-full max-h-full object-contain"
                 />
@@ -966,7 +969,7 @@ import Footer from "../components/Footer.astro";
                 style="margin: 0; padding: 0;"
               >
                 <img
-                  src="/ARQUITECTURA Y CONCRETO.png"
+                  src="/images/clients/ARQUITECTURA Y CONCRETO.png"
                   alt="Cliente 8"
                   class="w-full h-full object-cover m-0 p-0"
                   style="display: block; margin: 0; padding: 0; width: 100%; height: 100%; object-fit: cover;"
@@ -977,7 +980,7 @@ import Footer from "../components/Footer.astro";
                 style="margin: 0; padding: 0;"
               >
                 <img
-                  src="/COMBARRANQUILLA.png"
+                  src="/images/clients/COMBARRANQUILLA.png"
                   alt="Cliente 9"
                   class="w-full h-full object-cover m-0 p-0"
                   style="display: block; margin: 0; padding: 0; width: 100%; height: 100%; object-fit: cover;"
@@ -987,7 +990,7 @@ import Footer from "../components/Footer.astro";
                 class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-40 h-40"
               >
                 <img
-                  src="/DRUMMOND.png"
+                  src="/images/clients/DRUMMOND.png"
                   alt="Cliente 10"
                   class="max-w-full max-h-full object-contain"
                 />
@@ -1002,7 +1005,7 @@ import Footer from "../components/Footer.astro";
                 class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-40 h-40"
               >
                 <img
-                  src="/LOGO ADAMA .png"
+                  src="/images/clients/ADAMA .png"
                   alt="Cliente 11"
                   class="max-w-full max-h-full object-contain"
                 />
@@ -1011,7 +1014,7 @@ import Footer from "../components/Footer.astro";
                 class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-40 h-40"
               >
                 <img
-                  src="/LOGO CAMARA DE COMERCIO DE BARRANQUILLA.png"
+                  src="/images/clients/CAMARA DE COMERCIO DE BARRANQUILLA.png"
                   alt="Cliente 12"
                   class="max-w-full max-h-full object-contain"
                 />
@@ -1020,7 +1023,7 @@ import Footer from "../components/Footer.astro";
                 class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-40 h-40"
               >
                 <img
-                  src="/Tebsa.png"
+                  src="/images/clients/TEBSA.png"
                   alt="Cliente 13"
                   class="max-w-full max-h-full object-contain"
                 />
@@ -1029,7 +1032,7 @@ import Footer from "../components/Footer.astro";
                 class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-40 h-40"
               >
                 <img
-                  src="/Termocandelaria-1.png"
+                  src="/images/clients/TERMOCANDELARIA.png"
                   alt="Cliente 14"
                   class="max-w-full max-h-full object-contain"
                 />
@@ -1038,7 +1041,7 @@ import Footer from "../components/Footer.astro";
                 class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-40 h-40"
               >
                 <img
-                  src="/LOGO LITOPLAS.png"
+                  src="/images/clients/LITOPLAS.png"
                   alt="Cliente 15"
                   class="max-w-full max-h-full object-contain"
                 />
@@ -1068,19 +1071,19 @@ import Footer from "../components/Footer.astro";
         </h1>
         <div class="flex justify-center items-center gap-20 mb-16">
           <img
-            src="/basc.jpg"
+            src="/images/certifications/BASC.jpg"
             alt="Certificado BASC"
             class="w-[150px] h-auto object-contain"
             style="margin-right: -10rem;"
           />
           <img
-            src="/incotec.jpg"
+            src="/images/certifications/ICONTEC.jpg"
             alt="Certificado Icontec"
             class="w-[300px] h-auto object-contain"
             style="margin-left: 15.5rem;"
           />
           <img
-            src="/rut.jpg"
+            src="/images/certifications/RUC.jpg"
             alt="Certificado IQNET"
             class="w-[350px] h-auto object-contain"
           />
@@ -1091,22 +1094,22 @@ import Footer from "../components/Footer.astro";
         </h1>
         <div class="flex flex-nowrap justify-center items-center gap-16 max-w-[1600px] mx-auto">
           <img
-            src="/camara de comercio.jpg"
+            src="/images/associations/CAMARA DE COMERCIO.jpg"
             alt="Cámara de Comercio de Barranquilla"
             class="w-[350px] h-auto object-contain"
           />
           <img
-            src="/asosec.jpg"
+            src="/images/associations/ASOSEC.jpg"
             alt="Asociación Colombiana de Seguridad"
             class="w-[350px] h-auto object-contain"
           />
           <img
-            src="/amcham.jpg"
+            src="/images/associations/AMCHAM.jpg"
             alt="AMCHAM Colombia"
             class="w-[300px] h-auto object-contain"
           />
           <img
-            src="/ceo.jpg"
+            src="/images/associations/CEO.jpg"
             alt="CEO Corporación Empresarial del Oriente Antioqueño"
             class="w-[350px] h-auto object-contain"
           />
@@ -1117,7 +1120,7 @@ import Footer from "../components/Footer.astro";
     <section class="py-16 px-8 relative mt-[80px] md:mt-0" id="contacto">
       <div
         class="absolute inset-0 bg-cover bg-center z-0"
-        style="background-image: url('/Formulario.jpg')"
+        style="background-image: url('/images/team/FORMULARIO.jpg')"
       >
         <div class="absolute inset-0 bg-primary bg-opacity-70 z-0"></div>
       </div>
@@ -1130,7 +1133,7 @@ import Footer from "../components/Footer.astro";
         </h1>
 
         <form
-          class="bg-white/10 backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-xl w-full"
+          class="p-4 sm:p-6 md:p-8 rounded-xl w-full"
           action="https://formsubmit.co/informacion@viaservin.com"
           method="POST"
         >
@@ -1144,85 +1147,103 @@ import Footer from "../components/Footer.astro";
           <input type="hidden" name="_template" value="table" />
           <input type="text" name="_honey" style="display:none" />
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-8">
-            <input
-              type="text"
-              name="nombre"
-              placeholder="Nombre"
-              required
-              class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EE9D26] w-full"
-            />
-            <input
-              type="text"
-              name="direccion"
-              placeholder="Dirección"
-              required
-              class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EE9D26] w-full"
-            />
-            <input
-              type="text"
-              name="empresa"
-              placeholder="Empresa"
-              required
-              class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EE9D26] w-full"
-            />
-            <input
-              type="text"
-              name="id"
-              placeholder="Id"
-              required
-              class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EE9D26] w-full"
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Correo electrónico"
-              required
-              class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EE9D26] w-full"
-            />
-            <input
-              type="tel"
-              name="telefono"
-              placeholder="Número de celular"
-              required
-              class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EE9D26] w-full"
-            />
-            <input
-              type="text"
-              name="departamento"
-              placeholder="Departamento"
-              class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EE9D26] w-full"
-            />
-            <input
-              type="text"
-              name="municipio"
-              placeholder="Municipio"
-              class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EE9D26] w-full"
-            />
-            <textarea
-              name="mensaje"
-              placeholder="Mensaje"
-              required
-              class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EE9D26] md:col-span-2 h-32 w-full"
-            ></textarea>
+          <div class="flex flex-row gap-6 justify-center w-full">
+            <div class="flex flex-col gap-4" style="width: 431px; min-width: 431px;">
+              <input
+                type="text"
+                name="nombre"
+                placeholder="Nombre"
+                required
+                class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EE9D26]"
+                style="width: 431px; height: 48px; border-radius: 8px; background: #FFFFFFB2;"
+              />
+              <input
+                type="text"
+                name="empresa"
+                placeholder="Empresa"
+                required
+                class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EE9D26]"
+                style="width: 431px; height: 48px; border-radius: 8px; background: #FFFFFFB2;"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Correo electrónico"
+                required
+                class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EE9D26]"
+                style="width: 431px; height: 48px; border-radius: 8px; background: #FFFFFFB2;"
+              />
+              <input
+                type="tel"
+                name="telefono"
+                placeholder="Número de celular"
+                required
+                class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EE9D26]"
+                style="width: 431px; height: 48px; border-radius: 8px; background: #FFFFFFB2;"
+              />
+              <input
+                type="text"
+                name="departamento"
+                placeholder="Departamento"
+                class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EE9D26]"
+                style="width: 431px; height: 48px; border-radius: 8px; background: #FFFFFFB2;"
+              />
+              <input
+                type="text"
+                name="municipio"
+                placeholder="Municipio"
+                class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EE9D26]"
+                style="width: 431px; height: 48px; border-radius: 8px; background: #FFFFFFB2;"
+              />
+            </div>
+            <div class="flex flex-col gap-4 ml-3" style="width: 431px; min-width: 431px;">
+              <input
+                type="text"
+                name="direccion"
+                placeholder="Dirección"
+                required
+                class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EE9D26]"
+                style="width: 431px; height: 48px; border-radius: 8px; margin-bottom: 16px; background: #FFFFFFB2;"
+              />
+              <input
+                type="text"
+                name="id"
+                placeholder="Id"
+                required
+                class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EE9D26]"
+                style="width: 431px; height: 48px; border-radius: 8px; margin-bottom: 5px; margin-top: -15px; background: #FFFFFFB2;"
+              />
+              <textarea
+                name="mensaje"
+                placeholder="Mensaje"
+                required
+                class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EE9D26]"
+                style="width: 431px; height: 240px; border-radius: 8px; resize: none; margin-top: -5px; background: #FFFFFFB2;"
+              ></textarea>
+            </div>
           </div>
 
-          <div class="flex flex-col items-center gap-6">
-            <label
-              class="flex items-center gap-3 text-white text-sm sm:text-base"
-            >
-              <input
-                type="checkbox"
-                name="politica"
-                required
-                class="h-5 w-5 rounded border-gray-300 text-[#EE9D26] focus:ring-[#EE9D26]"
-              />
-              Acepto nuestra política de tratamiento de datos
+          <div class="flex flex-col items-center gap-6 mt-8">
+            <label class="flex items-center text-white text-sm sm:text-base relative cursor-pointer select-none" style="padding-left: 0;">
+              <span class="relative inline-block w-5 h-5 mr-2 align-middle">
+                <input
+                  type="checkbox"
+                  name="politica"
+                  required
+                  class="peer w-5 h-5 rounded border border-gray-300 bg-transparent appearance-none checked:bg-[#EE9D26] checked:border-[#EE9D26] focus:ring-[#EE9D26] transition-colors duration-200"
+                  style="outline: none; margin: 0; padding: 0; position: absolute; left: 0; top: 0;"
+                />
+                <svg class="pointer-events-none w-5 h-5 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden peer-checked:block" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 10.5L9 14.5L15 7.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span>Acepta nuestra <a href="/assets/docs/PRIVACIDAD-Y-TRATAMIENTO-DE-DATOS.pdf" target="_blank" class="text-white hover:underline">política de tratamiento de datos</a></span>
             </label>
 
             <button
               type="submit"
-              class="border border-white text-white px-8 py-3 rounded-md font-bold hover:bg-[#EE9D26] hover:border-[#EE9D26] transition-colors w-full md:w-auto md:min-w-[300px]"
+              class="border border-white text-white px-8 py-3 rounded-md font-bold hover:bg-[#EE9D26] hover:border-[#EE9D26] transition-colors"
+              style="width: 507px; height: 48px; font-size: 1.25rem;"
             >
               Enviar
             </button>
@@ -1232,7 +1253,7 @@ import Footer from "../components/Footer.astro";
     </section>
     
   </main>
-  <Footer bgColor="bg-white" />
+  <Footer bgColor="bg-[#D9D9D9]" />
 </Layout>
 
 <style>
@@ -1471,33 +1492,37 @@ import Footer from "../components/Footer.astro";
 
     function mostrarSlide(index: number) {
       if (clientesSlider) {
-        clientesSlider.style.transform = `translateX(-${index * 100}%)`;
+        // Asegurarse de que el índice esté dentro del rango válido
+        const totalSlides = clientesSlider.children.length;
+        const normalizedIndex = ((index % totalSlides) + totalSlides) % totalSlides;
+        
+        clientesSlider.style.transform = `translateX(-${normalizedIndex * 100}%)`;
 
-        indicadores.forEach((indicador, i) => {
-          if (i === index) {
-            indicador.classList.add("opacity-100");
-            indicador.classList.remove("opacity-40");
-          } else {
-            indicador.classList.add("opacity-40");
-            indicador.classList.remove("opacity-100");
-          }
+        // Primero, remover la clase activa de todos los indicadores
+        indicadores.forEach((indicador) => {
+          indicador.classList.remove("opacity-100");
+          indicador.classList.add("opacity-40");
         });
 
-        slideActual = index;
+        // Luego, activar solo el indicador seleccionado
+        if (indicadores[normalizedIndex]) {
+          indicadores[normalizedIndex].classList.remove("opacity-40");
+          indicadores[normalizedIndex].classList.add("opacity-100");
+        }
+
+        slideActual = normalizedIndex;
       }
     }
 
     // Inicializar el primer indicador como activo
     if (indicadores.length > 0) {
-      indicadores[0].classList.add("opacity-100");
-      indicadores[0].classList.remove("opacity-40");
+      mostrarSlide(0);
     }
 
     // Cambiar slide automáticamente cada 5 segundos
-    setInterval(() => {
+    let intervalId = setInterval(() => {
       if (clientesSlider) {
-        const slides = clientesSlider.children.length;
-        const nextSlide = (slideActual + 1) % slides;
+        const nextSlide = (slideActual + 1) % clientesSlider.children.length;
         mostrarSlide(nextSlide);
       }
     }, 5000);
@@ -1505,7 +1530,15 @@ import Footer from "../components/Footer.astro";
     // Permitir clic en los indicadores
     indicadores.forEach((indicador, i) => {
       indicador.addEventListener("click", () => {
+        // Reiniciar el intervalo cuando se hace clic manualmente
+        clearInterval(intervalId);
         mostrarSlide(i);
+        intervalId = setInterval(() => {
+          if (clientesSlider) {
+            const nextSlide = (slideActual + 1) % clientesSlider.children.length;
+            mostrarSlide(nextSlide);
+          }
+        }, 5000);
       });
     });
   });
