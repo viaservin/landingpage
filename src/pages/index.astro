@@ -10,14 +10,17 @@ import Footer from "../components/Footer.astro";
 ---
 
 <Layout>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
   <main class="w-full">
-    <section class="relative w-full h-screen">
+    <!-- Seccion Banners -->
+    <section class="relative w-full h-screen overflow-hidden">
       <Navbar />
       <div
-        class="w-full h-full relative overflow-hidden bg-white"
+        class="absolute inset-0 w-full h-full bg-white"
         id="banner-carousel"
       >
-      <!-- Banners -->
+        <!-- Banners -->
         <div class="flex w-full h-full transition-transform duration-1000">
           <!-- Banner 1 -->
           <div class="w-full h-full flex-shrink-0 relative group">
@@ -25,6 +28,7 @@ import Footer from "../components/Footer.astro";
               src="/images/banners/BANNER.jpg"
               alt="Banner principal 1"
               class="w-full h-full object-cover"
+              loading="eager"
             />
             <div
               class="absolute inset-0 transition-opacity duration-300 group-hover:opacity-0"
@@ -37,31 +41,32 @@ import Footer from "../components/Footer.astro";
             >
             </div>
             <div
-              class="absolute inset-0 flex items-center justify-start px-8 md:px-16 lg:px-24"
+              class="absolute inset-0 flex items-center justify-start px-4 sm:px-8 md:px-16 lg:px-24"
             >
               <div class="w-full banner-content" data-banner-id="0">
                 <h1
-                  class="text-white text-[65px] font-light mb-6 ps-4"
+                  class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light mb-3 sm:mb-6 ps-2 sm:ps-4"
                 >
                   <strong class="font-bold">Viaservin,</strong> vigilancia y seguridad
                   privada<br />
                 </h1>
                 <button
                   onclick="document.getElementById('servicios').scrollIntoView({behavior: 'smooth'})"
-                  class="border-[3px] border-[#ee9d26] hover:bg-[#ee9d26] text-white font-light py-3 px-6 rounded-md transition-colors duration-300 text-[33px] mx-4"
+                  class="border-[3px] border-[#ee9d26] hover:bg-[#ee9d26] text-white font-light py-2 px-4 sm:py-3 sm:px-6 rounded-md transition-colors duration-300 text-sm sm:text-lg md:text-xl lg:text-2xl mx-2 sm:mx-4"
                 >
                   Descubre nuestras soluciones
                 </button>
               </div>
             </div>
           </div>
-
+    
           <!-- Banner 2 -->
           <div class="w-full h-full flex-shrink-0 relative group">
             <img
               src="/images/banners/BANNER2.jpg"
               alt="Banner principal 2"
               class="w-full h-full object-cover"
+              loading="lazy"
             />
             <div
               class="absolute inset-0 transition-opacity duration-300 group-hover:opacity-0"
@@ -74,33 +79,34 @@ import Footer from "../components/Footer.astro";
             >
             </div>
             <div
-              class="absolute inset-0 flex items-center justify-start px-8 md:px-16 lg:px-24"
+              class="absolute inset-0 flex items-center justify-start px-4 sm:px-8 md:px-16 lg:px-24"
             >
               <div class="w-full banner-content" data-banner-id="1">
                 <h1
-                  class="text-white text-[65px] font-light mb-6"
+                  class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light mb-3 sm:mb-6"
                 >
-                  Tu tranquilidad es nuestra prioridad. Confía en los<br />
+                  Tu tranquilidad es nuestra prioridad. Confía en los<br class="hidden md:block" />
                   expertos en <strong class="font-bold"
                     >vigilancia y protección</strong
                   >
                 </h1>
                 <button
                   onclick="document.getElementById('contacto').scrollIntoView({behavior: 'smooth'})"
-                  class="border-[3px] border-[#ee9d26] hover:bg-[#ee9d26] text-white font-light py-3 px-6 rounded-md transition-colors duration-300 text-[33px] mx-4"
+                  class="border-[3px] border-[#ee9d26] hover:bg-[#ee9d26] text-white font-light py-2 px-4 sm:py-3 sm:px-6 rounded-md transition-colors duration-300 text-sm sm:text-lg md:text-xl lg:text-2xl mx-2 sm:mx-4"
                 >
                   Contáctanos ahora
                 </button>
               </div>
             </div>
           </div>
-
+    
           <!-- Banner 3 -->
           <div class="w-full h-full flex-shrink-0 relative group">
             <img
               src="/images/banners/BANNER3.jpg"
               alt="Banner principal 3"
               class="w-full h-full object-cover"
+              loading="lazy"
             />
             <div
               class="absolute inset-0 transition-opacity duration-300 group-hover:opacity-0"
@@ -113,21 +119,20 @@ import Footer from "../components/Footer.astro";
             >
             </div>
             <div
-              class="absolute inset-0 flex items-center justify-start px-8 md:px-16 lg:px-24"
+              class="absolute inset-0 flex items-center justify-start px-4 sm:px-8 md:px-16 lg:px-24"
             >
               <div class="w-full banner-content" data-banner-id="2">
                 <h1
-                  class="text-white text-[65px] font-light mb-6"
+                  class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light mb-3 sm:mb-6"
                 >
-                  Contamos con más de <strong class="font-bold">43 años</strong
-                  ><br />
+                  Contamos con más de <strong class="font-bold">43 años</strong><br class="hidden md:block" />
                   de experiencia <strong class="font-bold"
                     >respaldando tu tranquilidad</strong
                   >
                 </h1>
                 <button
                   onclick="document.getElementById('clientes').scrollIntoView({behavior: 'smooth'})"
-                  class="border-[3px] border-[#ee9d26] hover:bg-[#ee9d26] text-white font-light py-3 px-6 rounded-md transition-colors duration-300 text-[33px] mx-4"
+                  class="border-[3px] border-[#ee9d26] hover:bg-[#ee9d26] text-white font-light py-2 px-4 sm:py-3 sm:px-6 rounded-md transition-colors duration-300 text-sm sm:text-lg md:text-xl lg:text-2xl mx-2 sm:mx-4"
                 >
                   Conoce nuestros aliados
                 </button>
@@ -135,78 +140,83 @@ import Footer from "../components/Footer.astro";
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- Indicadores del carrusel -->
-      <div
-        class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-3 z-10"
-      >
+    
+        <!-- Botones de navegación del banner (con z-index ajustado) -->
         <button
-          class="w-3 h-3 rounded-full bg-white opacity-100 transition-opacity"
-          data-banner-index="0"></button>
+          class="absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full flex items-center justify-center shadow-xl hover:shadow-2xl transition-shadow opacity-0"
+          style="width: 62px; height: 62px; left: 14px; z-index: 5;"
+          id="banner-btn-izquierda">
+          <img src="/images/vectors/ARROW.svg" alt="Anterior" class="w-[20px] h-[40px] rotate-180" />
+        </button>
         <button
-          class="w-3 h-3 rounded-full bg-white opacity-40 transition-opacity"
-          data-banner-index="1"></button>
-        <button
-          class="w-3 h-3 rounded-full bg-white opacity-40 transition-opacity"
-          data-banner-index="2"></button>
-      </div>
-
-      <!-- Botones de navegación del banner -->
-      <button
-        class="absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full flex items-center justify-center shadow-xl z-10 hover:shadow-2xl transition-shadow opacity-0"
-        style="width: 62px; height: 62px; left: 14px;"
-        id="banner-btn-izquierda">
-        <img src="/images/vectors/ARROW.svg" alt="Anterior" class="w-[20px] h-[40px] rotate-180" />
-      </button>
-      <button
-        class="absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full flex items-center justify-center shadow-xl z-10 hover:shadow-2xl transition-shadow"
-        style="width: 62px; height: 62px;"
-        id="banner-btn-derecha">
-        <img src="/images/vectors/ARROW.svg" alt="Siguiente" class="w-[20px] h-[40px]" />
-      </button>
-    </section>
-
-    <!-- Seccion Nosotros -->
-
-    <section class="py-16 w-full mx-auto" id="nosotros">
-      <h1 class="text-[50px] font-bold text-center mb-12 text-primary">
-        Nosotros
-      </h1>
-      <p
-        class="mt-[25px] mb-[50px] w-[1665px] h-[108px] mx-[128px] text-[#878787]"
-        style="font-weight: 400; font-size: 28px; line-height: 130%; letter-spacing: 0%; text-align: justify;"
-      >
-        En Viaservin, somos líderes en vigilancia y seguridad privada con una
-        trayectoria de más de 40 años. Ofrecemos soluciones integrales que
-        combinan experiencia, tecnología de vanguardia y un equipo capacitado
-        para proteger lo que más valoras. Nuestro propósito es brindar
-        tranquilidad y confianza a empresas, hogares y comunidades en toda la
-        región.
-      </p>
-      <div class="w-full overflow-hidden">
-        <div class="relative">
-          <img
-            src="/images/team/NOSOTROS.jpg"
-            alt="Banner nosotros"
-            class="w-full object-cover shadow-lg"
-            style="height: 400px; object-position: center 25%;"
-          />
-          <div class="absolute inset-0" style="background: linear-gradient(89.94deg, rgba(0, 27, 81, 0.3) 1.12%, rgba(26, 103, 185, 0.3) 99.95%);"></div>
+          class="absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full flex items-center justify-center shadow-xl hover:shadow-2xl transition-shadow"
+          style="width: 62px; height: 62px; z-index: 5;"
+          id="banner-btn-derecha">
+          <img src="/images/vectors/ARROW.svg" alt="Siguiente" class="w-[20px] h-[40px]" />
+        </button>
+    
+        <!-- Indicadores del carrusel (dentro del div del carrusel) -->
+        <div
+          class="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 sm:gap-3"
+          style="z-index: 5;"
+        >
+          <button
+            class="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white opacity-100 transition-opacity"
+            data-banner-index="0"></button>
+          <button
+            class="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white opacity-40 transition-opacity"
+            data-banner-index="1"></button>
+          <button
+            class="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white opacity-40 transition-opacity"
+            data-banner-index="2"></button>
         </div>
       </div>
     </section>
 
-    <!-- Seccion Historia, trayectoria, mision y vision -->
-
-    <section class="pb-[50px] px-8 md:px-16" id="historia">
-      <div class="pt-[100px]">
-        <h1 class="text-[50px] font-bold text-center mb-12 text-primary">
-          Historia y trayectoria
+    <!-- Sección Nosotros -->
+    <section class="w-full mx-auto mt-[50px]" id="nosotros">
+      <!-- Contenedor flexible y controlado -->
+      <div class="w-full max-w-100% px-[100px] mx-auto">
+        <h1 class="text-3xl sm:text-4xl md:text-[50px] font-bold text-center mb-12 text-primary">
+          Nosotros
         </h1>
         <p
-          style="width: 1665px; height: 156px; margin: 0 200px 6px 70px; font-weight: 400; font-size: 28px; line-height: 130%; letter-spacing: 0%; text-align: justify; color: #878787;"
+          class="text-[#878787] text-lg sm:text-xl md:text-2xl lg:text-[28px] text-justify leading-[130%] font-normal mb-[50px]"
         >
+          En Viaservin, somos líderes en vigilancia y seguridad privada con una
+          trayectoria de más de 40 años. Ofrecemos soluciones integrales que
+          combinan experiencia, tecnología de vanguardia y un equipo capacitado
+          para proteger lo que más valoras. Nuestro propósito es brindar
+          tranquilidad y confianza a empresas, hogares y comunidades en toda la
+          región.
+        </p>
+      </div>
+
+      <!-- Imagen a ancho completo -->
+      <div class="w-full overflow-hidden">
+        <div class="relative w-full h-[200px] sm:h-[300px] md:h-[400px]">
+          <img
+            src="/images/team/NOSOTROS.jpg"
+            alt="Banner nosotros"
+            class="w-full h-full object-cover"
+            style="object-position: center 25%;"
+            loading="lazy"
+          />
+          <div 
+            class="absolute inset-0" 
+            style="background: linear-gradient(89.94deg, rgba(0, 27, 81, 0.3) 1.12%, rgba(26, 103, 185, 0.3) 99.95%);">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Historia, trayectoria -->
+    <section class="pt-[50px] pb-16 w-full mx-auto" id="historia">
+      <div class="w-full max-w-100% px-[100px] mx-auto">
+        <h1 class="text-3xl sm:text-4xl md:text-[50px] font-bold text-center mb-12 text-primary">
+          Historia y trayectoria
+        </h1>
+        <p class="text-[#878787] text-lg sm:text-xl md:text-2xl lg:text-[28px] text-justify leading-[130%] font-normal">
           Fundada en 1981, en Barranquilla, Viaservin ha sido pionera en el sector
           de seguridad privada en la región. Fuimos la primera empresa de
           vigilancia certificada por ICONTEC en la Costa Atlántica. A lo largo de
@@ -216,44 +226,39 @@ import Footer from "../components/Footer.astro";
         </p>
       </div>
     </section>
-    <hr class="max-w-[1014px] mx-auto px-8 md:px-16 -mt-[50px]" />
 
-    <section class="py-8 px-8 md:px-16 bg-white mt-8">
-      <div
-        class="max-w-6xl mx-auto flex flex-col md:flex-row gap-20 max-w-[1440px]"
-        id="mision-vision"
-      >
+    <hr class="max-w-[55%] mx-auto mb-[50px]" />
+
+    <!-- Sección Misión y Visión -->
+    <section class="pt-[0px] pb-8 sm:pb-12 md:pb-16 w-full mx-auto bg-white">
+      <div class="w-full max-w-100% px-[100px] mx-auto flex flex-col md:flex-row gap-16 md:gap-20" id="mision-vision">
+        <!-- Misión -->
         <div class="flex-1">
-          <h1 class="text-[#001B51] text-center mb-8 -ml-[100px] -mt-[20px]" style="font-weight: 700; font-size: 50px; line-height: 94%; letter-spacing: 0%;">
+          <h2 class="text-[#001B51] text-center mb-8 text-3xl sm:text-4xl md:text-[50px] font-bold leading-[94%]">
             Misión
-          </h1>
-          <p
-            class="mb-12 leading-[130%] text-[28px] text-[#878787] text-justify font-normal"
-            style="font-weight: 400; line-height: 130%; letter-spacing: 0%; margin-left: -100px;"
-          >
-            Brindamos soluciones de seguridad y vigilancia privada en los
-            diferentes sectores de la economía a nivel nacional, contribuimos a
-            la protección y bienestar de nuestros clientes mediante el
-            desarrollo integral del talento humano y la utilización de fuentes
-            tecnológicas.
+          </h2>
+          <p class="text-[#878787] text-lg sm:text-xl md:text-2xl lg:text-[28px] text-justify leading-[130%] font-normal">
+            Brindamos soluciones de seguridad y vigilancia privada en los diferentes
+            sectores de la economía a nivel nacional, contribuimos a la protección y
+            bienestar de nuestros clientes mediante el desarrollo integral del talento
+            humano y la utilización de fuentes tecnológicas.
           </p>
         </div>
+    
+        <!-- Visión -->
         <div class="flex-1">
-          <h1 class="text-[#001B51] text-center mb-8 -mr-[100px] -mt-[20px]" style="font-weight: 700; font-size: 50px; line-height: 94%; letter-spacing: 0%;">
+          <h2 class="text-[#001B51] text-center mb-8 text-3xl sm:text-4xl md:text-[50px] font-bold leading-[94%]">
             Visión
-          </h1>
-          <p
-            class="mb-12 leading-[130%] text-[28px] text-[#878787] text-justify font-normal"
-            style="font-weight: 400; line-height: 130%; letter-spacing: 0%; margin-right: -110px;"
-          >
-            Seremos reconocidos como una organización líder en el sector
-            seguridad y vigilancia privada, con un mayor posicionamiento a nivel
-            nacional.
+          </h2>
+          <p class="text-[#878787] text-lg sm:text-xl md:text-2xl lg:text-[28px] text-justify leading-[130%] font-normal">
+            Seremos reconocidos como una organización líder en el sector de seguridad
+            y vigilancia privada, con un mayor posicionamiento a nivel nacional.
           </p>
         </div>
       </div>
     </section>
 
+    <!-- Sección Servicios -->
     <section class="py-16 px-8 md:px-12" id="servicios" style="background: linear-gradient(103.74deg, #001B51 53.95%, #003DB7 201.51%);">
       <div class="text-[50px] mx-auto">
         <h1 class="text-center mb-6 text-white" style="font-weight: 700; font-size: 50px; line-height: 94%; letter-spacing: 0%;">
@@ -263,7 +268,7 @@ import Footer from "../components/Footer.astro";
           <div class="flex transition-transform duration-500" id="carrusel">
             <!-- Slide 1 -->
             <div
-              class="w-full flex-shrink-0 flex flex-wrap md:flex-nowrap gap-8 justify-center mr-12"
+              class="w-full flex-shrink-0 flex flex-wrap md:flex-nowrap gap-8 justify-center mr-4 md:mr-8"
             >
               <div
                 class="relative w-full md:w-1/3 h-[793px] overflow-hidden rounded-xl shadow-lg group"
@@ -272,35 +277,28 @@ import Footer from "../components/Footer.astro";
                   class="absolute inset-0 bg-cover bg-center"
                   style="background-image: url('/images/services/VIGILANCIA.jpg'); object-position: 20% center;"
                 >
-                  <!-- Color overlay without blur -->
                   <div class="absolute inset-0" style="background: rgba(0, 27, 81, 0.3);"></div>
                 </div>
                 <div
                   class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300"
                 >
                 </div>
-                <!-- Blur overlay for selection -->
                 <div
-                  class="absolute inset-0 backdrop-blur-[5px] opacity-0 invisible transition-all duration-300 z-10 select-overlay"
+                  class="absolute inset-0 backdrop-blur-[5px] opacity-0 invisible transition-all duration-300 z-[5] select-overlay"
                   style="background: rgba(0, 27, 81, 0.3);"
                 >
                 </div>
+                <div class="absolute top-[5%] left-10 -translate-y-1/2 flex items-center group-hover:opacity-0 transition-opacity duration-300">
+                  <h2 class="text-white font-bold text-[55px] rotate-90 origin-left whitespace-nowrap">
+                    VIGILANCIA FÍSICA
+                  </h2>
+                </div>
                 <div
-                class="absolute h-full left-10 top-1/2flex items-center group-hover:opacity-0 transition-opacity duration-300"
-              >
-                <h2
-                  class="text-white font-bold font-size-[65px] rotate-90 origin-left whitespace-nowrap"
-                >
-                  VIGILANCIA FÍSICA
-                </h2>
-              </div>
-                <!-- Contenido que aparece en hover -->
-                <div
-                  class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-12 py-8 z-20"
+                  class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-6 py-8 z-[5]"
                 >
                   <p
-                    class="text-center break-words whitespace-normal mb-8"
-                    style="width: 459px; height: 202px; top: 259px; left: 29px; font-weight: 400; font-size: 29px; line-height: 94%; letter-spacing: 0%; text-align: center; color: #D9D9D9;"
+                    class="text-center mb-8 w-full max-w-[300px] hyphens-auto"
+                    style="font-weight: 400; font-size: 24px; line-height: 130%; letter-spacing: 0%; text-align: center; color: #D9D9D9; word-break: normal; overflow-wrap: break-word;"
                   >
                     Protegemos instalaciones y hogares con servicios de
                     vigilancia física. Nuestro equipo capacitado ofrece
@@ -323,35 +321,29 @@ import Footer from "../components/Footer.astro";
                   class="absolute inset-0 bg-cover bg-center"
                   style="background-image: url('/images/services/ESCOLTAS PERSONAS.jpg')"
                 >
-                  <!-- Color overlay without blur -->
                   <div class="absolute inset-0" style="background: rgba(0, 27, 81, 0.3);"></div>
                 </div>
                 <div
                   class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300"
                 >
                 </div>
-                <!-- Blur overlay for selection -->
                 <div
-                  class="absolute inset-0 backdrop-blur-[5px] opacity-0 invisible transition-all duration-300 z-10 select-overlay"
+                  class="absolute inset-0 backdrop-blur-[5px] opacity-0 invisible transition-all duration-300 z-[5] select-overlay"
                   style="background: rgba(0, 27, 81, 0.3);"
                 >
                 </div>
+                <div class="absolute top-[5%] left-10 -translate-y-1/2 flex items-center group-hover:opacity-0 transition-opacity duration-300">                 <h2
+                    class="text-white font-bold text-[55px] rotate-90 origin-left whitespace-nowrap"
+                  >
+                    ESCOLTA DE PERSONAS
+                  </h2>
+                </div>
                 <div
-                class="absolute h-full left-10 top-1/2flex items-center group-hover:opacity-0 transition-opacity duration-300"
-              >
-                <h2
-                  class="text-white font-bold font-size-[65px] rotate-90 origin-left whitespace-nowrap"
-                >
-                  ESCOLTA DE PERSONAS
-                </h2>
-              </div>
-                <!-- Contenido que aparece en hover -->
-                <div
-                  class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-12 py-8 z-20"
+                  class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-6 py-8 z-[5]"
                 >
                   <p
-                    class="text-center break-words whitespace-normal mb-8"
-                    style="width: 459px; height: 202px; top: 259px; left: 29px; font-weight: 400; font-size: 29px; line-height: 94%; letter-spacing: 0%; text-align: center; color: #D9D9D9;"
+                    class="text-center mb-8 w-full max-w-[300px] hyphens-auto"
+                    style="font-weight: 400; font-size: 24px; line-height: 130%; letter-spacing: 0%; text-align: center; color: #D9D9D9; word-break: normal; overflow-wrap: break-word;"
                   >
                     Nuestros escoltas operan rutas seguras, con apoyo
                     tecnológico y reacción inmediata, minimizando cualquier
@@ -375,35 +367,30 @@ import Footer from "../components/Footer.astro";
                   class="absolute inset-0 bg-cover bg-center"
                   style="background-image: url('/images/services/ESCOLTA DE MERCA.jpg')"
                 >
-                  <!-- Color overlay without blur -->
                   <div class="absolute inset-0" style="background: rgba(0, 27, 81, 0.3);"></div>
                 </div>
                 <div
                   class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300"
                 >
                 </div>
-                <!-- Blur overlay for selection -->
                 <div
-                  class="absolute inset-0 backdrop-blur-[5px] opacity-0 invisible transition-all duration-300 z-10 select-overlay"
+                  class="absolute inset-0 backdrop-blur-[5px] opacity-0 invisible transition-all duration-300 z-[5] select-overlay"
                   style="background: rgba(0, 27, 81, 0.3);"
                 >
                 </div>
-                <div
-                  class="absolute h-full left-10 top-1/2flex items-center group-hover:opacity-0 transition-opacity duration-300"
-                >
+                <div class="absolute top-[5%] left-14 -translate-y-1/2 flex items-center group-hover:opacity-0 transition-opacity duration-300">
                   <h2
-                    class="text-white font-bold font-size-[65px] rotate-90 origin-left ml-8 w-min mt-[-30px]"
+                    class="text-white font-bold text-[55px] rotate-90 origin-left ml-8 w-min"
                   >
                     ESCOLTA DE MERCANCÍAS
                   </h2>
                 </div>
-                <!-- Contenido que aparece en hover -->
                 <div
-                  class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-12 py-8 z-20"
+                  class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-6 py-8 z-[5]"
                 >
                   <p
-                    class="text-center break-words whitespace-normal mb-8"
-                    style="width: 459px; height: 202px; top: 259px; left: 29px; font-weight: 400; font-size: 29px; line-height: 94%; letter-spacing: 0%; text-align: center; color: #D9D9D9;"
+                    class="text-center mb-8 w-full max-w-[300px] hyphens-auto"
+                    style="font-weight: 400; font-size: 24px; line-height: 130%; letter-spacing: 0%; text-align: center; color: #D9D9D9; word-break: normal; overflow-wrap: break-word;"
                   >
                     Nuestro servicio, respaldado por estándares de vigilancia y
                     seguridad privada, se adapta a cada entorno y nivel de
@@ -423,7 +410,7 @@ import Footer from "../components/Footer.astro";
 
             <!-- Slide 2 -->
             <div
-              class="w-full flex-shrink-0 flex flex-wrap md:flex-nowrap gap-8 justify-center ml-12"
+              class="w-full flex-shrink-0 flex flex-wrap md:flex-nowrap gap-8 justify-center ml-4 md:ml-8"
             >
               <div
                 class="relative w-full md:w-1/3 h-[793px] overflow-hidden rounded-xl shadow-lg group"
@@ -432,35 +419,32 @@ import Footer from "../components/Footer.astro";
                   class="absolute inset-0 bg-cover bg-center"
                   style="background-image: url('/images/services/MONITOREO DE ALARMAS.jpg')"
                 >
-                  <!-- Color overlay without blur -->
                   <div class="absolute inset-0" style="background: rgba(0, 27, 81, 0.3);"></div>
                 </div>
                 <div
                   class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300"
                 >
                 </div>
-                <!-- Blur overlay for selection -->
                 <div
-                  class="absolute inset-0 backdrop-blur-[5px] opacity-0 invisible transition-all duration-300 z-10 select-overlay"
+                  class="absolute inset-0 backdrop-blur-[5px] opacity-0 invisible transition-all duration-300 z-[5] select-overlay"
                   style="background: rgba(0, 27, 81, 0.3);"
                 >
                 </div>
                 <div
-                  class="absolute h-full left-10 top-1/2fflex items-center group-hover:opacity-0 transition-opacity duration-300"
+                  class="absolute top-[5%] left-10 -translate-y-1/2 flex items-center group-hover:opacity-0 transition-opacity duration-300"
                 >
                   <h2
-                    class="text-white font-bold font-size-[65px] rotate-90 origin-left whitespace-nowrap ml-10 mt-[-30px]"
+                    class="text-white font-bold text-[55px] rotate-90 origin-left whitespace-nowrap ml-10"
                   >
                     MONITOREO DE <br/>ALARMAS
                   </h2>
                 </div>
-                <!-- Contenido que aparece en hover -->
                 <div
-                  class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-12 py-8 z-20"
+                  class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-6 py-8 z-[5]"
                 >
                   <p
-                    class="text-center break-words whitespace-normal mb-8"
-                    style="width: 459px; height: 202px; top: 259px; left: 29px; font-weight: 400; font-size: 29px; line-height: 94%; letter-spacing: 0%; text-align: center; color: #D9D9D9;"
+                    class="text-center mb-8 w-full max-w-[300px] hyphens-auto"
+                    style="font-weight: 400; font-size: 24px; line-height: 130%; letter-spacing: 0%; text-align: center; color: #D9D9D9; word-break: normal; overflow-wrap: break-word;"
                   >
                     Detecta y responde a eventos en tiempo real. Las alarmas
                     conectadas a nuestra central activan patrullas de reacción
@@ -483,35 +467,33 @@ import Footer from "../components/Footer.astro";
                   class="absolute inset-0 bg-cover bg-center"
                   style="background-image: url('/images/services/INSTALACION DE SISTEMAS DE SEGURIDAD.jpg')"
                 >
-                  <!-- Color overlay without blur -->
                   <div class="absolute inset-0" style="background: rgba(0, 27, 81, 0.3);"></div>
                 </div>
                 <div
                   class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300"
                 >
                 </div>
-                <!-- Blur overlay for selection -->
                 <div
-                  class="absolute inset-0 backdrop-blur-[5px] opacity-0 invisible transition-all duration-300 z-10 select-overlay"
+                  class="absolute inset-0 backdrop-blur-[5px] opacity-0 invisible transition-all duration-300 z-[5] select-overlay"
                   style="background: rgba(0, 27, 81, 0.3);"
                 >
                 </div>
                 <div
-                  class="absolute h-full left-10 top-1/2flex items-center group-hover:opacity-0 transition-opacity duration-300"
+                  class="absolute top-[5%] left-10 -translate-y-1/2 flex items-center group-hover:opacity-0 transition-opacity duration-300"
                 >
                   <h2
-                    class="text-white font-bold font-size-[65px] rotate-90 origin-left whitespace-nowrap ml-10 mt-[-30px]"
+                    class="text-white font-bold text-[55px] rotate-90 origin-left whitespace-nowrap ml-10"
                   >
-                    INSTALACIÓN DE <br/>SISTEMAS DE SEGURIDAD
+                    INSTALACIÓN DE <br />SISTEMAS DE SEGURIDAD
                   </h2>
                 </div>
-                <!-- Contenido que aparece en hover -->
+
                 <div
-                  class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-12 py-8 z-20"
+                  class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-6 py-8 z-[5]"
                 >
                   <p
-                    class="text-center break-words whitespace-normal mb-8"
-                    style="width: 459px; height: 202px; top: 259px; left: 29px; font-weight: 400; font-size: 29px; line-height: 94%; letter-spacing: 0%; text-align: center; color: #D9D9D9;"
+                    class="text-center mb-8 w-full max-w-[300px] hyphens-auto"
+                    style="font-weight: 400; font-size: 24px; line-height: 130%; letter-spacing: 0%; text-align: center; color: #D9D9D9; word-break: normal; overflow-wrap: break-word;"
                   >
                     Somos expertos en la instalación y mantenimiento de sistemas
                     electrónicos como CCTV, controles biométricos y alarmas
@@ -534,35 +516,32 @@ import Footer from "../components/Footer.astro";
                   class="absolute inset-0 bg-cover bg-center"
                   style="background-image: url('/images/services/OPERACION DE MEDIOS EN TECH.jpg')"
                 >
-                  <!-- Color overlay without blur -->
                   <div class="absolute inset-0" style="background: rgba(0, 27, 81, 0.3);"></div>
                 </div>
                 <div
                   class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300"
                 >
                 </div>
-                <!-- Blur overlay for selection -->
                 <div
-                  class="absolute inset-0 backdrop-blur-[5px] opacity-0 invisible transition-all duration-300 z-10 select-overlay"
+                  class="absolute inset-0 backdrop-blur-[5px] opacity-0 invisible transition-all duration-300 z-[5] select-overlay"
                   style="background: rgba(0, 27, 81, 0.3);"
                 >
                 </div>
                 <div
-                  class="absolute h-full left-10 top-1/2flex items-center group-hover:opacity-0 transition-opacity duration-300"
+                  class="absolute top-[5%] left-10 -translate-y-1/2 flex items-center group-hover:opacity-0 transition-opacity duration-300"
                 >
                   <h2
-                     class="text-white font-bold font-size-[65px] rotate-90 origin-left whitespace-nowrap ml-10 mt-[-30px]"
+                    class="text-white font-bold text-[55px] rotate-90 origin-left whitespace-nowrap ml-10"
                   >
-                    OPERACIÓN DE MEDIOS <br/> TECNOLÓGICOS
+                    OPERACIÓN DE MEDIOS <br /> TECNOLÓGICOS
                   </h2>
                 </div>
-                <!-- Contenido que aparece en hover -->
                 <div
-                  class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-12 py-8 z-20"
+                  class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-6 py-8 z-[5]"
                 >
                   <p
-                    class="text-center break-words whitespace-normal mb-8"
-                    style="width: 459px; height: 202px; top: 259px; left: 29px; font-weight: 400; font-size: 29px; line-height: 94%; letter-spacing: 0%; text-align: center; color: #D9D9D9;"
+                    class="text-center mb-8 w-full max-w-[300px] hyphens-auto"
+                    style="font-weight: 400; font-size: 24px; line-height: 130%; letter-spacing: 0%; text-align: center; color: #D9D9D9; word-break: normal; overflow-wrap: break-word;"
                   >
                     Gestionamos centros de control con tecnología de vanguardia
                     que integran monitoreo de cámaras, acceso remoto y sistemas
@@ -581,294 +560,252 @@ import Footer from "../components/Footer.astro";
             </div>
           </div>
 
-          <!-- Botones de navegación con estilos similares a los originales -->
+          <!-- Botones de navegación para el carrusel de servicios -->
           <button
-            class="absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full flex items-center justify-center shadow-xl z-10 hover:shadow-2xl transition-shadow opacity-0"
-            style="width: 62px; height: 62px; left: 60px;"
-            id="btn-izquierda"
-          >
+            class="absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full flex items-center justify-center shadow-xl hover:shadow-2xl transition-shadow opacity-0 z-[5]"
+            style="width: 62px; height: 62px; left: 14px;"
+            id="servicios-btn-izquierda">
             <img src="/images/vectors/ARROW.svg" alt="Anterior" class="w-[20px] h-[40px] rotate-180" />
           </button>
           <button
-            class="absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full flex items-center justify-center shadow-xl z-10 hover:shadow-2xl transition-shadow"
+            class="absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full flex items-center justify-center shadow-xl hover:shadow-2xl transition-shadow z-[5]"
             style="width: 62px; height: 62px;"
-            id="btn-derecha"
-          >
+            id="servicios-btn-derecha">
             <img src="/images/vectors/ARROW.svg" alt="Siguiente" class="w-[20px] h-[40px]" />
           </button>
         </div>
       </div>
     </section>
 
+    <!-- Sección Equipo -->
     <section class="py-16 px-8 md:px-16 bg-white" id="equipo">
       <h1 class="text-[50px] font-bold text-center mb-12 text-primary">
         Nuestro Equipo
       </h1>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[1400px] mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-full mx-auto">
         <!-- Tarjeta 1 -->
         <div class="relative h-[424px] overflow-hidden group rounded-[10px]" id="flip-card-1">
           <div
             class="w-full h-full transition-transform duration-700 transform-style-preserve-3d cursor-pointer rounded-[10px]"
           >
-            <!-- Frente de la tarjeta -->
+            <!-- Frente -->
             <div class="absolute inset-0 backface-hidden rounded-[10px]">
               <div
                 class="absolute inset-0 bg-cover bg-center rounded-[10px]"
-                style="width: 100%; height: 424px; background-image: url('/images/team/PERSONAL OPERATIVO.jpg');"
+                style="background-image: url('/images/team/PERSONAL OPERATIVO.jpg');"
               >
                 <div
                   class="absolute inset-0 transition-all duration-300 rounded-[10px]"
                   style="background: linear-gradient(180deg, rgba(0, 27, 81, 0) 0%, rgba(0, 27, 81, 0.7) 100%);"
-                >
-                </div>
+                ></div>
               </div>
-              <div class="absolute inset-0 flex items-center justify-center">
-                  <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
-                    <h2 class="text-[35px] font-bold text-center text-white whitespace-nowrap">
-                      Perfil del Personal Operativo
-                    </h2>
-                  </div>
+              <div class="absolute inset-0 flex items-end p-4 text-white">
+                <h2 class="text-[28px] md:text-[35px] font-bold text-center w-full break-words">
+                  Perfil del Personal Operativo
+                </h2>
               </div>
             </div>
-            <!-- Reverso de la tarjeta -->
-            <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-[10px]">
+        
+            <!-- Reverso -->
+            <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-[10px] overflow-hidden">
               <div
                 class="absolute inset-0 bg-cover bg-center rounded-[10px]"
-                style="width: 100%; height: 424px; background-image: url('/images/team/PERSONAL OPERATIVO.jpg');"
+                style="background-image: url('/images/team/PERSONAL OPERATIVO.jpg');"
               >
                 <div class="absolute inset-0 rounded-[10px]" style="background: #2E2E2ECC;"></div>
               </div>
-              <div class="absolute inset-0 flex items-center justify-center">
-                <div class="text-center px-8">
-                  <div class="absolute inset-x-0" style="height: 33px; top: 103px;">
-                    <h2 class="text-[35px] font-bold text-center text-white whitespace-nowrap">
-                      Perfil del Personal Operativo
-                    </h2>
-                  </div>
-                  <div class="absolute" style="width: 512px; height: 161px; top: 161px; left: 61px;">
-                    <p class="text-white text-center" style="font-weight: 400; font-size: 28px; line-height: 94%; letter-spacing: 0%;">
-                      Nuestro equipo operativo está altamente capacitado,
-                      cumpliendo con estrictos estándares de selección y
-                      entrenamiento. Cada vigilante es evaluado en aptitudes
-                      físicas, psicológicas y técnicas, asegurando un servicio de
-                      calidad.
-                    </p>
-                  </div>
-                </div>
+              <div class="absolute inset-0 flex flex-col items-center justify-center p-4 overflow-y-auto text-center text-white">
+                <h2 class="text-[28px] md:text-[35px] font-bold mb-4 break-words">
+                  Perfil del Personal Operativo
+                </h2>
+                <p class="text-[16px] md:text-[20px] leading-snug px-2 md:px-4">
+                  Nuestro equipo operativo está altamente capacitado, cumpliendo con estrictos estándares de selección y entrenamiento. Cada vigilante es evaluado en aptitudes físicas, psicológicas y técnicas, asegurando un servicio de calidad.
+                </p>
               </div>
             </div>
           </div>
         </div>
-
+        
         <!-- Tarjeta 2 -->
         <div class="relative h-[424px] overflow-hidden group rounded-[10px]" id="flip-card-2">
           <div
             class="w-full h-full transition-transform duration-700 transform-style-preserve-3d cursor-pointer rounded-[10px]"
           >
-            <!-- Frente de la tarjeta -->
+            <!-- Frente -->
             <div class="absolute inset-0 backface-hidden rounded-[10px]">
               <div
                 class="absolute inset-0 bg-cover bg-center rounded-[10px]"
-                style="width: 100%; height: 424px; background-image: url('/images/team/RESPONSABILIDAD SOCIAL.jpg');"
+                style="background-image: url('/images/team/RESPONSABILIDAD SOCIAL.jpg');"
               >
                 <div
                   class="absolute inset-0 transition-all duration-300 rounded-[10px]"
                   style="background: linear-gradient(180deg, rgba(0, 27, 81, 0) 0%, rgba(0, 27, 81, 0.7) 100%);"
-                >
-                </div>
+                ></div>
               </div>
-              <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
-                <h2 class="text-[35px] font-bold text-center text-white whitespace-nowrap">
+              <div class="absolute inset-0 flex items-end p-4 text-white">
+                <h2 class="text-[28px] md:text-[35px] font-bold text-center w-full break-words">
                   Responsabilidad Social
                 </h2>
               </div>
             </div>
-            <!-- Reverso de la tarjeta -->
-            <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-[10px]">
+        
+            <!-- Reverso -->
+            <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-[10px] overflow-hidden">
               <div
                 class="absolute inset-0 bg-cover bg-center rounded-[10px]"
-                style="width: 100%; height: 424px; background-image: url('/images/team/RESPONSABILIDAD SOCIAL.jpg');"
+                style="background-image: url('/images/team/RESPONSABILIDAD SOCIAL.jpg');"
               >
                 <div class="absolute inset-0 rounded-[10px]" style="background: #2E2E2ECC;"></div>
               </div>
-              <div class="absolute inset-0 flex items-center justify-center">
-                <div class="text-center px-8">
-                  <div class="absolute inset-x-0" style="height: 33px; top: 103px;">
-                    <h2 class="text-[35px] font-bold text-center text-white whitespace-nowrap">
-                      Responsabilidad Social
-                    </h2>
-                  </div>
-                  <div class="absolute" style="width: 512px; height: 161px; top: 161px; left: 61px;">
-                    <p class="text-white text-center" style="font-weight: 400; font-size: 28px; line-height: 94%; letter-spacing: 0%;">
-                      A través de herramientas tecnológicas nos apoyamos con
-                      recolección de información digital, disminuyendo el uso de
-                      papel, impactando positivamente el medio ambiente, bajando
-                      la huella carbono de la compañía.
-                    </p>
-                  </div>
-                </div>
+              <div class="absolute inset-0 flex flex-col items-center justify-center p-4 overflow-y-auto text-center text-white">
+                <h2 class="text-[28px] md:text-[35px] font-bold mb-4 break-words">
+                  Responsabilidad Social
+                </h2>
+                <p class="text-[16px] md:text-[20px] leading-snug px-2 md:px-4">
+                  A través de herramientas tecnológicas nos apoyamos con recolección de información digital,
+                  disminuyendo el uso de papel, impactando positivamente el medio ambiente,
+                  bajando la huella de carbono de la compañía.
+                </p>
               </div>
             </div>
           </div>
         </div>
-
+        
         <!-- Tarjeta 3 -->
         <div class="relative h-[424px] overflow-hidden group rounded-[10px]" id="flip-card-3">
           <div
             class="w-full h-full transition-transform duration-700 transform-style-preserve-3d cursor-pointer rounded-[10px]"
           >
-            <!-- Frente de la tarjeta -->
+            <!-- Frente -->
             <div class="absolute inset-0 backface-hidden rounded-[10px]">
               <div
                 class="absolute inset-0 bg-cover bg-center rounded-[10px]"
-                style="width: 100%; height: 424px; background-image: url('/images/team/CAPACITACION Y SELECCION.jpg');"
+                style="background-image: url('/images/team/CAPACITACION Y SELECCION.jpg');"
               >
                 <div
                   class="absolute inset-0 transition-all duration-300 rounded-[10px]"
                   style="background: linear-gradient(180deg, rgba(0, 27, 81, 0) 0%, rgba(0, 27, 81, 0.7) 100%);"
-                >
-                </div>
+                ></div>
               </div>
-              <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
-                <h2 class="text-[35px] font-bold text-center text-white whitespace-nowrap">
+              <div class="absolute inset-0 flex items-end p-4 text-white">
+                <h2 class="text-[28px] md:text-[35px] font-bold text-center w-full break-words">
                   Capacitación y Selección
                 </h2>
               </div>
             </div>
-            <!-- Reverso de la tarjeta -->
-            <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-[10px]">
+        
+            <!-- Reverso -->
+            <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-[10px] overflow-hidden">
               <div
                 class="absolute inset-0 bg-cover bg-center rounded-[10px]"
-                style="width: 100%; height: 424px; background-image: url('/images/team/CAPACITACION Y SELECCION.jpg');"
+                style="background-image: url('/images/team/CAPACITACION Y SELECCION.jpg');"
               >
                 <div class="absolute inset-0 rounded-[10px]" style="background: #2E2E2ECC;"></div>
               </div>
-              <div class="absolute inset-0 flex items-center justify-center">
-                <div class="text-center px-8">
-                  <div class="absolute inset-x-0" style="height: 33px; top: 103px;">
-                    <h2 class="text-[35px] font-bold text-center text-white whitespace-nowrap">
-                      Capacitación y Selección
-                    </h2>
-                  </div>
-                  <div class="absolute" style="width: 512px; height: 161px; top: 161px; left: 61px;">
-                    <p class="text-white text-center" style="font-weight: 400; font-size: 28px; line-height: 94%; letter-spacing: 0%;">
-                      Viaservin comprometido con la calidad y el desarrollo
-                      profesional continuo.
-                    </p>
-                  </div>
-                </div>
+              <div class="absolute inset-0 flex flex-col items-center justify-center p-4 overflow-y-auto text-center text-white">
+                <h2 class="text-[28px] md:text-[35px] font-bold mb-4 break-words">
+                  Capacitación y Selección
+                </h2>
+                <p class="text-[16px] md:text-[20px] leading-snug px-2 md:px-4">
+                  Viaservin comprometido con la calidad y el desarrollo profesional continuo.
+                </p>
               </div>
             </div>
           </div>
-        </div>
+        </div>        
 
         <!-- Tarjeta 4 -->
         <div class="relative h-[424px] overflow-hidden group rounded-[10px]" id="flip-card-4">
           <div
             class="w-full h-full transition-transform duration-700 transform-style-preserve-3d cursor-pointer rounded-[10px]"
           >
-            <!-- Frente de la tarjeta -->
+            <!-- Frente -->
             <div class="absolute inset-0 backface-hidden rounded-[10px]">
               <div
                 class="absolute inset-0 bg-cover bg-center rounded-[10px]"
-                style="width: 100%; height: 424px; background-image: url('/images/team/PROGRAMAS DE BIENESTAR SOCIAL.jpg');"
+                style="background-image: url('/images/team/PROGRAMAS DE BIENESTAR SOCIAL.jpg');"
               >
                 <div
                   class="absolute inset-0 transition-all duration-300 rounded-[10px]"
                   style="background: linear-gradient(180deg, rgba(0, 27, 81, 0) 0%, rgba(0, 27, 81, 0.7) 100%);"
-                >
-                </div>
+                ></div>
               </div>
-              <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
-                <h2 class="text-[35px] font-bold text-center text-white whitespace-nowrap">
+              <div class="absolute inset-0 flex items-end p-4 text-white">
+                <h2 class="text-[26px] md:text-[35px] font-bold text-center w-full break-words">
                   Programas de Bienestar Social
                 </h2>
               </div>
             </div>
-            <!-- Reverso de la tarjeta -->
-            <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-[10px]">
+        
+            <!-- Reverso -->
+            <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-[10px] overflow-hidden">
               <div
                 class="absolute inset-0 bg-cover bg-center rounded-[10px]"
-                style="width: 100%; height: 424px; background-image: url('/images/team/PROGRAMAS DE BIENESTAR SOCIAL.jpg');"
+                style="background-image: url('/images/team/PROGRAMAS DE BIENESTAR SOCIAL.jpg');"
               >
                 <div class="absolute inset-0 rounded-[10px]" style="background: #2E2E2ECC;"></div>
               </div>
-              <div class="absolute inset-0 flex items-center justify-center">
-                <div class="text-center px-8">
-                  <div class="absolute inset-x-0" style="height: 33px; top: 103px;">
-                    <h2 class="text-[35px] font-bold text-center text-white whitespace-nowrap">
-                      Programas de Bienestar Social
-                    </h2>
-                  </div>
-                  <div class="absolute" style="width: 512px; height: 161px; top: 161px; left: 61px;">
-                    <p class="text-white text-center" style="font-weight: 400; font-size: 28px; line-height: 94%; letter-spacing: 0%;">
-                      Apoyamos a nuestros colaboradores y sus familias con
-                      iniciativas sociales, convenios de crédito y actividades
-                      recreativas.
-                    </p>
-                  </div>
-                </div>
+              <div class="absolute inset-0 flex flex-col items-center justify-center p-4 overflow-y-auto text-center text-white">
+                <h2 class="text-[26px] md:text-[35px] font-bold mb-4 break-words">
+                  Programas de Bienestar Social
+                </h2>
+                <p class="text-[16px] md:text-[20px] leading-snug px-2 md:px-4">
+                  Apoyamos a nuestros colaboradores y sus familias con iniciativas sociales, convenios de crédito y actividades recreativas.
+                </p>
               </div>
             </div>
           </div>
-        </div>
+        </div>        
 
         <!-- Tarjeta 5 -->
         <div
-          class="relative h-[424px] overflow-hidden group md:col-span-2 md:w-1/2 md:mx-auto rounded-[10px]"
+          class="relative h-[424px] overflow-hidden group md:col-span-2 md:w-[600px] md:mx-auto rounded-[10px]"
           id="flip-card-5"
         >
           <div
             class="w-full h-full transition-transform duration-700 transform-style-preserve-3d cursor-pointer rounded-[10px]"
           >
-            <!-- Frente de la tarjeta -->
+            <!-- Frente -->
             <div class="absolute inset-0 backface-hidden rounded-[10px]">
               <div
                 class="absolute inset-0 bg-cover bg-center rounded-[10px]"
-                style="width: 100%; height: 424px; background-image: url('/images/team/DOTACION Y SUPERVISION.jpg');"
+                style="background-image: url('/images/team/DOTACION Y SUPERVISION.jpg');"
               >
                 <div
                   class="absolute inset-0 transition-all duration-300 rounded-[10px]"
                   style="background: linear-gradient(180deg, rgba(0, 27, 81, 0) 0%, rgba(0, 27, 81, 0.7) 100%);"
-                >
-                </div>
+                ></div>
               </div>
-              <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
-                <h2 class="text-[35px] font-bold text-center text-white whitespace-nowrap">
+              <div class="absolute inset-0 flex items-end p-4 text-white">
+                <h2 class="text-[26px] md:text-[35px] font-bold text-center w-full break-words">
                   Dotación y Supervisión
                 </h2>
               </div>
             </div>
-            <!-- Reverso de la tarjeta -->
-            <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-[10px]">
+
+            <!-- Reverso -->
+            <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-[10px] overflow-hidden">
               <div
                 class="absolute inset-0 bg-cover bg-center rounded-[10px]"
-                style="width: 100%; height: 424px; background-image: url('/images/team/DOTACION Y SUPERVISION.jpg');"
+                style="background-image: url('/images/team/DOTACION Y SUPERVISION.jpg');"
               >
                 <div class="absolute inset-0 rounded-[10px]" style="background: #2E2E2ECC;"></div>
               </div>
-              <div class="absolute inset-0 flex items-center justify-center">
-                <div class="text-center px-8">
-                  <div class="absolute inset-x-0" style="height: 33px; top: 103px;">
-                    <h2 class="text-[35px] font-bold text-center text-white whitespace-nowrap">
-                      Dotación y Supervisión
-                    </h2>
-                  </div>
-                  <div class="absolute" style="width: 512px; height: 161px; top: 161px; left: 61px;">
-                    <p class="text-white text-center" style="font-weight: 400; font-size: 28px; line-height: 94%; letter-spacing: 0%;">
-                      Cada puesto de trabajo cuenta con dotación de vanguardia y
-                      adecuada a las necesidades del cliente. Aseguramos que los
-                      estándares de calidad se cumplan en todo momento.
-                    </p>
-                  </div>
-                </div>
+              <div class="absolute inset-0 flex flex-col items-center justify-center p-4 overflow-y-auto text-center text-white">
+                <h2 class="text-[26px] md:text-[35px] font-bold mb-4 break-words">
+                  Dotación y Supervisión
+                </h2>
+                <p class="text-[16px] md:text-[20px] leading-snug px-2 md:px-4">
+                  Cada puesto de trabajo cuenta con dotación de vanguardia y adecuada a las necesidades del cliente. Aseguramos que los estándares de calidad se cumplan en todo momento.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    
+
+    <!-- Sección Clientes -->
     <section class="py-16 px-8 text-white" id="clientes" style="background: linear-gradient(97.5deg, #001B51 16.76%, #003DB7 271.25%);">
       <div class="max-w-6xl mx-auto">
         <h1 class="text-[50px] font-bold text-center mb-6">
@@ -1047,9 +984,26 @@ import Footer from "../components/Footer.astro";
                 />
               </div>
             </div>
+
+            <!-- Slide 4: Clínica La Misericordia -->
+            <div
+              class="w-full flex-shrink-0 grid grid-cols-1 gap-6 justify-items-center"
+            >
+              <div
+                class="bg-white rounded-2xl shadow-lg w-40 h-40 overflow-hidden m-0 p-0 flex items-center justify-center"
+                style="margin: 0; padding: 0;"
+              >
+                <img
+                  src="/images/clients/CLINICA LA MISERICORDIA.png"
+                  alt="Clínica La Misericordia"
+                  class="w-full h-full object-contain p-4"
+                  style="display: block; margin: 0; padding: 0; width: 100%; height: 100%; object-fit: contain;"
+                />
+              </div>
+            </div>
           </div>
 
-          <div class="flex justify-center gap-3 mt-8">
+          <div class="flex justify-center gap-3 mt-8 clientes-indicadores">
             <button
               class="w-4 h-4 rounded-full bg-white opacity-40 transition-opacity hover:opacity-100 focus:opacity-100"
               data-index="0"></button>
@@ -1059,65 +1013,82 @@ import Footer from "../components/Footer.astro";
             <button
               class="w-4 h-4 rounded-full bg-white opacity-40 transition-opacity hover:opacity-100 focus:opacity-100"
               data-index="2"></button>
+            <button
+              class="w-4 h-4 rounded-full bg-white opacity-40 transition-opacity hover:opacity-100 focus:opacity-100"
+              data-index="3"></button>
           </div>
         </div>
       </div>
     </section>
     
-    <section class="py-16 px-8 bg-white" id="certificaciones">
-      <div class="max-w-6xl mx-auto">
-        <h1 class="text-[50px] font-bold text-center mb-12 text-primary">
+    <!-- Sección Certificaciones -->
+    <section class="py-16 px-4 sm:px-8 bg-white" id="certificaciones">
+      <div class="max-w-7xl mx-auto">
+        <h1 class="text-[32px] sm:text-[40px] md:text-[50px] font-bold text-center mb-8 sm:mb-12 text-primary">
           Certificaciones
         </h1>
-        <div class="flex justify-center items-center gap-20 mb-16">
-          <img
-            src="/images/certifications/BASC.jpg"
-            alt="Certificado BASC"
-            class="w-[150px] h-auto object-contain"
-            style="margin-right: -10rem;"
-          />
-          <img
-            src="/images/certifications/ICONTEC.jpg"
-            alt="Certificado Icontec"
-            class="w-[300px] h-auto object-contain"
-            style="margin-left: 15.5rem;"
-          />
-          <img
-            src="/images/certifications/RUC.jpg"
-            alt="Certificado IQNET"
-            class="w-[350px] h-auto object-contain"
-          />
+        <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12 lg:gap-20 mb-12 md:mb-16">
+          <div class="w-full md:w-auto flex justify-center">
+            <img
+              src="/images/certifications/BASC.jpg"
+              alt="Certificado BASC"
+              class="w-[120px] sm:w-[150px] h-auto object-contain"
+            />
+          </div>
+          <div class="w-full md:w-auto flex justify-center">
+            <img
+              src="/images/certifications/ICONTEC.jpg"
+              alt="Certificado Icontec"
+              class="w-[200px] sm:w-[250px] md:w-[300px] h-auto object-contain"
+            />
+          </div>
+          <div class="w-full md:w-auto flex justify-center">
+            <img
+              src="/images/certifications/RUC.jpg"
+              alt="Certificado IQNET"
+              class="w-[250px] sm:w-[300px] md:w-[350px] h-auto object-contain"
+            />
+          </div>
         </div>
 
-        <h1 class="text-[50px] font-bold text-center mb-12 text-primary">
+        <h1 class="text-[32px] sm:text-[40px] md:text-[50px] font-bold text-center mb-8 sm:mb-12 text-primary">
           Asociaciones
         </h1>
-        <div class="flex flex-nowrap justify-center items-center gap-16 max-w-[1600px] mx-auto">
-          <img
-            src="/images/associations/CAMARA DE COMERCIO.jpg"
-            alt="Cámara de Comercio de Barranquilla"
-            class="w-[350px] h-auto object-contain"
-          />
-          <img
-            src="/images/associations/ASOSEC.jpg"
-            alt="Asociación Colombiana de Seguridad"
-            class="w-[350px] h-auto object-contain"
-          />
-          <img
-            src="/images/associations/AMCHAM.jpg"
-            alt="AMCHAM Colombia"
-            class="w-[300px] h-auto object-contain"
-          />
-          <img
-            src="/images/associations/CEO.jpg"
-            alt="CEO Corporación Empresarial del Oriente Antioqueño"
-            class="w-[350px] h-auto object-contain"
-          />
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 lg:gap-16 max-w-7xl mx-auto">
+          <div class="flex justify-center">
+            <img
+              src="/images/associations/CAMARA DE COMERCIO.jpg"
+              alt="Cámara de Comercio de Barranquilla"
+              class="w-[250px] sm:w-[300px] md:w-[350px] h-auto object-contain"
+            />
+          </div>
+          <div class="flex justify-center">
+            <img
+              src="/images/associations/ASOSEC.jpg"
+              alt="Asociación Colombiana de Seguridad"
+              class="w-[250px] sm:w-[300px] md:w-[350px] h-auto object-contain"
+            />
+          </div>
+          <div class="flex justify-center">
+            <img
+              src="/images/associations/AMCHAM.jpg"
+              alt="AMCHAM Colombia"
+              class="w-[200px] sm:w-[250px] md:w-[300px] h-auto object-contain"
+            />
+          </div>
+          <div class="flex justify-center">
+            <img
+              src="/images/associations/CEO.jpg"
+              alt="CEO Corporación Empresarial del Oriente Antioqueño"
+              class="w-[250px] sm:w-[300px] md:w-[350px] h-auto object-contain"
+            />
+          </div>
         </div>
       </div>
     </section>
     
-    <section class="py-16 px-8 relative mt-[80px] md:mt-0" id="contacto">
+    <!-- Seccion Formulario -->
+    <section class="py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 relative mt-[80px] md:mt-0" id="contacto">
       <div
         class="absolute inset-0 bg-cover bg-center z-0"
         style="background-image: url('/images/team/FORMULARIO.jpg')"
@@ -1127,7 +1098,7 @@ import Footer from "../components/Footer.astro";
 
       <div class="max-w-4xl w-full mx-auto relative px-2 sm:px-4 md:px-8">
         <h1
-          class="text-[50px] font-bold text-center mb-12 text-white section-title whitespace-nowrap"
+          class="text-[28px] sm:text-[40px] md:text-[50px] font-bold text-center mb-8 sm:mb-12 text-white section-title"
         >
           Déjanos proteger lo que más valoras
         </h1>
@@ -1147,84 +1118,75 @@ import Footer from "../components/Footer.astro";
           <input type="hidden" name="_template" value="table" />
           <input type="text" name="_honey" style="display:none" />
 
-          <div class="flex flex-row gap-6 justify-center w-full">
-            <div class="flex flex-col gap-4" style="width: 431px; min-width: 431px;">
+          <div class="flex flex-col lg:flex-row gap-4 sm:gap-6 justify-center w-full">
+            <div class="flex flex-col gap-4 w-full lg:w-1/2">
               <input
                 type="text"
                 name="nombre"
                 placeholder="Nombre"
                 required
-                class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EE9D26]"
-                style="width: 431px; height: 48px; border-radius: 8px; background: #FFFFFFB2;"
+                class="w-full h-12 bg-[#FFFFFFB2] text-primary px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#EE9D26]"
               />
               <input
                 type="text"
                 name="empresa"
                 placeholder="Empresa"
                 required
-                class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EE9D26]"
-                style="width: 431px; height: 48px; border-radius: 8px; background: #FFFFFFB2;"
+                class="w-full h-12 bg-[#FFFFFFB2] text-primary px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#EE9D26]"
               />
               <input
                 type="email"
                 name="email"
                 placeholder="Correo electrónico"
                 required
-                class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EE9D26]"
-                style="width: 431px; height: 48px; border-radius: 8px; background: #FFFFFFB2;"
+                class="w-full h-12 bg-[#FFFFFFB2] text-primary px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#EE9D26]"
               />
               <input
                 type="tel"
                 name="telefono"
                 placeholder="Número de celular"
                 required
-                class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EE9D26]"
-                style="width: 431px; height: 48px; border-radius: 8px; background: #FFFFFFB2;"
+                class="w-full h-12 bg-[#FFFFFFB2] text-primary px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#EE9D26]"
               />
               <input
                 type="text"
                 name="departamento"
                 placeholder="Departamento"
-                class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EE9D26]"
-                style="width: 431px; height: 48px; border-radius: 8px; background: #FFFFFFB2;"
+                class="w-full h-12 bg-[#FFFFFFB2] text-primary px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#EE9D26]"
               />
               <input
                 type="text"
                 name="municipio"
                 placeholder="Municipio"
-                class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EE9D26]"
-                style="width: 431px; height: 48px; border-radius: 8px; background: #FFFFFFB2;"
+                class="w-full h-12 bg-[#FFFFFFB2] text-primary px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#EE9D26]"
               />
             </div>
-            <div class="flex flex-col gap-4 ml-3" style="width: 431px; min-width: 431px;">
+            <div class="flex flex-col gap-4 w-full lg:w-1/2">
               <input
                 type="text"
                 name="direccion"
                 placeholder="Dirección"
                 required
-                class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EE9D26]"
-                style="width: 431px; height: 48px; border-radius: 8px; margin-bottom: 16px; background: #FFFFFFB2;"
+                class="w-full h-12 bg-[#FFFFFFB2] text-primary px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#EE9D26]"
               />
               <input
                 type="text"
                 name="id"
                 placeholder="Id"
                 required
-                class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EE9D26]"
-                style="width: 431px; height: 48px; border-radius: 8px; margin-bottom: 5px; margin-top: -15px; background: #FFFFFFB2;"
+                class="w-full h-12 bg-[#FFFFFFB2] text-primary px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#EE9D26]"
               />
               <textarea
                 name="mensaje"
                 placeholder="Mensaje"
                 required
-                class="bg-gray-200 text-primary px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EE9D26]"
-                style="width: 431px; height: 240px; border-radius: 8px; resize: none; margin-top: -5px; background: #FFFFFFB2;"
+                class="w-full h-[240px] bg-[#FFFFFFB2] text-primary px-4 py-3 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-[#EE9D26]"
               ></textarea>
             </div>
           </div>
 
           <div class="flex flex-col items-center gap-6 mt-8">
-            <label class="flex items-center text-white text-sm sm:text-base relative cursor-pointer select-none" style="padding-left: 0;">
+            <label class="flex items-center text-white text-sm sm:text-base relative cursor-pointer select-none px-4">
               <span class="relative inline-block w-5 h-5 mr-2 align-middle">
                 <input
                   type="checkbox"
@@ -1237,13 +1199,12 @@ import Footer from "../components/Footer.astro";
                   <path d="M5 10.5L9 14.5L15 7.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </span>
-              <span>Acepta nuestra <a href="/assets/docs/PRIVACIDAD-Y-TRATAMIENTO-DE-DATOS.pdf" target="_blank" class="text-white hover:underline">política de tratamiento de datos</a></span>
+              <span class="text-center sm:text-left">Acepta nuestra <a href="/assets/docs/PRIVACIDAD-Y-TRATAMIENTO-DE-DATOS.pdf" target="_blank" class="text-white hover:underline">política de tratamiento de datos</a></span>
             </label>
 
             <button
               type="submit"
-              class="border border-white text-white px-8 py-3 rounded-md font-bold hover:bg-[#EE9D26] hover:border-[#EE9D26] transition-colors"
-              style="width: 507px; height: 48px; font-size: 1.25rem;"
+              class="w-full sm:w-[300px] md:w-[400px] lg:w-[507px] h-12 border border-white text-white rounded-lg font-bold hover:bg-[#EE9D26] hover:border-[#EE9D26] transition-colors text-base sm:text-lg md:text-xl"
             >
               Enviar
             </button>
@@ -1359,6 +1320,7 @@ import Footer from "../components/Footer.astro";
     // Carrusel del banner principal
     const bannerCarousel = document.querySelector("#banner-carousel .flex");
     const bannerIndicadores = document.querySelectorAll("[data-banner-index]");
+    
     const btnIzquierda = document.getElementById("banner-btn-izquierda");
     const btnDerecha = document.getElementById("banner-btn-derecha");
     let bannerActual = 0;
@@ -1444,8 +1406,8 @@ import Footer from "../components/Footer.astro";
 
     // Carrusel de servicios
     const carrusel = document.getElementById("carrusel");
-    const btnDerechaServicios = document.getElementById("btn-derecha");
-    const btnIzquierdaServicios = document.getElementById("btn-izquierda");
+    const btnDerechaServicios = document.getElementById("servicios-btn-derecha");
+    const btnIzquierdaServicios = document.getElementById("servicios-btn-izquierda");
     let posicionActual = 0;
     const totalSlidesServicios = 2; // Tenemos 2 slides de servicios
 
@@ -1487,7 +1449,7 @@ import Footer from "../components/Footer.astro";
 
     // Clientes carrusel
     const clientesSlider = document.getElementById("clientes-slider");
-    const indicadores = document.querySelectorAll("[data-index]");
+    const clientesIndicadores = document.querySelectorAll('.clientes-indicadores [data-index]');
     let slideActual = 0;
 
     function mostrarSlide(index: number) {
@@ -1497,25 +1459,25 @@ import Footer from "../components/Footer.astro";
         const normalizedIndex = ((index % totalSlides) + totalSlides) % totalSlides;
         
         clientesSlider.style.transform = `translateX(-${normalizedIndex * 100}%)`;
-
+  
         // Primero, remover la clase activa de todos los indicadores
-        indicadores.forEach((indicador) => {
+        clientesIndicadores.forEach((indicador) => {
           indicador.classList.remove("opacity-100");
           indicador.classList.add("opacity-40");
         });
-
+  
         // Luego, activar solo el indicador seleccionado
-        if (indicadores[normalizedIndex]) {
-          indicadores[normalizedIndex].classList.remove("opacity-40");
-          indicadores[normalizedIndex].classList.add("opacity-100");
+        if (clientesIndicadores[normalizedIndex]) {
+          clientesIndicadores[normalizedIndex].classList.remove("opacity-40");
+          clientesIndicadores[normalizedIndex].classList.add("opacity-100");
         }
-
+  
         slideActual = normalizedIndex;
       }
     }
 
     // Inicializar el primer indicador como activo
-    if (indicadores.length > 0) {
+    if (clientesIndicadores.length > 0) {
       mostrarSlide(0);
     }
 
@@ -1528,7 +1490,7 @@ import Footer from "../components/Footer.astro";
     }, 5000);
 
     // Permitir clic en los indicadores
-    indicadores.forEach((indicador, i) => {
+    clientesIndicadores.forEach((indicador, i) => {
       indicador.addEventListener("click", () => {
         // Reiniciar el intervalo cuando se hace clic manualmente
         clearInterval(intervalId);
