@@ -1,14 +1,26 @@
+---
+// Obtener la ruta actual y el hash
+const currentPath = Astro.url.pathname;
+const currentHash = Astro.url.hash;
+
+const isActive = (path: string) => {
+  if (path.startsWith('/#')) {
+    return currentHash === path.substring(1);
+  }
+  return currentPath === path;
+};
+---
+
 <nav
   class="fixed top-0 left-0 w-full bg-white py-4 shadow-md z-10 rounded-bl-[32px] rounded-br-[20px]"
 >
   <div class="mx-auto flex justify-between items-center px-6">
     <div class="logo">
       <a href="/">
-        <img src="/images/logos/HEADER.png" alt="Logo" class="w-[230px] h-[42px]" />
+        <img src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955104/logos/d4mbrhpbwf8dxdup7otv.png" alt="Logo" class="w-[230px] h-[42px]" />
       </a>
     </div>
     
-    <!-- Botón de menú móvil -->
     <button
       id="menu-toggle"
       class="md:hidden flex items-center text-gray-800 focus:outline-none"
@@ -79,10 +91,10 @@
           >
         </li>
         <li>
-          <button
+          {/* <button
             class="font-['Franklin Gothic Book'] bg-[#ee9d26] text-white border border-[#ee9d26] py-2 px-2.5 rounded-md cursor-pointer transition-all hover:bg-white hover:text-black whitespace-nowrap w-full md:w-auto text-[20px] leading-[123%] tracking-[0px] align-bottom font-normal"
             >Iniciar sesión</button
-          >
+          > */}
         </li>
       </ul>
     </div>
@@ -90,23 +102,53 @@
 </nav>
 
 <script>
-  // Agregar manejador de clic para los enlaces de navegación
   document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll("nav a[data-section]");
     const menuToggle = document.getElementById("menu-toggle");
     const navMenu = document.getElementById("navbar-menu");
     
-    // Menú móvil toggle con transición
+    // Función para actualizar los enlaces activos basado en el scroll
+    function updateActiveSection() {
+      const sections = document.querySelectorAll('section[id]');
+      const scrollPosition = window.scrollY + 100; // Ajuste para el offset del navbar
+
+      sections.forEach(section => {
+        const sectionElement = section as HTMLElement;
+        const sectionTop = sectionElement.offsetTop;
+        const sectionHeight = sectionElement.offsetHeight;
+        const sectionId = section.getAttribute('id');
+        
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          // Remover clase activa de todos los enlaces
+          document.querySelectorAll('.nav-link').forEach(link => {
+            link.classList.remove('text-black');
+            link.classList.add('text-[#42424280]');
+          });
+          
+          // Agregar clase activa al enlace correspondiente
+          const activeLink = document.querySelector(`.nav-link[href="/#${sectionId}"]`);
+          if (activeLink) {
+            activeLink.classList.remove('text-[#42424280]');
+            activeLink.classList.add('text-black');
+          }
+        }
+      });
+    }
+
+    // Actualizar sección activa al hacer scroll
+    window.addEventListener('scroll', updateActiveSection);
+    
+    // Actualizar sección activa al cargar la página
+    updateActiveSection();
+    
     if (menuToggle && navMenu) {
       menuToggle.addEventListener("click", function () {
         if (navMenu.classList.contains("max-h-0")) {
-          // Abrir menú con animación
           navMenu.classList.remove("max-h-0");
           navMenu.classList.add("max-h-[500px]");
           navMenu.classList.remove("opacity-0");
           navMenu.classList.add("opacity-100");
         } else {
-          // Cerrar menú con animación
           navMenu.classList.remove("max-h-[500px]");
           navMenu.classList.add("max-h-0");
           navMenu.classList.remove("opacity-100");
@@ -115,79 +157,31 @@
       });
     }
     
-    // Función para actualizar la sección activa
-    function actualizarSeccionActiva() {
-      const scrollPosition = window.scrollY;
-      
-      // Obtener todas las secciones
-      document.querySelectorAll("section[id]").forEach((section) => {
-        const sectionId = section.getAttribute("id");
-        const sectionTop = (section as HTMLElement).offsetTop - 100; // Ajuste para el header
-        const sectionHeight = (section as HTMLElement).offsetHeight;
+    // Manejar clics en los enlaces
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', function(this: HTMLAnchorElement, e: Event) {
+        const href = this.getAttribute('href');
         
-        if (
-          scrollPosition >= sectionTop &&
-          scrollPosition < sectionTop + sectionHeight
-        ) {
-          // Desactivar todas las opciones del menú
-          navLinks.forEach((link) => {
-            link.classList.remove("text-black");
-            link.classList.add("text-[#42424280]");
-          });
-          
-          // Activar la opción correspondiente a la sección actual
-          const activeLink = document.querySelector(
-            `nav a[data-section="${sectionId}"]`
-          );
-          if (activeLink) {
-            activeLink.classList.remove("text-[#42424280]");
-            activeLink.classList.add("text-black");
-          }
-        }
-      });
-    }
-    
-    // Ejecutar al cargar la página
-    actualizarSeccionActiva();
-    
-    // Ejecutar al hacer scroll
-    window.addEventListener("scroll", actualizarSeccionActiva);
-    
-    // Cerrar menú cuando se hace clic en un enlace
-    navLinks.forEach(function (link) {
-      link.addEventListener(
-        "click",
-        function (this: HTMLAnchorElement, e: Event) {
+        if (href?.startsWith('/#')) {
           e.preventDefault();
-          const sectionId = this.getAttribute("data-section");
+          const targetId = href.substring(2);
+          const targetSection = document.getElementById(targetId);
           
-          // Cerrar el menú móvil al hacer clic
-          if (window.innerWidth < 768 && navMenu) {
-            navMenu.classList.remove("max-h-[500px]");
-            navMenu.classList.add("max-h-0");
-            navMenu.classList.remove("opacity-100");
-            navMenu.classList.add("opacity-0");
-          }
-          
-          if (!sectionId) return;
-          
-          // Buscar la sección por ID
-          const targetSection = document.getElementById(sectionId);
-          
-          // Si encontramos la sección, hacemos scroll
           if (targetSection) {
-            const headerOffset = 80; // Compensar el navbar fijo
+            const headerOffset = 80;
             const elementPosition = targetSection.getBoundingClientRect().top;
-            const offsetPosition =
-              elementPosition + window.pageYOffset - headerOffset;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
             
             window.scrollTo({
               top: offsetPosition,
-              behavior: "smooth",
+              behavior: 'smooth'
             });
+          } else {
+            // Si estamos en la página de políticas, redirigir a la página principal con el hash
+            window.location.href = href;
           }
         }
-      );
+      });
     });
   });
 </script>

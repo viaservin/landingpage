@@ -8,10 +8,9 @@ import WhatsAppButton from '../components/WhatsAppButton.astro';
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" href="/images/logos/ISOTIPO.png" />
+		<link rel="icon" type="image/png" href="https://res.cloudinary.com/dzgixneim/image/upload/v1747955105/logos/kodntuxuhk8zhy6jgd2i.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Viaservin - Seguridad Privada</title>
-		<!-- Google tag (gtag.js) -->
 		<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-7HTKKRQBX0"></script>
 		<script is:inline>
 			window.dataLayer = window.dataLayer || [];
@@ -24,6 +23,255 @@ import WhatsAppButton from '../components/WhatsAppButton.astro';
 	<body class="w-full h-full m-0">
 		<slot />
 		<WhatsAppButton />
+
+		<!-- Banner de Cookies -->
+		<div id="cookie-banner" style="display:none; position:fixed; bottom:0; left:0; width:100%; z-index:9999; background:#fff; box-shadow:0 -2px 8px rgba(0,0,0,0.08);">
+			<div class="cookie-banner-inner">
+				<div class="cookie-banner-col cookie-banner-info">
+					<div class="cookie-banner-title">Nosotros apreciamos tu privacidad</div>
+					<div class="cookie-banner-text">
+						Este sitio emplea cookies para ofrecer un servicio seguro y personalizado. Puedes aceptar o rechazar su uso.
+					</div>
+				</div>
+				<div class="cookie-banner-col cookie-banner-actions">
+					<button id="cookie-reject" class="cookie-btn">Rechazar</button>
+					<button id="cookie-accept" class="cookie-btn">Aceptar</button>
+				</div>
+			</div>
+		</div>
+
+		<style>
+			.cookie-banner-inner {
+				display: grid;
+				grid-template-columns: 1fr;
+				gap: 12px;
+				max-width: 100%;
+				margin-left: 0;
+				margin-right: auto;
+				padding: 24px 16px;
+				width: 100%;
+				box-sizing: border-box;
+				align-items: start;
+			}
+			.cookie-banner-col {
+				width: 100%;
+			}
+			.cookie-banner-title {
+				font-family: 'Utile', sans-serif;
+				font-weight: 700;
+				font-size: 25px;
+				line-height: 123%;
+				color: #424242;
+				padding: 2px 0;
+				margin-bottom: 0;
+				background: none;
+				width: 100%;
+			}
+			.cookie-banner-text {
+				font-family: 'Franklin Gothic Book', Arial, sans-serif;
+				font-weight: 400;
+				font-size: 20px;
+				line-height: 123%;
+				color: #42424280;
+				margin-bottom: 0;
+				white-space: normal;
+				word-break: break-word;
+			}
+			.cookie-banner-actions {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 12px;
+				align-items: center;
+				justify-content: flex-start;
+				width: 100%;
+				margin-top: 8px;
+			}
+			.cookie-btn {
+				background: #f7a325;
+				color: #fff;
+				border: none;
+				border-radius: 8px;
+				padding: 10px 24px;
+				font-weight: 600;
+				font-size: 1rem;
+				cursor: pointer;
+				white-space: nowrap;
+				width: 100%;
+				min-width: 120px;
+				max-width: 100%;
+				flex: 1 1 120px;
+			}
+			@media (min-width: 1024px) {
+				.cookie-banner-inner {
+					grid-template-columns: 2fr 1fr;
+					gap: 32px;
+					padding: 24px 64px;
+					align-items: center;
+				}
+				.cookie-banner-info {
+					width: 100%;
+				}
+				.cookie-banner-actions {
+					justify-content: flex-end;
+					width: 100%;
+					margin-top: 0;
+					gap: 24px;
+					flex-wrap: nowrap;
+				}
+				.cookie-banner-text {
+					white-space: normal;
+					overflow: visible;
+					text-overflow: unset;
+					min-width: 0;
+				}
+				.cookie-btn {
+					width: auto;
+					min-width: 120px;
+					max-width: 100%;
+					flex: 0 0 auto;
+				}
+			}
+		</style>
+
+		<script>
+			function setCookie(name: string, value: string, days: number) {
+				let expires = "";
+				if (days) {
+					const date = new Date();
+					date.setTime(date.getTime() + (days*24*60*60*1000));
+					expires = "; expires=" + date.toUTCString();
+				}
+				let cookieString = name + "=" + (value || "") + expires + "; path=/; SameSite=Lax";
+				if (location.protocol === 'https:') {
+					cookieString += "; Secure";
+				}
+				document.cookie = cookieString;
+			}
+			function getCookie(name: string): string | null {
+				let nameEQ = name + "=";
+				let ca = document.cookie.split(';');
+				for(let i=0;i < ca.length;i++) {
+					let c = ca[i];
+					while (c.charAt(0)==' ') c = c.substring(1,c.length);
+					if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+				}
+				return null;
+			}
+			document.addEventListener("DOMContentLoaded", function() {
+				const banner = document.getElementById("cookie-banner");
+				const acceptBtn = document.getElementById("cookie-accept");
+				const rejectBtn = document.getElementById("cookie-reject");
+				if (banner && !getCookie("cookieConsent")) {
+					banner.style.display = "block";
+				}
+				if (acceptBtn && banner) {
+					acceptBtn.onclick = function() {
+						setCookie("cookieConsent", "accepted", 365);
+						banner.style.display = "none";
+					};
+				}
+				if (rejectBtn && banner) {
+					rejectBtn.onclick = function() {
+						setCookie("cookieConsent", "rejected", 365);
+						banner.style.display = "none";
+					};
+				}
+			});
+		</script>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				// Función para actualizar los enlaces activos
+				function updateActiveLinks() {
+					const currentPath = window.location.pathname;
+					const currentHash = window.location.hash;
+					
+					// Actualizar enlaces del navbar
+					document.querySelectorAll('.nav-link').forEach(link => {
+						const href = link.getAttribute('href');
+						if (href) {
+							if (currentPath === '/politicas' && href === '/politicas') {
+								link.classList.remove('text-[#42424280]');
+								link.classList.add('text-black');
+							} else if (href.startsWith('/#')) {
+								if (currentHash === href.substring(1)) {
+									link.classList.remove('text-[#42424280]');
+									link.classList.add('text-black');
+								} else {
+									link.classList.remove('text-black');
+									link.classList.add('text-[#42424280]');
+								}
+							}
+						}
+					});
+
+					// Actualizar enlaces del footer
+					document.querySelectorAll('footer a').forEach(link => {
+						const href = link.getAttribute('href');
+						if (href) {
+							if (currentPath === '/politicas' && href === '/politicas') {
+								link.classList.remove('text-gray-600');
+								link.classList.add('text-[#001B51]');
+							} else if (href.startsWith('/#')) {
+								if (currentHash === href.substring(1)) {
+									link.classList.remove('text-gray-600');
+									link.classList.add('text-[#001B51]');
+								} else {
+									link.classList.remove('text-[#001B51]');
+									link.classList.add('text-gray-600');
+								}
+							}
+						}
+					});
+				}
+
+				// Actualizar enlaces cuando cambia el hash o la ruta
+				window.addEventListener('hashchange', updateActiveLinks);
+				window.addEventListener('popstate', updateActiveLinks);
+				
+				// Actualizar enlaces al cargar la página
+				updateActiveLinks();
+
+				// Manejar clics en enlaces con hash
+				document.querySelectorAll('a[href^="#"], a[href^="/#"]').forEach(function (link) {
+					link.addEventListener("click", (e) => {
+						const href = link.getAttribute("href");
+						const match = href && href.match(/#(.+)$/);
+						if (match) {
+							const sectionId = match[1];
+							const targetSection = document.getElementById(sectionId);
+							if (targetSection) {
+								e.preventDefault();
+								const headerOffset = 80;
+								const elementPosition = targetSection.getBoundingClientRect().top;
+								const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+								window.scrollTo({
+									top: offsetPosition,
+									behavior: "smooth",
+								});
+							}
+						}
+					});
+				});
+
+				// Manejar hash en la URL al cargar la página
+				if (window.location.hash) {
+					const sectionId = window.location.hash.substring(1);
+					const targetSection = document.getElementById(sectionId);
+					if (targetSection) {
+						setTimeout(() => {
+							const headerOffset = 80;
+							const elementPosition = targetSection.getBoundingClientRect().top;
+							const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+							window.scrollTo({
+								top: offsetPosition,
+								behavior: "smooth",
+							});
+						}, 100);
+					}
+				}
+			});
+		</script>
 	</body>
 </html>
 

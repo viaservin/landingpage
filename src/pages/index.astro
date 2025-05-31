@@ -1,12 +1,8 @@
 ---
-import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 
-// import bannerImage from '../assets/tu-imagen.jpg';
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
@@ -14,7 +10,7 @@ import Footer from "../components/Footer.astro";
     
   <main class="w-full">
     <!-- Seccion Banners -->
-    <section class="relative w-full h-screen overflow-hidden">
+    <section class="relative w-full h-[60vh] md:h-screen overflow-hidden">
       <Navbar />
       <div
         class="absolute inset-0 w-full h-full bg-white"
@@ -25,7 +21,7 @@ import Footer from "../components/Footer.astro";
           <!-- Banner 1 -->
           <div class="w-full h-full flex-shrink-0 relative group">
             <img
-              src="/images/banners/BANNER.jpg"
+              src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955075/banners/jfmtnp3lkpyri8iciswi.jpg"
               alt="Banner principal 1"
               class="w-full h-full object-cover"
               loading="eager"
@@ -63,7 +59,7 @@ import Footer from "../components/Footer.astro";
           <!-- Banner 2 -->
           <div class="w-full h-full flex-shrink-0 relative group">
             <img
-              src="/images/banners/BANNER2.jpg"
+              src="https://res.cloudinary.com/dzgixneim/image/upload/v1748698859/BANNER_yxxncq.jpg"
               alt="Banner principal 2"
               class="w-full h-full object-cover"
               loading="lazy"
@@ -85,9 +81,8 @@ import Footer from "../components/Footer.astro";
                 <h1
                   class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light mb-3 sm:mb-6"
                 >
-                  Tu tranquilidad es nuestra prioridad. Confía en los<br class="hidden md:block" />
-                  expertos en <strong class="font-bold"
-                    >vigilancia y protección</strong
+                  Confía en los expertos en <strong class="font-bold"
+                    >vigilancia y seguridad</strong
                   >
                 </h1>
                 <button
@@ -103,7 +98,7 @@ import Footer from "../components/Footer.astro";
           <!-- Banner 3 -->
           <div class="w-full h-full flex-shrink-0 relative group">
             <img
-              src="/images/banners/BANNER3.jpg"
+              src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955077/banners/uvpj3wspfggitywpdq5g.jpg"
               alt="Banner principal 3"
               class="w-full h-full object-cover"
               loading="lazy"
@@ -125,10 +120,7 @@ import Footer from "../components/Footer.astro";
                 <h1
                   class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light mb-3 sm:mb-6"
                 >
-                  Contamos con más de <strong class="font-bold">43 años</strong><br class="hidden md:block" />
-                  de experiencia <strong class="font-bold"
-                    >respaldando tu tranquilidad</strong
-                  >
+                  Contamos con más de <strong class="font-bold">43 años</strong> de experiencia
                 </h1>
                 <button
                   onclick="document.getElementById('clientes').scrollIntoView({behavior: 'smooth'})"
@@ -141,21 +133,18 @@ import Footer from "../components/Footer.astro";
           </div>
         </div>
     
-        <!-- Botones de navegación del banner (con z-index ajustado) -->
         <button
-          class="absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full flex items-center justify-center shadow-xl hover:shadow-2xl transition-shadow opacity-0"
-          style="width: 62px; height: 62px; left: 14px; z-index: 5;"
+          class="absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full flex items-center justify-center shadow-xl hover:shadow-2xl transition-shadow opacity-0 md:w-[62px] md:h-[62px] w-[40px] h-[40px]"
+          style="left: 14px; z-index: 5;"
           id="banner-btn-izquierda">
-          <img src="/images/vectors/ARROW.svg" alt="Anterior" class="w-[20px] h-[40px] rotate-180" />
+          <img src="/images/vectors/ARROW.svg" alt="Anterior" class="w-[12px] h-[24px] md:w-[20px] md:h-[40px] rotate-180" />
         </button>
         <button
-          class="absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full flex items-center justify-center shadow-xl hover:shadow-2xl transition-shadow"
-          style="width: 62px; height: 62px; z-index: 5;"
+          class="absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full flex items-center justify-center shadow-xl hover:shadow-2xl transition-shadow md:w-[62px] md:h-[62px] w-[40px] h-[40px]"
+          style="z-index: 5;"
           id="banner-btn-derecha">
-          <img src="/images/vectors/ARROW.svg" alt="Siguiente" class="w-[20px] h-[40px]" />
+          <img src="/images/vectors/ARROW.svg" alt="Siguiente" class="w-[12px] h-[24px] md:w-[20px] md:h-[40px]" />
         </button>
-    
-        <!-- Indicadores del carrusel (dentro del div del carrusel) -->
         <div
           class="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 sm:gap-3"
           style="z-index: 5;"
@@ -175,7 +164,6 @@ import Footer from "../components/Footer.astro";
 
     <!-- Sección Nosotros -->
     <section class="w-full mx-auto mt-[50px]" id="nosotros">
-      <!-- Contenedor flexible y controlado -->
       <div class="w-full max-w-100% px-[100px] mx-auto">
         <h1 class="text-3xl sm:text-4xl md:text-[50px] font-bold text-center mb-12 text-primary">
           Nosotros
@@ -192,11 +180,10 @@ import Footer from "../components/Footer.astro";
         </p>
       </div>
 
-      <!-- Imagen a ancho completo -->
       <div class="w-full overflow-hidden">
         <div class="relative w-full h-[200px] sm:h-[300px] md:h-[400px]">
           <img
-            src="/images/team/NOSOTROS.jpg"
+            src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955126/team/lubgdjho9ima8ak7vpem.jpg"
             alt="Banner nosotros"
             class="w-full h-full object-cover"
             style="object-position: center 25%;"
@@ -232,7 +219,6 @@ import Footer from "../components/Footer.astro";
     <!-- Sección Misión y Visión -->
     <section class="pt-[0px] pb-8 sm:pb-12 md:pb-16 w-full mx-auto bg-white">
       <div class="w-full max-w-100% px-[100px] mx-auto flex flex-col md:flex-row gap-16 md:gap-20" id="mision-vision">
-        <!-- Misión -->
         <div class="flex-1">
           <h2 class="text-[#001B51] text-center mb-8 text-3xl sm:text-4xl md:text-[50px] font-bold leading-[94%]">
             Misión
@@ -245,7 +231,6 @@ import Footer from "../components/Footer.astro";
           </p>
         </div>
     
-        <!-- Visión -->
         <div class="flex-1">
           <h2 class="text-[#001B51] text-center mb-8 text-3xl sm:text-4xl md:text-[50px] font-bold leading-[94%]">
             Visión
@@ -261,21 +246,18 @@ import Footer from "../components/Footer.astro";
     <!-- Sección Servicios -->
     <section class="py-16 px-8 md:px-12" id="servicios" style="background: linear-gradient(103.74deg, #001B51 53.95%, #003DB7 201.51%);">
       <div class="text-[50px] mx-auto">
-        <h1 class="text-center mb-6 text-white" style="font-weight: 700; font-size: 50px; line-height: 94%; letter-spacing: 0%;">
+        <h1 class="text-center mb-6 text-white text-[28px] sm:text-[40px] md:text-[50px]" style="font-weight: 700; line-height: 94%; letter-spacing: 0%;">
           Servicios
         </h1>
         <div class="relative overflow-hidden px-4 md:px-12">
-          <div class="flex transition-transform duration-500" id="carrusel">
+          <!-- Carrusel Desktop -->
+          <div class="hidden md:flex transition-transform duration-500" id="carrusel-desktop">
             <!-- Slide 1 -->
-            <div
-              class="w-full flex-shrink-0 flex flex-wrap md:flex-nowrap gap-8 justify-center mr-4 md:mr-8"
-            >
-              <div
-                class="relative w-full md:w-1/3 h-[793px] overflow-hidden rounded-xl shadow-lg group"
-              >
+            <div class="w-full flex-shrink-0 flex flex-wrap md:flex-nowrap gap-8 justify-center mr-4 md:mr-8">
+              <div class="relative w-full md:w-1/3 h-[793px] overflow-hidden rounded-xl shadow-lg group">
                 <div
                   class="absolute inset-0 bg-cover bg-center"
-                  style="background-image: url('/images/services/VIGILANCIA.jpg'); object-position: 20% center;"
+                  style="background-image: url('https://res.cloudinary.com/dzgixneim/image/upload/v1747955119/services/qfm0z2voihqurw1cnicb.jpg'); object-position: 20% center;"
                 >
                   <div class="absolute inset-0" style="background: rgba(0, 27, 81, 0.3);"></div>
                 </div>
@@ -289,7 +271,7 @@ import Footer from "../components/Footer.astro";
                 >
                 </div>
                 <div class="absolute top-[5%] left-10 -translate-y-1/2 flex items-center group-hover:opacity-0 transition-opacity duration-300">
-                  <h2 class="text-white font-bold text-[55px] rotate-90 origin-left whitespace-nowrap">
+                  <h2 class="text-white font-bold text-[35px] md:text-[55px] rotate-90 origin-left whitespace-nowrap">
                     VIGILANCIA FÍSICA
                   </h2>
                 </div>
@@ -297,8 +279,8 @@ import Footer from "../components/Footer.astro";
                   class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-6 py-8 z-[5]"
                 >
                   <p
-                    class="text-center mb-8 w-full max-w-[300px] hyphens-auto"
-                    style="font-weight: 400; font-size: 24px; line-height: 130%; letter-spacing: 0%; text-align: center; color: #D9D9D9; word-break: normal; overflow-wrap: break-word;"
+                    class="text-center mb-8 w-full max-w-[300px] hyphens-auto text-[16px] md:text-[24px]"
+                    style="font-weight: 400; line-height: 130%; letter-spacing: 0%; text-align: center; color: #D9D9D9; word-break: normal; overflow-wrap: break-word;"
                   >
                     Protegemos instalaciones y hogares con servicios de
                     vigilancia física. Nuestro equipo capacitado ofrece
@@ -307,8 +289,8 @@ import Footer from "../components/Footer.astro";
                   </p>
                   <a
                     href="#contacto"
-                    class="text-white hover:bg-[#EE9D26] hover:text-white rounded-md font-light transition-colors border-[2px] border-[#EE9D26] select-trigger flex items-center justify-center"
-                    style="width: 205px; height: 51px; font-weight: 400; font-size: 30px; line-height: 94%; letter-spacing: 0%;"
+                    class="text-white hover:bg-[#EE9D26] hover:text-white rounded-md font-light transition-colors border-[2px] border-[#EE9D26] select-trigger flex items-center justify-center w-[180px] h-[45px] md:w-[205px] md:h-[51px] text-[20px] md:text-[30px]"
+                    style="font-weight: 400; line-height: 94%; letter-spacing: 0%;"
                   >
                     Contáctanos
                   </a>
@@ -319,7 +301,7 @@ import Footer from "../components/Footer.astro";
               >
                 <div
                   class="absolute inset-0 bg-cover bg-center"
-                  style="background-image: url('/images/services/ESCOLTAS PERSONAS.jpg')"
+                  style="background-image: url('https://res.cloudinary.com/dzgixneim/image/upload/v1747955112/services/tkqnlf2wndenguknp2da.jpg'); object-position: 20% center;"
                 >
                   <div class="absolute inset-0" style="background: rgba(0, 27, 81, 0.3);"></div>
                 </div>
@@ -333,7 +315,7 @@ import Footer from "../components/Footer.astro";
                 >
                 </div>
                 <div class="absolute top-[5%] left-10 -translate-y-1/2 flex items-center group-hover:opacity-0 transition-opacity duration-300">                 <h2
-                    class="text-white font-bold text-[55px] rotate-90 origin-left whitespace-nowrap"
+                    class="text-white font-bold text-[35px] md:text-[55px] rotate-90 origin-left whitespace-nowrap"
                   >
                     ESCOLTA DE PERSONAS
                   </h2>
@@ -342,8 +324,8 @@ import Footer from "../components/Footer.astro";
                   class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-6 py-8 z-[5]"
                 >
                   <p
-                    class="text-center mb-8 w-full max-w-[300px] hyphens-auto"
-                    style="font-weight: 400; font-size: 24px; line-height: 130%; letter-spacing: 0%; text-align: center; color: #D9D9D9; word-break: normal; overflow-wrap: break-word;"
+                    class="text-center mb-8 w-full max-w-[300px] hyphens-auto text-[16px] md:text-[24px]"
+                    style="font-weight: 400; line-height: 130%; letter-spacing: 0%; text-align: center; color: #D9D9D9; word-break: normal; overflow-wrap: break-word;"
                   >
                     Nuestros escoltas operan rutas seguras, con apoyo
                     tecnológico y reacción inmediata, minimizando cualquier
@@ -353,8 +335,8 @@ import Footer from "../components/Footer.astro";
                   </p>
                   <a
                     href="#contacto"
-                    class="text-white hover:bg-[#EE9D26] hover:text-white rounded-md font-light transition-colors border-[2px] border-[#EE9D26] select-trigger flex items-center justify-center"
-                    style="width: 205px; height: 51px; font-weight: 400; font-size: 30px; line-height: 94%; letter-spacing: 0%;"
+                    class="text-white hover:bg-[#EE9D26] hover:text-white rounded-md font-light transition-colors border-[2px] border-[#EE9D26] select-trigger flex items-center justify-center w-[180px] h-[45px] md:w-[205px] md:h-[51px] text-[20px] md:text-[30px]"
+                    style="font-weight: 400; line-height: 94%; letter-spacing: 0%;"
                   >
                     Contáctanos
                   </a>
@@ -365,7 +347,7 @@ import Footer from "../components/Footer.astro";
               >
                 <div
                   class="absolute inset-0 bg-cover bg-center"
-                  style="background-image: url('/images/services/ESCOLTA DE MERCA.jpg')"
+                  style="background-image: url('https://res.cloudinary.com/dzgixneim/image/upload/v1747955111/services/c1piagy6ahdxpf5n0rjx.jpg')"
                 >
                   <div class="absolute inset-0" style="background: rgba(0, 27, 81, 0.3);"></div>
                 </div>
@@ -380,7 +362,7 @@ import Footer from "../components/Footer.astro";
                 </div>
                 <div class="absolute top-[5%] left-14 -translate-y-1/2 flex items-center group-hover:opacity-0 transition-opacity duration-300">
                   <h2
-                    class="text-white font-bold text-[55px] rotate-90 origin-left ml-8 w-min"
+                    class="text-white font-bold text-[35px] md:text-[55px] rotate-90 origin-left ml-8 w-min"
                   >
                     ESCOLTA DE MERCANCÍAS
                   </h2>
@@ -389,8 +371,8 @@ import Footer from "../components/Footer.astro";
                   class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-6 py-8 z-[5]"
                 >
                   <p
-                    class="text-center mb-8 w-full max-w-[300px] hyphens-auto"
-                    style="font-weight: 400; font-size: 24px; line-height: 130%; letter-spacing: 0%; text-align: center; color: #D9D9D9; word-break: normal; overflow-wrap: break-word;"
+                    class="text-center mb-8 w-full max-w-[300px] hyphens-auto text-[16px] md:text-[24px]"
+                    style="font-weight: 400; line-height: 130%; letter-spacing: 0%; text-align: center; color: #D9D9D9; word-break: normal; overflow-wrap: break-word;"
                   >
                     Nuestro servicio, respaldado por estándares de vigilancia y
                     seguridad privada, se adapta a cada entorno y nivel de
@@ -399,8 +381,8 @@ import Footer from "../components/Footer.astro";
                   </p>
                   <a
                     href="#contacto"
-                    class="text-white hover:bg-[#EE9D26] hover:text-white rounded-md font-light transition-colors border-[2px] border-[#EE9D26] select-trigger flex items-center justify-center"
-                    style="width: 205px; height: 51px; font-weight: 400; font-size: 30px; line-height: 94%; letter-spacing: 0%;"
+                    class="text-white hover:bg-[#EE9D26] hover:text-white rounded-md font-light transition-colors border-[2px] border-[#EE9D26] select-trigger flex items-center justify-center w-[180px] h-[45px] md:w-[205px] md:h-[51px] text-[20px] md:text-[30px]"
+                    style="font-weight: 400; line-height: 94%; letter-spacing: 0%;"
                   >
                     Contáctanos
                   </a>
@@ -409,15 +391,13 @@ import Footer from "../components/Footer.astro";
             </div>
 
             <!-- Slide 2 -->
-            <div
-              class="w-full flex-shrink-0 flex flex-wrap md:flex-nowrap gap-8 justify-center ml-4 md:ml-8"
-            >
+            <div class="w-full flex-shrink-0 flex flex-wrap md:flex-nowrap gap-8 justify-center ml-4 md:ml-8">
               <div
                 class="relative w-full md:w-1/3 h-[793px] overflow-hidden rounded-xl shadow-lg group"
               >
                 <div
                   class="absolute inset-0 bg-cover bg-center"
-                  style="background-image: url('/images/services/MONITOREO DE ALARMAS.jpg')"
+                  style="background-image: url('https://res.cloudinary.com/dzgixneim/image/upload/v1747955116/services/zdunfj2ld0y4kkxjabfw.jpg')"
                 >
                   <div class="absolute inset-0" style="background: rgba(0, 27, 81, 0.3);"></div>
                 </div>
@@ -434,7 +414,7 @@ import Footer from "../components/Footer.astro";
                   class="absolute top-[5%] left-10 -translate-y-1/2 flex items-center group-hover:opacity-0 transition-opacity duration-300"
                 >
                   <h2
-                    class="text-white font-bold text-[55px] rotate-90 origin-left whitespace-nowrap ml-10"
+                    class="text-white font-bold text-[35px] md:text-[55px] rotate-90 origin-left whitespace-nowrap ml-10"
                   >
                     MONITOREO DE <br/>ALARMAS
                   </h2>
@@ -443,8 +423,8 @@ import Footer from "../components/Footer.astro";
                   class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-6 py-8 z-[5]"
                 >
                   <p
-                    class="text-center mb-8 w-full max-w-[300px] hyphens-auto"
-                    style="font-weight: 400; font-size: 24px; line-height: 130%; letter-spacing: 0%; text-align: center; color: #D9D9D9; word-break: normal; overflow-wrap: break-word;"
+                    class="text-center mb-8 w-full max-w-[300px] hyphens-auto text-[16px] md:text-[24px]"
+                    style="font-weight: 400; line-height: 130%; letter-spacing: 0%; text-align: center; color: #D9D9D9; word-break: normal; overflow-wrap: break-word;"
                   >
                     Detecta y responde a eventos en tiempo real. Las alarmas
                     conectadas a nuestra central activan patrullas de reacción
@@ -453,8 +433,8 @@ import Footer from "../components/Footer.astro";
                   </p>
                   <a
                     href="#contacto"
-                    class="text-white hover:bg-[#EE9D26] hover:text-white rounded-md font-light transition-colors border-[2px] border-[#EE9D26] select-trigger flex items-center justify-center"
-                    style="width: 205px; height: 51px; font-weight: 400; font-size: 30px; line-height: 94%; letter-spacing: 0%;"
+                    class="text-white hover:bg-[#EE9D26] hover:text-white rounded-md font-light transition-colors border-[2px] border-[#EE9D26] select-trigger flex items-center justify-center w-[180px] h-[45px] md:w-[205px] md:h-[51px] text-[20px] md:text-[30px]"
+                    style="font-weight: 400; line-height: 94%; letter-spacing: 0%;"
                   >
                     Contáctanos
                   </a>
@@ -465,7 +445,7 @@ import Footer from "../components/Footer.astro";
               >
                 <div
                   class="absolute inset-0 bg-cover bg-center"
-                  style="background-image: url('/images/services/INSTALACION DE SISTEMAS DE SEGURIDAD.jpg')"
+                  style="background-image: url('https://res.cloudinary.com/dzgixneim/image/upload/v1747955114/services/p2ttw7vfrd4jn7uyblwo.jpg')"
                 >
                   <div class="absolute inset-0" style="background: rgba(0, 27, 81, 0.3);"></div>
                 </div>
@@ -482,7 +462,7 @@ import Footer from "../components/Footer.astro";
                   class="absolute top-[5%] left-10 -translate-y-1/2 flex items-center group-hover:opacity-0 transition-opacity duration-300"
                 >
                   <h2
-                    class="text-white font-bold text-[55px] rotate-90 origin-left whitespace-nowrap ml-10"
+                    class="text-white font-bold text-[35px] md:text-[55px] rotate-90 origin-left whitespace-nowrap ml-10"
                   >
                     INSTALACIÓN DE <br />SISTEMAS DE SEGURIDAD
                   </h2>
@@ -492,8 +472,8 @@ import Footer from "../components/Footer.astro";
                   class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-6 py-8 z-[5]"
                 >
                   <p
-                    class="text-center mb-8 w-full max-w-[300px] hyphens-auto"
-                    style="font-weight: 400; font-size: 24px; line-height: 130%; letter-spacing: 0%; text-align: center; color: #D9D9D9; word-break: normal; overflow-wrap: break-word;"
+                    class="text-center mb-8 w-full max-w-[300px] hyphens-auto text-[16px] md:text-[24px]"
+                    style="font-weight: 400; line-height: 130%; letter-spacing: 0%; text-align: center; color: #D9D9D9; word-break: normal; overflow-wrap: break-word;"
                   >
                     Somos expertos en la instalación y mantenimiento de sistemas
                     electrónicos como CCTV, controles biométricos y alarmas
@@ -502,8 +482,8 @@ import Footer from "../components/Footer.astro";
                   </p>
                   <a
                     href="#contacto"
-                    class="text-white hover:bg-[#EE9D26] hover:text-white rounded-md font-light transition-colors border-[2px] border-[#EE9D26] select-trigger flex items-center justify-center"
-                    style="width: 205px; height: 51px; font-weight: 400; font-size: 30px; line-height: 94%; letter-spacing: 0%;"
+                    class="text-white hover:bg-[#EE9D26] hover:text-white rounded-md font-light transition-colors border-[2px] border-[#EE9D26] select-trigger flex items-center justify-center w-[180px] h-[45px] md:w-[205px] md:h-[51px] text-[20px] md:text-[30px]"
+                    style="font-weight: 400; line-height: 94%; letter-spacing: 0%;"
                   >
                     Contáctanos
                   </a>
@@ -514,7 +494,7 @@ import Footer from "../components/Footer.astro";
               >
                 <div
                   class="absolute inset-0 bg-cover bg-center"
-                  style="background-image: url('/images/services/OPERACION DE MEDIOS EN TECH.jpg')"
+                  style="background-image: url('https://res.cloudinary.com/dzgixneim/image/upload/v1747955117/services/zewlnglfrgjaijlli7rc.jpg')"
                 >
                   <div class="absolute inset-0" style="background: rgba(0, 27, 81, 0.3);"></div>
                 </div>
@@ -531,7 +511,7 @@ import Footer from "../components/Footer.astro";
                   class="absolute top-[5%] left-10 -translate-y-1/2 flex items-center group-hover:opacity-0 transition-opacity duration-300"
                 >
                   <h2
-                    class="text-white font-bold text-[55px] rotate-90 origin-left whitespace-nowrap ml-10"
+                    class="text-white font-bold text-[35px] md:text-[55px] rotate-90 origin-left whitespace-nowrap ml-10"
                   >
                     OPERACIÓN DE MEDIOS <br /> TECNOLÓGICOS
                   </h2>
@@ -540,8 +520,8 @@ import Footer from "../components/Footer.astro";
                   class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-6 py-8 z-[5]"
                 >
                   <p
-                    class="text-center mb-8 w-full max-w-[300px] hyphens-auto"
-                    style="font-weight: 400; font-size: 24px; line-height: 130%; letter-spacing: 0%; text-align: center; color: #D9D9D9; word-break: normal; overflow-wrap: break-word;"
+                    class="text-center mb-8 w-full max-w-[300px] hyphens-auto text-[16px] md:text-[24px]"
+                    style="font-weight: 400; line-height: 130%; letter-spacing: 0%; text-align: center; color: #D9D9D9; word-break: normal; overflow-wrap: break-word;"
                   >
                     Gestionamos centros de control con tecnología de vanguardia
                     que integran monitoreo de cámaras, acceso remoto y sistemas
@@ -550,8 +530,300 @@ import Footer from "../components/Footer.astro";
                   </p>
                   <a
                     href="#contacto"
-                    class="text-white hover:bg-[#EE9D26] hover:text-white rounded-md font-light transition-colors border-[2px] border-[#EE9D26] select-trigger flex items-center justify-center"
-                    style="width: 205px; height: 51px; font-weight: 400; font-size: 30px; line-height: 94%; letter-spacing: 0%;"
+                    class="text-white hover:bg-[#EE9D26] hover:text-white rounded-md font-light transition-colors border-[2px] border-[#EE9D26] select-trigger flex items-center justify-center w-[180px] h-[45px] md:w-[205px] md:h-[51px] text-[20px] md:text-[30px]"
+                    style="font-weight: 400; line-height: 94%; letter-spacing: 0%;"
+                  >
+                    Contáctanos
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carrusel Mobile -->
+          <div class="md:hidden flex transition-transform duration-500" id="carrusel-mobile">
+            <!-- Slide 1 -->
+            <div class="w-full flex-shrink-0 px-4">
+              <div class="relative w-full h-[500px] md:h-[793px] overflow-hidden rounded-xl shadow-lg group">
+                <div
+                  class="absolute inset-0 bg-cover bg-center"
+                  style="background-image: url('https://res.cloudinary.com/dzgixneim/image/upload/v1747955119/services/qfm0z2voihqurw1cnicb.jpg'); object-position: 20% center;"
+                >
+                  <div class="absolute inset-0" style="background: rgba(0, 27, 81, 0.3);"></div>
+                </div>
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300"
+                >
+                </div>
+                <div
+                  class="absolute inset-0 backdrop-blur-[5px] opacity-0 invisible transition-all duration-300 z-[5] select-overlay"
+                  style="background: rgba(0, 27, 81, 0.3);"
+                >
+                </div>
+                <div class="absolute top-[5%] left-10 -translate-y-1/2 flex items-center group-hover:opacity-0 transition-opacity duration-300">
+                  <h2 class="text-white font-bold text-[35px] md:text-[55px] rotate-90 origin-left whitespace-nowrap">
+                    VIGILANCIA FÍSICA
+                  </h2>
+                </div>
+                <div
+                  class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-6 py-8 z-[5]"
+                >
+                  <p
+                    class="text-center mb-8 w-full max-w-[300px] hyphens-auto text-[16px] md:text-[24px]"
+                    style="font-weight: 400; line-height: 130%; letter-spacing: 0%; text-align: center; color: #D9D9D9; word-break: normal; overflow-wrap: break-word;"
+                  >
+                    Protegemos instalaciones y hogares con servicios de
+                    vigilancia física. Nuestro equipo capacitado ofrece
+                    presencia constante y monitoreo detallado, garantizando un
+                    entorno seguro.
+                  </p>
+                  <a
+                    href="#contacto"
+                    class="text-white hover:bg-[#EE9D26] hover:text-white rounded-md font-light transition-colors border-[2px] border-[#EE9D26] select-trigger flex items-center justify-center w-[180px] h-[45px] md:w-[205px] md:h-[51px] text-[20px] md:text-[30px]"
+                    style="font-weight: 400; line-height: 94%; letter-spacing: 0%;"
+                  >
+                    Contáctanos
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="w-full flex-shrink-0 px-4">
+              <div class="relative w-full h-[500px] md:h-[793px] overflow-hidden rounded-xl shadow-lg group">
+                <div
+                  class="absolute inset-0 bg-cover bg-center"
+                  style="background-image: url('https://res.cloudinary.com/dzgixneim/image/upload/v1747955112/services/tkqnlf2wndenguknp2da.jpg'); object-position: 20% center;"
+                >
+                  <div class="absolute inset-0" style="background: rgba(0, 27, 81, 0.3);"></div>
+                </div>
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300"
+                >
+                </div>
+                <div
+                  class="absolute inset-0 backdrop-blur-[5px] opacity-0 invisible transition-all duration-300 z-[5] select-overlay"
+                  style="background: rgba(0, 27, 81, 0.3);"
+                >
+                </div>
+                <div class="absolute top-[5%] left-10 -translate-y-1/2 flex items-center group-hover:opacity-0 transition-opacity duration-300">
+                  <h2
+                    class="text-white font-bold text-[35px] md:text-[55px] rotate-90 origin-left whitespace-nowrap"
+                  >
+                    ESCOLTA DE PERSONAS
+                  </h2>
+                </div>
+                <div
+                  class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-6 py-8 z-[5]"
+                >
+                  <p
+                    class="text-center mb-8 w-full max-w-[300px] hyphens-auto text-[16px] md:text-[24px]"
+                    style="font-weight: 400; line-height: 130%; letter-spacing: 0%; text-align: center; color: #D9D9D9; word-break: normal; overflow-wrap: break-word;"
+                  >
+                    Nuestros escoltas operan rutas seguras, con apoyo
+                    tecnológico y reacción inmediata, minimizando cualquier
+                    riesgo. Protegemos tu cadena logística desde el origen hasta
+                    el destino, con personal confiable y vehículos
+                    especializados
+                  </p>
+                  <a
+                    href="#contacto"
+                    class="text-white hover:bg-[#EE9D26] hover:text-white rounded-md font-light transition-colors border-[2px] border-[#EE9D26] select-trigger flex items-center justify-center w-[180px] h-[45px] md:w-[205px] md:h-[51px] text-[20px] md:text-[30px]"
+                    style="font-weight: 400; line-height: 94%; letter-spacing: 0%;"
+                  >
+                    Contáctanos
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="w-full flex-shrink-0 px-4">
+              <div class="relative w-full h-[500px] md:h-[793px] overflow-hidden rounded-xl shadow-lg group">
+                <div
+                  class="absolute inset-0 bg-cover bg-center"
+                  style="background-image: url('https://res.cloudinary.com/dzgixneim/image/upload/v1747955111/services/c1piagy6ahdxpf5n0rjx.jpg')"
+                >
+                  <div class="absolute inset-0" style="background: rgba(0, 27, 81, 0.3);"></div>
+                </div>
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300"
+                >
+                </div>
+                <div
+                  class="absolute inset-0 backdrop-blur-[5px] opacity-0 invisible transition-all duration-300 z-[5] select-overlay"
+                  style="background: rgba(0, 27, 81, 0.3);"
+                >
+                </div>
+                <div class="absolute top-[5%] left-14 -translate-y-1/2 flex items-center group-hover:opacity-0 transition-opacity duration-300">
+                  <h2
+                    class="text-white font-bold text-[35px] md:text-[55px] rotate-90 origin-left ml-8 w-min"
+                  >
+                    ESCOLTA DE MERCANCÍAS
+                  </h2>
+                </div>
+                <div
+                  class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-6 py-8 z-[5]"
+                >
+                  <p
+                    class="text-center mb-8 w-full max-w-[300px] hyphens-auto text-[16px] md:text-[24px]"
+                    style="font-weight: 400; line-height: 130%; letter-spacing: 0%; text-align: center; color: #D9D9D9; word-break: normal; overflow-wrap: break-word;"
+                  >
+                    Nuestro servicio, respaldado por estándares de vigilancia y
+                    seguridad privada, se adapta a cada entorno y nivel de
+                    riesgo. Actuamos con discreción, precisión y experiencia
+                    para que cada desplazamiento sea seguro y confiable.
+                  </p>
+                  <a
+                    href="#contacto"
+                    class="text-white hover:bg-[#EE9D26] hover:text-white rounded-md font-light transition-colors border-[2px] border-[#EE9D26] select-trigger flex items-center justify-center w-[180px] h-[45px] md:w-[205px] md:h-[51px] text-[20px] md:text-[30px]"
+                    style="font-weight: 400; line-height: 94%; letter-spacing: 0%;"
+                  >
+                    Contáctanos
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="w-full flex-shrink-0 px-4">
+              <div class="relative w-full h-[500px] md:h-[793px] overflow-hidden rounded-xl shadow-lg group">
+                <div
+                  class="absolute inset-0 bg-cover bg-center"
+                  style="background-image: url('https://res.cloudinary.com/dzgixneim/image/upload/v1747955116/services/zdunfj2ld0y4kkxjabfw.jpg')"
+                >
+                  <div class="absolute inset-0" style="background: rgba(0, 27, 81, 0.3);"></div>
+                </div>
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300"
+                >
+                </div>
+                <div
+                  class="absolute inset-0 backdrop-blur-[5px] opacity-0 invisible transition-all duration-300 z-[5] select-overlay"
+                  style="background: rgba(0, 27, 81, 0.3);"
+                >
+                </div>
+                <div
+                  class="absolute top-[5%] left-10 -translate-y-1/2 flex items-center group-hover:opacity-0 transition-opacity duration-300"
+                >
+                  <h2
+                    class="text-white font-bold text-[35px] md:text-[55px] rotate-90 origin-left whitespace-nowrap ml-10"
+                  >
+                    MONITOREO DE <br/>ALARMAS
+                  </h2>
+                </div>
+                <div
+                  class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-6 py-8 z-[5]"
+                >
+                  <p
+                    class="text-center mb-8 w-full max-w-[300px] hyphens-auto text-[16px] md:text-[24px]"
+                    style="font-weight: 400; line-height: 130%; letter-spacing: 0%; text-align: center; color: #D9D9D9; word-break: normal; overflow-wrap: break-word;"
+                  >
+                    Detecta y responde a eventos en tiempo real. Las alarmas
+                    conectadas a nuestra central activan patrullas de reacción
+                    inmediata, apoyadas por tecnología GPS y comunicación
+                    cifrada. Garantizando respuesta efectiva.
+                  </p>
+                  <a
+                    href="#contacto"
+                    class="text-white hover:bg-[#EE9D26] hover:text-white rounded-md font-light transition-colors border-[2px] border-[#EE9D26] select-trigger flex items-center justify-center w-[180px] h-[45px] md:w-[205px] md:h-[51px] text-[20px] md:text-[30px]"
+                    style="font-weight: 400; line-height: 94%; letter-spacing: 0%;"
+                  >
+                    Contáctanos
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 5 -->
+            <div class="w-full flex-shrink-0 px-4">
+              <div class="relative w-full h-[500px] md:h-[793px] overflow-hidden rounded-xl shadow-lg group">
+                <div
+                  class="absolute inset-0 bg-cover bg-center"
+                  style="background-image: url('https://res.cloudinary.com/dzgixneim/image/upload/v1747955114/services/p2ttw7vfrd4jn7uyblwo.jpg')"
+                >
+                  <div class="absolute inset-0" style="background: rgba(0, 27, 81, 0.3);"></div>
+                </div>
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300"
+                >
+                </div>
+                <div
+                  class="absolute inset-0 backdrop-blur-[5px] opacity-0 invisible transition-all duration-300 z-[5] select-overlay"
+                  style="background: rgba(0, 27, 81, 0.3);"
+                >
+                </div>
+                <div
+                  class="absolute top-[5%] left-10 -translate-y-1/2 flex items-center group-hover:opacity-0 transition-opacity duration-300"
+                >
+                  <h2
+                    class="text-white font-bold text-[35px] md:text-[55px] rotate-90 origin-left whitespace-nowrap ml-10"
+                  >
+                    INSTALACIÓN DE <br />SISTEMAS DE SEGURIDAD
+                  </h2>
+                </div>
+
+                <div
+                  class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-6 py-8 z-[5]"
+                >
+                  <p
+                    class="text-center mb-8 w-full max-w-[300px] hyphens-auto text-[16px] md:text-[24px]"
+                    style="font-weight: 400; line-height: 130%; letter-spacing: 0%; text-align: center; color: #D9D9D9; word-break: normal; overflow-wrap: break-word;"
+                  >
+                    Somos expertos en la instalación y mantenimiento de sistemas
+                    electrónicos como CCTV, controles biométricos y alarmas
+                    inteligentes. Trabajamos con las mejores marcas del mercado,
+                    asegurando una protección confiable.
+                  </p>
+                  <a
+                    href="#contacto"
+                    class="text-white hover:bg-[#EE9D26] hover:text-white rounded-md font-light transition-colors border-[2px] border-[#EE9D26] select-trigger flex items-center justify-center w-[180px] h-[45px] md:w-[205px] md:h-[51px] text-[20px] md:text-[30px]"
+                    style="font-weight: 400; line-height: 94%; letter-spacing: 0%;"
+                  >
+                    Contáctanos
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 6 -->
+            <div class="w-full flex-shrink-0 px-4">
+              <div class="relative w-full h-[500px] md:h-[793px] overflow-hidden rounded-xl shadow-lg group">
+                <div
+                  class="absolute inset-0 bg-cover bg-center"
+                  style="background-image: url('https://res.cloudinary.com/dzgixneim/image/upload/v1747955117/services/zewlnglfrgjaijlli7rc.jpg')"
+                >
+                  <div class="absolute inset-0" style="background: rgba(0, 27, 81, 0.3);"></div>
+                </div>
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300"
+                >
+                </div>
+                <div
+                  class="absolute inset-0 backdrop-blur-[5px] opacity-0 invisible transition-all duration-300 z-[5] select-overlay"
+                  style="background: rgba(0, 27, 81, 0.3);"
+                >
+                </div>
+                <div
+                  class="absolute top-[5%] left-10 -translate-y-1/2 flex items-center group-hover:opacity-0 transition-opacity duration-300"
+                >
+                  <h2
+                    class="text-white font-bold text-[35px] md:text-[55px] rotate-90 origin-left whitespace-nowrap ml-10"
+                  >
+                    OPERACIÓN DE MEDIOS <br /> TECNOLÓGICOS
+                  </h2>
+                </div>
+                <div
+                  class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-6 py-8 z-[5]"
+                >
+                  <p
+                    class="text-center mb-8 w-full max-w-[300px] hyphens-auto text-[16px] md:text-[24px]"
+                    style="font-weight: 400; line-height: 130%; letter-spacing: 0%; text-align: center; color: #D9D9D9; word-break: normal; overflow-wrap: break-word;"
+                  >
+                    Gestionamos centros de control con tecnología de vanguardia
+                    que integran monitoreo de cámaras, acceso remoto y sistemas
+                    de rastreo GPS. Optimizamos los protocolos de vigilancia y
+                    mejorando la seguridad de nuestros clientes.
+                  </p>
+                  <a
+                    href="#contacto"
+                    class="text-white hover:bg-[#EE9D26] hover:text-white rounded-md font-light transition-colors border-[2px] border-[#EE9D26] select-trigger flex items-center justify-center w-[180px] h-[45px] md:w-[205px] md:h-[51px] text-[20px] md:text-[30px]"
+                    style="font-weight: 400; line-height: 94%; letter-spacing: 0%;"
                   >
                     Contáctanos
                   </a>
@@ -562,16 +834,15 @@ import Footer from "../components/Footer.astro";
 
           <!-- Botones de navegación para el carrusel de servicios -->
           <button
-            class="absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full flex items-center justify-center shadow-xl hover:shadow-2xl transition-shadow opacity-0 z-[5]"
-            style="width: 62px; height: 62px; left: 14px;"
+            class="absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full flex items-center justify-center shadow-xl hover:shadow-2xl transition-shadow opacity-0 z-[5] md:w-[62px] md:h-[62px] w-[40px] h-[40px]"
+            style="left: 14px;"
             id="servicios-btn-izquierda">
-            <img src="/images/vectors/ARROW.svg" alt="Anterior" class="w-[20px] h-[40px] rotate-180" />
+            <img src="/images/vectors/ARROW.svg" alt="Anterior" class="w-[12px] h-[24px] md:w-[20px] md:h-[40px] rotate-180" />
           </button>
           <button
-            class="absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full flex items-center justify-center shadow-xl hover:shadow-2xl transition-shadow z-[5]"
-            style="width: 62px; height: 62px;"
+            class="absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full flex items-center justify-center shadow-xl hover:shadow-2xl transition-shadow z-[5] md:w-[62px] md:h-[62px] w-[40px] h-[40px]"
             id="servicios-btn-derecha">
-            <img src="/images/vectors/ARROW.svg" alt="Siguiente" class="w-[20px] h-[40px]" />
+            <img src="/images/vectors/ARROW.svg" alt="Siguiente" class="w-[12px] h-[24px] md:w-[20px] md:h-[40px]" />
           </button>
         </div>
       </div>
@@ -579,7 +850,7 @@ import Footer from "../components/Footer.astro";
 
     <!-- Sección Equipo -->
     <section class="py-16 px-8 md:px-16 bg-white" id="equipo">
-      <h1 class="text-[50px] font-bold text-center mb-12 text-primary">
+      <h1 class="text-[28px] sm:text-[40px] md:text-[50px] font-bold text-center mb-12 text-primary">
         Nuestro Equipo
       </h1>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-full mx-auto">
@@ -592,7 +863,7 @@ import Footer from "../components/Footer.astro";
             <div class="absolute inset-0 backface-hidden rounded-[10px]">
               <div
                 class="absolute inset-0 bg-cover bg-center rounded-[10px]"
-                style="background-image: url('/images/team/PERSONAL OPERATIVO.jpg');"
+                style="background-image: url('https://res.cloudinary.com/dzgixneim/image/upload/v1747955129/team/x9l3cvaprgwrcvnduuve.jpg');"
               >
                 <div
                   class="absolute inset-0 transition-all duration-300 rounded-[10px]"
@@ -610,7 +881,7 @@ import Footer from "../components/Footer.astro";
             <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-[10px] overflow-hidden">
               <div
                 class="absolute inset-0 bg-cover bg-center rounded-[10px]"
-                style="background-image: url('/images/team/PERSONAL OPERATIVO.jpg');"
+                style="background-image: url('https://res.cloudinary.com/dzgixneim/image/upload/v1747955129/team/x9l3cvaprgwrcvnduuve.jpg');"
               >
                 <div class="absolute inset-0 rounded-[10px]" style="background: #2E2E2ECC;"></div>
               </div>
@@ -635,7 +906,7 @@ import Footer from "../components/Footer.astro";
             <div class="absolute inset-0 backface-hidden rounded-[10px]">
               <div
                 class="absolute inset-0 bg-cover bg-center rounded-[10px]"
-                style="background-image: url('/images/team/RESPONSABILIDAD SOCIAL.jpg');"
+                style="background-image: url('https://res.cloudinary.com/dzgixneim/image/upload/v1747955133/team/bbvdbgpzbbbb5fwlk4zp.jpg');"
               >
                 <div
                   class="absolute inset-0 transition-all duration-300 rounded-[10px]"
@@ -653,7 +924,7 @@ import Footer from "../components/Footer.astro";
             <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-[10px] overflow-hidden">
               <div
                 class="absolute inset-0 bg-cover bg-center rounded-[10px]"
-                style="background-image: url('/images/team/RESPONSABILIDAD SOCIAL.jpg');"
+                style="background-image: url('https://res.cloudinary.com/dzgixneim/image/upload/v1747955133/team/bbvdbgpzbbbb5fwlk4zp.jpg');"
               >
                 <div class="absolute inset-0 rounded-[10px]" style="background: #2E2E2ECC;"></div>
               </div>
@@ -680,7 +951,7 @@ import Footer from "../components/Footer.astro";
             <div class="absolute inset-0 backface-hidden rounded-[10px]">
               <div
                 class="absolute inset-0 bg-cover bg-center rounded-[10px]"
-                style="background-image: url('/images/team/CAPACITACION Y SELECCION.jpg');"
+                style="background-image: url('https://res.cloudinary.com/dzgixneim/image/upload/v1747955123/team/bz5s6lyrilqyhdwc2kzf.jpg');"
               >
                 <div
                   class="absolute inset-0 transition-all duration-300 rounded-[10px]"
@@ -698,7 +969,7 @@ import Footer from "../components/Footer.astro";
             <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-[10px] overflow-hidden">
               <div
                 class="absolute inset-0 bg-cover bg-center rounded-[10px]"
-                style="background-image: url('/images/team/CAPACITACION Y SELECCION.jpg');"
+                style="background-image: url('https://res.cloudinary.com/dzgixneim/image/upload/v1747955123/team/bz5s6lyrilqyhdwc2kzf.jpg');"
               >
                 <div class="absolute inset-0 rounded-[10px]" style="background: #2E2E2ECC;"></div>
               </div>
@@ -723,7 +994,7 @@ import Footer from "../components/Footer.astro";
             <div class="absolute inset-0 backface-hidden rounded-[10px]">
               <div
                 class="absolute inset-0 bg-cover bg-center rounded-[10px]"
-                style="background-image: url('/images/team/PROGRAMAS DE BIENESTAR SOCIAL.jpg');"
+                style="background-image: url('https://res.cloudinary.com/dzgixneim/image/upload/v1747955132/team/rdulcu4jlk2fademb4ej.jpg');"
               >
                 <div
                   class="absolute inset-0 transition-all duration-300 rounded-[10px]"
@@ -741,7 +1012,7 @@ import Footer from "../components/Footer.astro";
             <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-[10px] overflow-hidden">
               <div
                 class="absolute inset-0 bg-cover bg-center rounded-[10px]"
-                style="background-image: url('/images/team/PROGRAMAS DE BIENESTAR SOCIAL.jpg');"
+                style="background-image: url('https://res.cloudinary.com/dzgixneim/image/upload/v1747955132/team/rdulcu4jlk2fademb4ej.jpg');"
               >
                 <div class="absolute inset-0 rounded-[10px]" style="background: #2E2E2ECC;"></div>
               </div>
@@ -769,7 +1040,7 @@ import Footer from "../components/Footer.astro";
             <div class="absolute inset-0 backface-hidden rounded-[10px]">
               <div
                 class="absolute inset-0 bg-cover bg-center rounded-[10px]"
-                style="background-image: url('/images/team/DOTACION Y SUPERVISION.jpg');"
+                style="background-image: url('https://res.cloudinary.com/dzgixneim/image/upload/v1747955124/team/ryg9ithtlh85cbmqolbk.jpg');"
               >
                 <div
                   class="absolute inset-0 transition-all duration-300 rounded-[10px]"
@@ -787,7 +1058,7 @@ import Footer from "../components/Footer.astro";
             <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-[10px] overflow-hidden">
               <div
                 class="absolute inset-0 bg-cover bg-center rounded-[10px]"
-                style="background-image: url('/images/team/DOTACION Y SUPERVISION.jpg');"
+                style="background-image: url('https://res.cloudinary.com/dzgixneim/image/upload/v1747955124/team/ryg9ithtlh85cbmqolbk.jpg');"
               >
                 <div class="absolute inset-0 rounded-[10px]" style="background: #2E2E2ECC;"></div>
               </div>
@@ -808,7 +1079,7 @@ import Footer from "../components/Footer.astro";
     <!-- Sección Clientes -->
     <section class="py-16 px-8 text-white" id="clientes" style="background: linear-gradient(97.5deg, #001B51 16.76%, #003DB7 271.25%);">
       <div class="max-w-6xl mx-auto">
-        <h1 class="text-[50px] font-bold text-center mb-6">
+        <h1 class="text-[28px] sm:text-[40px] md:text-[50px] font-bold text-center mb-6">
           Algunos de nuestros Clientes
         </h1>
         <p class="text-center text-lg mb-12 max-w-3xl mx-auto text-[28px]">
@@ -824,16 +1095,36 @@ import Footer from "../components/Footer.astro";
             class="flex transition-transform duration-500 w-full"
             id="clientes-slider"
           >
-            <!-- Slide 1 -->
-            <div
-              class="w-full flex-shrink-0 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 justify-items-center"
-            >
+            <!-- Versión Móvil -->
+            <div class="md:hidden w-full flex-shrink-0 grid grid-cols-2 gap-6 justify-items-center">
+              <div
+                class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-32 md:w-40 h-32 md:h-40 overflow-hidden"
+              >
+                <img
+                  src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955093/clients/ado07pwlovoiph7xtbja.jpg"
+                  alt="Country Club"
+                  class="w-full h-full object-cover scale-150"
+                />
+              </div>
+              <div
+                class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-32 md:w-40 h-32 md:h-40 overflow-hidden"
+              >
+                <img
+                  src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955082/clients/xv1hmjoa4yrjnsygp7vh.png"
+                  alt="Atlantic Qi"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+            </div>
+
+            <!-- Versión Desktop -->
+            <div class="hidden md:flex w-full flex-shrink-0 justify-center items-center gap-6">
               <div
                 class="bg-white rounded-2xl shadow-lg w-40 h-40 overflow-hidden m-0 p-0"
                 style="margin: 0; padding: 0;"
               >
                 <img
-                  src="/images/clients/COUNTRY CLUB.jpg"
+                  src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955093/clients/ado07pwlovoiph7xtbja.jpg"
                   alt="Country Club"
                   class="w-full h-full object-cover m-0 p-0"
                   style="display: block; margin: 0; padding: 0; width: 100%; height: 100%; object-fit: cover;"
@@ -844,7 +1135,7 @@ import Footer from "../components/Footer.astro";
                 style="margin: 0; padding: 0;"
               >
                 <img
-                  src="/images/clients/ATLANTIC.png"
+                  src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955082/clients/xv1hmjoa4yrjnsygp7vh.png"
                   alt="Atlantic Qi"
                   class="w-full h-full object-cover m-0 p-0"
                   style="display: block; margin: 0; padding: 0; width: 100%; height: 100%; object-fit: cover;"
@@ -854,7 +1145,7 @@ import Footer from "../components/Footer.astro";
                 class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-40 h-40 overflow-hidden"
               >
                 <img
-                  src="/images/clients/CLINICA PORTO AZUL.png"
+                  src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955091/clients/nwmwo0ox9zojbjr4yksu.png"
                   alt="Clínica Porto Azul"
                   class="w-full h-full object-cover scale-150"
                 />
@@ -863,7 +1154,7 @@ import Footer from "../components/Footer.astro";
                 class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-40 h-40 overflow-hidden"
               >
                 <img
-                  src="/images/clients/AUTOLITORAL.png"
+                  src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955083/clients/pntwxyzgkn7maxlaq3ge.png"
                   alt="Autolitoral"
                   class="w-full h-full object-contain"
                 />
@@ -872,23 +1163,43 @@ import Footer from "../components/Footer.astro";
                 class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-40 h-40 overflow-hidden"
               >
                 <img
-                  src="/images/clients/CECAC.jpg"
+                  src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955084/clients/qkajpaml9lnwnugeep3d.png"
                   alt="CECAC"
                   class="w-full h-full object-cover"
                 />
               </div>
             </div>
 
-            <!-- Slide 2 -->
-            <div
-              class="w-full flex-shrink-0 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 justify-items-center"
-            >
+            <!-- Slide 2 Móvil -->
+            <div class="md:hidden w-full flex-shrink-0 grid grid-cols-2 gap-6 justify-items-center">
+              <div
+                class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-32 md:w-40 h-32 md:h-40 overflow-hidden"
+              >
+                <img
+                  src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955091/clients/nwmwo0ox9zojbjr4yksu.png"
+                  alt="Clínica Porto Azul"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div
+                class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-32 md:w-40 h-32 md:h-40 overflow-hidden"
+              >
+                <img
+                  src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955083/clients/pntwxyzgkn7maxlaq3ge.png"
+                  alt="Autolitoral"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            <!-- Slide 2 Desktop -->
+            <div class="hidden md:flex w-full flex-shrink-0 justify-center items-center gap-6">
               <div
                 class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-40 h-40"
               >
                 <img
-                  src="/images/clients/COLOMBO AMERICANO.png"
-                  alt="Cliente 6"
+                  src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955091/clients/p3qfzc7hfjw9ikvycatw.png"
+                  alt="Colombo"
                   class="max-w-full max-h-full object-contain"
                 />
               </div>
@@ -896,8 +1207,8 @@ import Footer from "../components/Footer.astro";
                 class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-40 h-40"
               >
                 <img
-                  src="/images/clients/CLINICA DE LA COSTA.png"
-                  alt="Cliente 7"
+                  src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955087/clients/wwmmugl6szrdsesffap3.png"
+                  alt="Clínica de la Costa"
                   class="max-w-full max-h-full object-contain"
                 />
               </div>
@@ -906,8 +1217,8 @@ import Footer from "../components/Footer.astro";
                 style="margin: 0; padding: 0;"
               >
                 <img
-                  src="/images/clients/ARQUITECTURA Y CONCRETO.png"
-                  alt="Cliente 8"
+                  src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955081/clients/knchbe74lpmluno8l2nd.png"
+                  alt="Arquitectura y Concreto"
                   class="w-full h-full object-cover m-0 p-0"
                   style="display: block; margin: 0; padding: 0; width: 100%; height: 100%; object-fit: cover;"
                 />
@@ -917,8 +1228,8 @@ import Footer from "../components/Footer.astro";
                 style="margin: 0; padding: 0;"
               >
                 <img
-                  src="/images/clients/COMBARRANQUILLA.png"
-                  alt="Cliente 9"
+                  src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955092/clients/sfdrgshs2swqpifai2tw.png"
+                  alt="Combarranquilla"
                   class="w-full h-full object-cover m-0 p-0"
                   style="display: block; margin: 0; padding: 0; width: 100%; height: 100%; object-fit: cover;"
                 />
@@ -927,23 +1238,43 @@ import Footer from "../components/Footer.astro";
                 class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-40 h-40"
               >
                 <img
-                  src="/images/clients/DRUMMOND.png"
-                  alt="Cliente 10"
+                  src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955094/clients/xmqdri9efychh7pe1biz.png"
+                  alt="Drumont"
                   class="max-w-full max-h-full object-contain"
                 />
               </div>
             </div>
 
-            <!-- Slide 3 -->
-            <div
-              class="w-full flex-shrink-0 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 justify-items-center"
-            >
+            <!-- Slide 3 Móvil -->
+            <div class="md:hidden w-full flex-shrink-0 grid grid-cols-2 gap-6 justify-items-center">
+              <div
+                class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-32 md:w-40 h-32 md:h-40 overflow-hidden"
+              >
+                <img
+                  src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955084/clients/qkajpaml9lnwnugeep3d.png"
+                  alt="CECAC"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div
+                class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-32 md:w-40 h-32 md:h-40 overflow-hidden"
+              >
+                <img
+                  src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955091/clients/p3qfzc7hfjw9ikvycatw.png"
+                  alt="Colombo"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+            </div>
+
+            <!-- Slide 3 Desktop -->
+            <div class="hidden md:flex w-full flex-shrink-0 justify-center items-center gap-6">
               <div
                 class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-40 h-40"
               >
                 <img
-                  src="/images/clients/ADAMA .png"
-                  alt="Cliente 11"
+                  src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955081/clients/drgrlybyzrgewslq3qmp.png"
+                  alt="Adama"
                   class="max-w-full max-h-full object-contain"
                 />
               </div>
@@ -951,8 +1282,8 @@ import Footer from "../components/Footer.astro";
                 class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-40 h-40"
               >
                 <img
-                  src="/images/clients/CAMARA DE COMERCIO DE BARRANQUILLA.png"
-                  alt="Cliente 12"
+                  src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955083/clients/qbab5rldn7fwk2hrwzls.png"
+                  alt="Camara de Comercio"
                   class="max-w-full max-h-full object-contain"
                 />
               </div>
@@ -960,8 +1291,8 @@ import Footer from "../components/Footer.astro";
                 class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-40 h-40"
               >
                 <img
-                  src="/images/clients/TEBSA.png"
-                  alt="Cliente 13"
+                  src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955095/clients/o74of47e94g24zgszfhv.png"
+                  alt="Tebsa"
                   class="max-w-full max-h-full object-contain"
                 />
               </div>
@@ -969,8 +1300,8 @@ import Footer from "../components/Footer.astro";
                 class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-40 h-40"
               >
                 <img
-                  src="/images/clients/TERMOCANDELARIA.png"
-                  alt="Cliente 14"
+                  src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955243/clients/vdk1wgousl9annmlqt9y.png"
+                  alt="Termo Candelaria"
                   class="max-w-full max-h-full object-contain"
                 />
               </div>
@@ -978,30 +1309,139 @@ import Footer from "../components/Footer.astro";
                 class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-40 h-40"
               >
                 <img
-                  src="/images/clients/LITOPLAS.png"
-                  alt="Cliente 15"
+                  src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955094/clients/vatas20xspdgoq4dlgjm.png"
+                  alt="Litoplas"
                   class="max-w-full max-h-full object-contain"
                 />
               </div>
             </div>
 
-            <!-- Slide 4: Clínica La Misericordia -->
-            <div
-              class="w-full flex-shrink-0 grid grid-cols-1 gap-6 justify-items-center"
-            >
+            <!-- Slide 4 Móvil -->
+            <div class="md:hidden w-full flex-shrink-0 grid grid-cols-2 gap-6 justify-items-center">
+              <div
+                class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-32 md:w-40 h-32 md:h-40 overflow-hidden"
+              >
+                <img
+                  src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955087/clients/wwmmugl6szrdsesffap3.png"
+                  alt="Clínica de la Costa"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <div
+                class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-32 md:w-40 h-32 md:h-40 overflow-hidden"
+              >
+                <img
+                  src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955081/clients/knchbe74lpmluno8l2nd.png"
+                  alt="Arquitectura y Concreto"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+            </div>
+
+            <!-- Slide 4 Desktop -->
+            <div class="hidden md:flex w-full flex-shrink-0 justify-center items-center gap-6">
               <div
                 class="bg-white rounded-2xl shadow-lg w-40 h-40 overflow-hidden m-0 p-0 flex items-center justify-center"
                 style="margin: 0; padding: 0;"
               >
                 <img
-                  src="/images/clients/CLINICA LA MISERICORDIA.png"
+                  src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955088/clients/uwq66ngiikyzg2y7oapo.png"
                   alt="Clínica La Misericordia"
                   class="w-full h-full object-contain p-4"
                   style="display: block; margin: 0; padding: 0; width: 100%; height: 100%; object-fit: contain;"
                 />
               </div>
             </div>
+
+            <!-- Slide 5 Móvil -->
+            <div class="md:hidden w-full flex-shrink-0 grid grid-cols-2 gap-6 justify-items-center">
+              <div
+                class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-32 md:w-40 h-32 md:h-40 overflow-hidden"
+              >
+                <img
+                  src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955092/clients/sfdrgshs2swqpifai2tw.png"
+                  alt="Combarranquilla"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <div
+                class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-32 md:w-40 h-32 md:h-40 overflow-hidden"
+              >
+                <img
+                  src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955094/clients/xmqdri9efychh7pe1biz.png"
+                  alt="Drumont"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+            </div>
+
+            <!-- Slide 6 Móvil -->
+            <div class="md:hidden w-full flex-shrink-0 grid grid-cols-2 gap-6 justify-items-center">
+              <div
+                class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-32 md:w-40 h-32 md:h-40 overflow-hidden"
+              >
+                <img
+                  src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955081/clients/drgrlybyzrgewslq3qmp.png"
+                  alt="Adama"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <div
+                class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-32 md:w-40 h-32 md:h-40 overflow-hidden"
+              >
+                <img
+                  src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955083/clients/qbab5rldn7fwk2hrwzls.png"
+                  alt="Camara de Comercio"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+            </div>
+
+            <!-- Slide 7 Móvil -->
+            <div class="md:hidden w-full flex-shrink-0 grid grid-cols-2 gap-6 justify-items-center">
+              <div
+                class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-32 md:w-40 h-32 md:h-40 overflow-hidden"
+              >
+                <img
+                  src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955095/clients/o74of47e94g24zgszfhv.png"
+                  alt="Tebsa"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <div
+                class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-32 md:w-40 h-32 md:h-40 overflow-hidden"
+              >
+                <img
+                  src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955243/clients/vdk1wgousl9annmlqt9y.png"
+                  alt="Termo Candelaria"
+                  class="w-full h-full object-contain"
+                />
+              </div>
           </div>
+
+          <!-- Slide 8 Móvil -->
+          <div class="md:hidden w-full flex-shrink-0 grid grid-cols-2 gap-6 justify-items-center">
+            <div
+              class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-32 md:w-40 h-32 md:h-40 overflow-hidden"
+                >
+                  <img
+                    src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955094/clients/vatas20xspdgoq4dlgjm.png"
+                    alt="Litoplas"
+                    class="w-full h-full object-contain"
+                  />
+          </div>
+              <div
+                class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center w-32 md:w-40 h-32 md:h-40 overflow-hidden"
+                  >
+                  <img
+                    src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955088/clients/uwq66ngiikyzg2y7oapo.png"
+                    alt="Clínica La Misericordia"
+                    class="w-full h-full object-contain"
+                  />
+              </div>
+          </div>
+
+        </div>
 
           <div class="flex justify-center gap-3 mt-8 clientes-indicadores">
             <button
@@ -1016,6 +1456,18 @@ import Footer from "../components/Footer.astro";
             <button
               class="w-4 h-4 rounded-full bg-white opacity-40 transition-opacity hover:opacity-100 focus:opacity-100"
               data-index="3"></button>
+            <button
+              class="w-4 h-4 rounded-full bg-white opacity-40 transition-opacity hover:opacity-100 focus:opacity-100 md:hidden"
+              data-index="4"></button>
+            <button
+              class="w-4 h-4 rounded-full bg-white opacity-40 transition-opacity hover:opacity-100 focus:opacity-100 md:hidden"
+              data-index="5"></button>
+            <button
+              class="w-4 h-4 rounded-full bg-white opacity-40 transition-opacity hover:opacity-100 focus:opacity-100 md:hidden"
+              data-index="6"></button>
+            <button
+              class="w-4 h-4 rounded-full bg-white opacity-40 transition-opacity hover:opacity-100 focus:opacity-100 md:hidden"
+              data-index="7"></button>
           </div>
         </div>
       </div>
@@ -1030,21 +1482,21 @@ import Footer from "../components/Footer.astro";
         <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12 lg:gap-20 mb-12 md:mb-16">
           <div class="w-full md:w-auto flex justify-center">
             <img
-              src="/images/certifications/BASC.jpg"
+              src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955078/certifications/viy4mpdhxjuhfwv1cltn.jpg"
               alt="Certificado BASC"
               class="w-[120px] sm:w-[150px] h-auto object-contain"
             />
           </div>
           <div class="w-full md:w-auto flex justify-center">
             <img
-              src="/images/certifications/ICONTEC.jpg"
+              src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955079/certifications/dorylggc2cdmgwosxn6b.jpg"
               alt="Certificado Icontec"
               class="w-[200px] sm:w-[250px] md:w-[300px] h-auto object-contain"
             />
           </div>
           <div class="w-full md:w-auto flex justify-center">
             <img
-              src="/images/certifications/RUC.jpg"
+              src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955080/certifications/lbtnf1vm31dtqmiwtvhu.jpg"
               alt="Certificado IQNET"
               class="w-[250px] sm:w-[300px] md:w-[350px] h-auto object-contain"
             />
@@ -1057,28 +1509,28 @@ import Footer from "../components/Footer.astro";
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 lg:gap-16 max-w-7xl mx-auto">
           <div class="flex justify-center">
             <img
-              src="/images/associations/CAMARA DE COMERCIO.jpg"
+              src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955070/associations/eehdnmfknevivwe0yoi4.jpg"
               alt="Cámara de Comercio de Barranquilla"
               class="w-[250px] sm:w-[300px] md:w-[350px] h-auto object-contain"
             />
           </div>
           <div class="flex justify-center">
             <img
-              src="/images/associations/ASOSEC.jpg"
+              src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955070/associations/dpdsfoaoqwrkknl9jm5e.jpg"
               alt="Asociación Colombiana de Seguridad"
               class="w-[250px] sm:w-[300px] md:w-[350px] h-auto object-contain"
             />
           </div>
           <div class="flex justify-center">
             <img
-              src="/images/associations/AMCHAM.jpg"
+              src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955069/associations/vxi1un7f6plismwlfvbl.jpg"
               alt="AMCHAM Colombia"
               class="w-[200px] sm:w-[250px] md:w-[300px] h-auto object-contain"
             />
           </div>
           <div class="flex justify-center">
             <img
-              src="/images/associations/CEO.jpg"
+              src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955071/associations/iisv1mm6ueykpdab0qhm.jpg"
               alt="CEO Corporación Empresarial del Oriente Antioqueño"
               class="w-[250px] sm:w-[300px] md:w-[350px] h-auto object-contain"
             />
@@ -1091,7 +1543,7 @@ import Footer from "../components/Footer.astro";
     <section class="py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 relative mt-[80px] md:mt-0" id="contacto">
       <div
         class="absolute inset-0 bg-cover bg-center z-0"
-        style="background-image: url('/images/team/FORMULARIO.jpg')"
+        style="background-image: url('https://res.cloudinary.com/dzgixneim/image/upload/v1747955125/team/osfhhzpcuu5km6jp7djt.jpg')"
       >
         <div class="absolute inset-0 bg-primary bg-opacity-70 z-0"></div>
       </div>
@@ -1258,250 +1710,268 @@ import Footer from "../components/Footer.astro";
 <script>
   // Carrusel de servicios
   document.addEventListener("DOMContentLoaded", function () {
-    // Manejar el efecto flip card
-    const flipCards = document.querySelectorAll('[id^="flip-card-"]');
-
-    flipCards.forEach((card) => {
-      card.addEventListener("click", function (this: HTMLElement) {
-        const inner = this.querySelector(".transform-style-preserve-3d");
-        if (inner) {
-          inner.classList.toggle("flipped");
-        }
-      });
-    });
-
-    // Verificar si hay un hash #gracias para mostrar mensaje de agradecimiento
-    if (window.location.hash === "#gracias") {
-      // Crear el modal de agradecimiento
-      const modal = document.createElement("div");
-      modal.className =
-        "fixed inset-0 flex items-center justify-center z-50 bg-black/70";
-      modal.innerHTML = `
-        <div class="bg-white p-8 max-w-md mx-auto rounded-xl shadow-lg">
-          <div class="text-center">
-            <h2 class="text-2xl font-bold text-primary mb-4">¡Gracias por contactarnos!</h2>
-            <p class="mb-6">Hemos recibido tu mensaje. Nos pondremos en contacto contigo lo antes posible.</p>
-            <button id="cerrar-modal" class="bg-primary text-white px-6 py-2 rounded-md hover:bg-[#EE9D26] transition-colors">
-              Cerrar
-            </button>
-          </div>
-        </div>
-      `;
-
-      document.body.appendChild(modal);
-
-      // Cerrar el modal al hacer clic en el botón
-      const cerrarModalBtn = document.getElementById("cerrar-modal");
-      if (cerrarModalBtn) {
-        cerrarModalBtn.addEventListener("click", () => {
-          modal.remove();
-          // Limpiar el hash de la URL
-          history.pushState(
-            "",
-            document.title,
-            window.location.pathname + window.location.search
-          );
-        });
-      }
-
-      // También cerrar el modal al hacer clic fuera
-      modal.addEventListener("click", (e) => {
-        if (e.target === modal) {
-          modal.remove();
-          history.pushState(
-            "",
-            document.title,
-            window.location.pathname + window.location.search
-          );
-        }
-      });
-    }
-
-    // Carrusel del banner principal
-    const bannerCarousel = document.querySelector("#banner-carousel .flex");
-    const bannerIndicadores = document.querySelectorAll("[data-banner-index]");
-    
-    const btnIzquierda = document.getElementById("banner-btn-izquierda");
-    const btnDerecha = document.getElementById("banner-btn-derecha");
-    let bannerActual = 0;
-
-    function mostrarBanner(index: number) {
-      if (bannerCarousel && bannerCarousel instanceof HTMLElement) {
-        bannerCarousel.style.transform = `translateX(-${index * 100}%)`;
-
-        bannerIndicadores.forEach((indicador, i) => {
-          if (i === index) {
-            indicador.classList.add("opacity-100");
-            indicador.classList.remove("opacity-40");
-          } else {
-            indicador.classList.add("opacity-40");
-            indicador.classList.remove("opacity-100");
-          }
-        });
-
-        // Mostrar/ocultar botones según la posición
-        if (btnIzquierda) {
-          if (index === 0) {
-            btnIzquierda.classList.add("opacity-0");
-            btnIzquierda.classList.add("pointer-events-none");
-          } else {
-            btnIzquierda.classList.remove("opacity-0");
-            btnIzquierda.classList.remove("pointer-events-none");
-          }
-        }
-
-        // Ocultar flecha derecha en el último banner
-        if (btnDerecha) {
-          if (index === 2) { // 2 es el índice del último banner (0-based)
-            btnDerecha.classList.add("opacity-0");
-            btnDerecha.classList.add("pointer-events-none");
-          } else {
-            btnDerecha.classList.remove("opacity-0");
-            btnDerecha.classList.remove("pointer-events-none");
-          }
-        }
-
-        bannerActual = index;
-      }
-    }
-
-    // Inicializar el primer indicador como activo
-    if (bannerIndicadores.length > 0) {
-      bannerIndicadores[0].classList.add("opacity-100");
-      bannerIndicadores[0].classList.remove("opacity-40");
-    }
-
-    // Cambiar banner automáticamente cada 5 segundos
-    setInterval(() => {
-      if (bannerCarousel) {
-        const slides = 3; // Tenemos 3 banners
-        const nextSlide = (bannerActual + 1) % slides;
-        mostrarBanner(nextSlide);
-      }
-    }, 10000);
-
-    // Permitir clic en los indicadores del banner
-    bannerIndicadores.forEach((indicador, i) => {
-      indicador.addEventListener("click", () => {
-        mostrarBanner(i);
-      });
-    });
-
-    // Botones de navegación del banner
-    if (btnDerecha) {
-      btnDerecha.addEventListener("click", function () {
-        const totalSlides = 3; // Tenemos 3 banners
-        const nextSlide = (bannerActual + 1) % totalSlides;
-        mostrarBanner(nextSlide);
-      });
-    }
-
-    if (btnIzquierda) {
-      btnIzquierda.addEventListener("click", function () {
-        const totalSlides = 3; // Tenemos 3 banners
-        const prevSlide = (bannerActual - 1 + totalSlides) % totalSlides;
-        mostrarBanner(prevSlide);
-      });
-    }
-
-    // Carrusel de servicios
-    const carrusel = document.getElementById("carrusel");
+    const carruselDesktop = document.getElementById("carrusel-desktop");
+    const carruselMobile = document.getElementById("carrusel-mobile");
     const btnDerechaServicios = document.getElementById("servicios-btn-derecha");
     const btnIzquierdaServicios = document.getElementById("servicios-btn-izquierda");
     let posicionActual = 0;
-    const totalSlidesServicios = 2; // Tenemos 2 slides de servicios
+    let totalSlides = window.innerWidth < 768 ? 6 : 2;
 
-    if (carrusel && btnDerechaServicios && btnIzquierdaServicios) {
-      // Inicializar estado de los botones
+    if (btnDerechaServicios && btnIzquierdaServicios) {
       btnIzquierdaServicios.classList.add('opacity-0');
       btnIzquierdaServicios.classList.add('pointer-events-none');
       btnDerechaServicios.classList.remove('opacity-0');
       btnDerechaServicios.classList.remove('pointer-events-none');
 
       btnDerechaServicios.addEventListener("click", function () {
-        posicionActual = (posicionActual + 1) % totalSlidesServicios;
+        posicionActual = (posicionActual + 1) % totalSlides;
         actualizarPosicionCarrusel();
       });
 
       btnIzquierdaServicios.addEventListener("click", function () {
-        posicionActual = (posicionActual - 1 + totalSlidesServicios) % totalSlidesServicios;
+        posicionActual = (posicionActual - 1 + totalSlides) % totalSlides;
         actualizarPosicionCarrusel();
       });
 
       function actualizarPosicionCarrusel() {
-        if (!carrusel || !btnIzquierdaServicios || !btnDerechaServicios) return;
+        if (!btnIzquierdaServicios || !btnDerechaServicios) return;
 
+        if (window.innerWidth < 768) {
+          // En móvil
+          if (carruselMobile) {
+            carruselMobile.style.transform = `translateX(-${posicionActual * 100}%)`;
+          }
+        } else {
+          // En desktop
+          if (carruselDesktop) {
+            if (posicionActual === 0) {
+              carruselDesktop.style.transform = `translateX(0%)`;
+            } else {
+              carruselDesktop.style.transform = `translateX(calc(-${posicionActual * 100}% - 3rem))`;
+            }
+          }
+        }
+
+        // Actualizar estado de los botones
         if (posicionActual === 0) {
-          carrusel.style.transform = `translateX(0%)`;
           btnIzquierdaServicios.classList.add('opacity-0');
           btnIzquierdaServicios.classList.add('pointer-events-none');
           btnDerechaServicios.classList.remove('opacity-0');
           btnDerechaServicios.classList.remove('pointer-events-none');
-        } else {
-          carrusel.style.transform = `translateX(calc(-${posicionActual * 100}% - 3rem))`;
+        } else if (posicionActual === totalSlides - 1) {
           btnIzquierdaServicios.classList.remove('opacity-0');
           btnIzquierdaServicios.classList.remove('pointer-events-none');
           btnDerechaServicios.classList.add('opacity-0');
           btnDerechaServicios.classList.add('pointer-events-none');
+        } else {
+          btnIzquierdaServicios.classList.remove('opacity-0');
+          btnIzquierdaServicios.classList.remove('pointer-events-none');
+          btnDerechaServicios.classList.remove('opacity-0');
+          btnDerechaServicios.classList.remove('pointer-events-none');
         }
       }
+
+      window.addEventListener('resize', function() {
+        const newTotalSlides = window.innerWidth < 768 ? 6 : 2;
+        if (newTotalSlides !== totalSlides) {
+          totalSlides = newTotalSlides;
+          posicionActual = 0;
+          actualizarPosicionCarrusel();
+        }
+      });
+    }
+  });
+
+  // Manejar el efecto flip card
+  const flipCards = document.querySelectorAll('[id^="flip-card-"]');
+
+  flipCards.forEach((card) => {
+    card.addEventListener("click", function (this: HTMLElement) {
+      const inner = this.querySelector(".transform-style-preserve-3d");
+      if (inner) {
+        inner.classList.toggle("flipped");
+      }
+    });
+  });
+
+  if (window.location.hash === "#gracias") {
+    const modal = document.createElement("div");
+    modal.className =
+      "fixed inset-0 flex items-center justify-center z-50 bg-black/70";
+    modal.innerHTML = `
+      <div class="bg-white p-8 max-w-md mx-auto rounded-xl shadow-lg">
+        <div class="text-center">
+          <h2 class="text-2xl font-bold text-primary mb-4">¡Gracias por contactarnos!</h2>
+          <p class="mb-6">Hemos recibido tu mensaje. Nos pondremos en contacto contigo lo antes posible.</p>
+          <button id="cerrar-modal" class="bg-primary text-white px-6 py-2 rounded-md hover:bg-[#EE9D26] transition-colors">
+            Cerrar
+          </button>
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(modal);
+
+    const cerrarModalBtn = document.getElementById("cerrar-modal");
+    if (cerrarModalBtn) {
+      cerrarModalBtn.addEventListener("click", () => {
+        modal.remove();
+        history.pushState(
+          "",
+          document.title,
+          window.location.pathname + window.location.search
+        );
+      });
     }
 
-    // Clientes carrusel
-    const clientesSlider = document.getElementById("clientes-slider");
-    const clientesIndicadores = document.querySelectorAll('.clientes-indicadores [data-index]');
-    let slideActual = 0;
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.remove();
+        history.pushState(
+          "",
+          document.title,
+          window.location.pathname + window.location.search
+        );
+      }
+    });
+  }
 
-    function mostrarSlide(index: number) {
-      if (clientesSlider) {
-        // Asegurarse de que el índice esté dentro del rango válido
-        const totalSlides = clientesSlider.children.length;
-        const normalizedIndex = ((index % totalSlides) + totalSlides) % totalSlides;
-        
-        clientesSlider.style.transform = `translateX(-${normalizedIndex * 100}%)`;
+  const bannerCarousel = document.querySelector("#banner-carousel .flex");
+  const bannerIndicadores = document.querySelectorAll("[data-banner-index]");
   
-        // Primero, remover la clase activa de todos los indicadores
-        clientesIndicadores.forEach((indicador) => {
-          indicador.classList.remove("opacity-100");
+  const btnIzquierda = document.getElementById("banner-btn-izquierda");
+  const btnDerecha = document.getElementById("banner-btn-derecha");
+  let bannerActual = 0;
+
+  function mostrarBanner(index: number) {
+    if (bannerCarousel && bannerCarousel instanceof HTMLElement) {
+      bannerCarousel.style.transform = `translateX(-${index * 100}%)`;
+
+      bannerIndicadores.forEach((indicador, i) => {
+        if (i === index) {
+          indicador.classList.add("opacity-100");
+          indicador.classList.remove("opacity-40");
+        } else {
           indicador.classList.add("opacity-40");
-        });
-  
-        // Luego, activar solo el indicador seleccionado
-        if (clientesIndicadores[normalizedIndex]) {
-          clientesIndicadores[normalizedIndex].classList.remove("opacity-40");
-          clientesIndicadores[normalizedIndex].classList.add("opacity-100");
+          indicador.classList.remove("opacity-100");
         }
-  
-        slideActual = normalizedIndex;
-      }
-    }
+      });
 
-    // Inicializar el primer indicador como activo
-    if (clientesIndicadores.length > 0) {
+      if (btnIzquierda) {
+        if (index === 0) {
+          btnIzquierda.classList.add("opacity-0");
+          btnIzquierda.classList.add("pointer-events-none");
+        } else {
+          btnIzquierda.classList.remove("opacity-0");
+          btnIzquierda.classList.remove("pointer-events-none");
+        }
+      }
+
+      if (btnDerecha) {
+        if (index === 2) {
+          btnDerecha.classList.add("opacity-0");
+          btnDerecha.classList.add("pointer-events-none");
+        } else {
+          btnDerecha.classList.remove("opacity-0");
+          btnDerecha.classList.remove("pointer-events-none");
+        }
+      }
+
+      bannerActual = index;
+    }
+  }
+
+  if (bannerIndicadores.length > 0) {
+    bannerIndicadores[0].classList.add("opacity-100");
+    bannerIndicadores[0].classList.remove("opacity-40");
+  }
+
+  setInterval(() => {
+    if (bannerCarousel) {
+      const slides = 3;
+      const nextSlide = (bannerActual + 1) % slides;
+      mostrarBanner(nextSlide);
+    }
+  }, 10000);
+
+  bannerIndicadores.forEach((indicador, i) => {
+    indicador.addEventListener("click", () => {
+      mostrarBanner(i);
+    });
+  });
+
+  if (btnDerecha) {
+    btnDerecha.addEventListener("click", function () {
+      const totalSlides = 3;
+      const nextSlide = (bannerActual + 1) % totalSlides;
+      mostrarBanner(nextSlide);
+    });
+  }
+
+  if (btnIzquierda) {
+    btnIzquierda.addEventListener("click", function () {
+      const totalSlides = 3;
+      const prevSlide = (bannerActual - 1 + totalSlides) % totalSlides;
+      mostrarBanner(prevSlide);
+    });
+  }
+
+  const clientesSlider = document.getElementById("clientes-slider");
+  const clientesIndicadores = document.querySelectorAll('.clientes-indicadores [data-index]');
+  let slideActual = 0;
+  let totalSlides = window.innerWidth < 768 ? 8 : 4; // 6 slides en móvil, 4 en desktop
+
+  function mostrarSlide(index: number) {
+    if (clientesSlider) {
+      const normalizedIndex = ((index % totalSlides) + totalSlides) % totalSlides;
+      
+      clientesSlider.style.transform = `translateX(-${normalizedIndex * 100}%)`;
+
+      clientesIndicadores.forEach((indicador) => {
+        indicador.classList.remove("opacity-100");
+        indicador.classList.add("opacity-40");
+      });
+
+      if (clientesIndicadores[normalizedIndex]) {
+        clientesIndicadores[normalizedIndex].classList.remove("opacity-40");
+        clientesIndicadores[normalizedIndex].classList.add("opacity-100");
+      }
+
+      slideActual = normalizedIndex;
+    }
+  }
+
+  if (clientesIndicadores.length > 0) {
+    mostrarSlide(0);
+  }
+
+  let intervalId = setInterval(() => {
+    if (clientesSlider) {
+      const nextSlide = (slideActual + 1) % totalSlides;
+      mostrarSlide(nextSlide);
+    }
+  }, 5000);
+
+  clientesIndicadores.forEach((indicador, i) => {
+    indicador.addEventListener("click", () => {
+      clearInterval(intervalId);
+      mostrarSlide(i);
+      intervalId = setInterval(() => {
+        if (clientesSlider) {
+          const nextSlide = (slideActual + 1) % totalSlides;
+          mostrarSlide(nextSlide);
+        }
+      }, 5000);
+    });
+  });
+
+  // Actualizar totalSlides cuando cambie el tamaño de la ventana
+  window.addEventListener('resize', function() {
+    const newTotalSlides = window.innerWidth < 768 ? 8 : 4;
+    if (newTotalSlides !== totalSlides) {
+      totalSlides = newTotalSlides;
+      slideActual = 0;
       mostrarSlide(0);
     }
-
-    // Cambiar slide automáticamente cada 5 segundos
-    let intervalId = setInterval(() => {
-      if (clientesSlider) {
-        const nextSlide = (slideActual + 1) % clientesSlider.children.length;
-        mostrarSlide(nextSlide);
-      }
-    }, 5000);
-
-    // Permitir clic en los indicadores
-    clientesIndicadores.forEach((indicador, i) => {
-      indicador.addEventListener("click", () => {
-        // Reiniciar el intervalo cuando se hace clic manualmente
-        clearInterval(intervalId);
-        mostrarSlide(i);
-        intervalId = setInterval(() => {
-          if (clientesSlider) {
-            const nextSlide = (slideActual + 1) % clientesSlider.children.length;
-            mostrarSlide(nextSlide);
-          }
-        }, 5000);
-      });
-    });
   });
 </script>

@@ -4,22 +4,28 @@ interface Props {
 }
 
 const { bgColor = "bg-[#D9D9D9]" } = Astro.props;
+
+// Obtener la ruta actual y el hash
+const currentPath = Astro.url.pathname;
+const currentHash = Astro.url.hash;
+
+const isActive = (path: string) => {
+  if (path.startsWith('/#')) {
+    return currentHash === path.substring(1);
+  }
+  return currentPath === path;
+};
 ---
 
 <footer class={`${bgColor} pt-[2.5rem] pb-[0.5rem]`}>
   <div class="px-4 w-full">
     <div class="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8 lg:gap-0 mb-10 w-full">
-      <!-- Logo y redes sociales -->
       <div class="flex flex-col items-center mb-6 lg:mb-0 w-full lg:w-1/4">
         <img 
-          src="/images/logos/FOOTER.svg" 
+          src="https://res.cloudinary.com/dzgixneim/image/upload/v1747955124/logos/footer.svg" 
           alt="Viaservin Logo" 
           class="w-[180px] sm:w-[200px] md:w-[225px] h-auto" 
         />
-        <!--   <p class="text-gray-700 mt-3 max-w-md text-sm">
-          Llevamos más de 40 años ofreciendo soluciones integrales de seguridad privada 
-          con la mejor tecnología y personal capacitado.
-        </p> -->
         <div class="flex gap-4 mt-4">
           <a
             href="https://www.instagram.com/viaservinltda/"
@@ -27,7 +33,7 @@ const { bgColor = "bg-[#D9D9D9]" } = Astro.props;
             class="hover:transform hover:scale-110 transition-transform"
           >
             <img
-              src="/images/social media/INSTAGRAM.svg"
+              src="https://res.cloudinary.com/dzgixneim/image/upload/v1748712405/INSTAGRAM_magkdh.svg"
               alt="Instagram"
               class="w-8 h-8 rounded-full border transition-colors hover:bg-[#EE9D26]"
             />
@@ -38,7 +44,7 @@ const { bgColor = "bg-[#D9D9D9]" } = Astro.props;
             class="hover:transform hover:scale-110 transition-transform"
           >
             <img
-              src="/images/social media/LINKEDIN.svg"
+              src="https://res.cloudinary.com/dzgixneim/image/upload/v1748712478/LINKEDIN_vhorv1.svg"
               alt="LinkedIn"
               class="w-8 h-8 rounded-full border hover:bg-[#EE9D26]"
             />
@@ -49,7 +55,7 @@ const { bgColor = "bg-[#D9D9D9]" } = Astro.props;
             class="hover:transform hover:scale-110 transition-transform"
           >
             <img
-              src="/images/social media/YOUTUBE.svg"
+              src="https://res.cloudinary.com/dzgixneim/image/upload/v1748712485/YOUTUBE_kbqjn2.svg"
               alt="Youtube"
               class="w-8 h-8 rounded-full border hover:bg-[#EE9D26]"
             />
@@ -57,53 +63,50 @@ const { bgColor = "bg-[#D9D9D9]" } = Astro.props;
         </div>
       </div>
 
-      <!-- Enlaces + Contacto juntos -->
       <div class="flex flex-col lg:flex-row items-center lg:items-start w-full lg:w-3/4 justify-end gap-8">
-        <!-- Enlaces -->
         <div class="flex flex-col sm:flex-row gap-8 text-center lg:text-left">
           <ul class="list-none p-0 m-0 text-gray-600 text-lg whitespace-nowrap w-full">
             <li class="mb-1">
-              <a href="/#nosotros" class="text-gray-600 hover:text-[#001B51]">Nosotros</a>
+              <a href="/#nosotros" class={`${isActive('/#nosotros') ? 'text-[#001B51]' : 'text-gray-600 hover:text-[#001B51]'}`}>Nosotros</a>
             </li>
             <li class="mb-1">
-              <a href="/#historia" class="text-gray-600 hover:text-[#001B51]">Historia y Trayectoria</a>
+              <a href="/#historia" class={`${isActive('/#historia') ? 'text-[#001B51]' : 'text-gray-600 hover:text-[#001B51]'}`}>Historia y Trayectoria</a>
             </li>
             <li class="mb-1">
-              <a href="/#mision-vision" class="text-gray-600 hover:text-[#001B51]">Misión y Visión</a>  
+              <a href="/#mision-vision" class={`${isActive('/#mision-vision') ? 'text-[#001B51]' : 'text-gray-600 hover:text-[#001B51]'}`}>Misión y Visión</a>  
             </li>
             <li class="mb-1">
-              <a href="/#equipo" class="text-gray-600 hover:text-[#001B51]">Nuestro Equipo</a>
+              <a href="/#equipo" class={`${isActive('/#equipo') ? 'text-[#001B51]' : 'text-gray-600 hover:text-[#001B51]'}`}>Nuestro Equipo</a>
             </li>
             <li class="mb-1">
-              <a href="/politicas" class="text-gray-600 hover:text-[#001B51]">Políticas</a>
+              <a href="/politicas" class={`${isActive('/politicas') ? 'text-[#001B51]' : 'text-gray-600 hover:text-[#001B51]'}`}>Políticas</a>
             </li>
           </ul>
 
           <ul class="list-none p-0 m-0 text-gray-600 text-lg whitespace-nowrap w-full mt-4 sm:mt-0">
             <li class="mb-1">
-              <a href="/#servicios" class="text-gray-600 hover:text-[#001B51]">Servicios</a>
+              <a href="/#servicios" class={`${isActive('/#servicios') ? 'text-[#001B51]' : 'text-gray-600 hover:text-[#001B51]'}`}>Servicios</a>
             </li>
             <li class="mb-1">
-              <a href="/#clientes" class="text-gray-600 hover:text-[#001B51]">Clientes</a>
+              <a href="/#clientes" class={`${isActive('/#clientes') ? 'text-[#001B51]' : 'text-gray-600 hover:text-[#001B51]'}`}>Clientes</a>
             </li>
             <li class="mb-1">
-              <a href="/#contacto" class="text-gray-600 hover:text-[#001B51]">Contáctanos</a>
+              <a href="/#contacto" class={`${isActive('/#contacto') ? 'text-[#001B51]' : 'text-gray-600 hover:text-[#001B51]'}`}>Contáctanos</a>
             </li>
           </ul>
         </div>
 
-        <!-- Contacto -->
         <div class="flex flex-col items-center lg:items-start w-full lg:w-auto mt-6 lg:mt-0 text-center lg:text-left lg:pr-[70px]">
           <ul class="list-none p-0 m-0 text-gray-600 text-lg w-full lg:max-w-xs lg:ml-auto">
             <li class="mb-2">
               <strong class="text-[#001B51] text-xl">Contacto</strong>
             </li>
             <li class="mb-1 flex items-center justify-center lg:justify-start gap-2">
-              <img src="/images/vectors/TELEFONO.svg" alt="Teléfono" class="w-4 h-4" />
+              <img src="https://res.cloudinary.com/dzgixneim/image/upload/v1748712489/PHONE_nqygfb.svg" alt="Teléfono" class="w-4 h-4" />
               <span class="whitespace-nowrap">(+57) 310 223 2918</span>
             </li>
             <li class="mb-1 flex items-center justify-center lg:justify-start gap-2">
-              <img src="/images/vectors/EMAIL.svg" alt="Email" class="w-4 h-4" />
+              <img src="https://res.cloudinary.com/dzgixneim/image/upload/v1748712495/EMAIL_fnou0b.svg" alt="Email" class="w-4 h-4" />
               <span class="break-all">informacion@viaservin.com</span>
             </li>
           </ul>
@@ -116,3 +119,28 @@ const { bgColor = "bg-[#D9D9D9]" } = Astro.props;
     </div>
   </div>
 </footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Función para actualizar los enlaces activos
+    function updateActiveLinks() {
+      const currentHash = window.location.hash;
+      document.querySelectorAll('footer a').forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentHash || (currentHash === '' && href === '/')) {
+          link.classList.remove('text-gray-600');
+          link.classList.add('text-[#001B51]');
+        } else {
+          link.classList.remove('text-[#001B51]');
+          link.classList.add('text-gray-600');
+        }
+      });
+    }
+
+    // Actualizar enlaces cuando cambia el hash
+    window.addEventListener('hashchange', updateActiveLinks);
+    
+    // Actualizar enlaces al cargar la página
+    updateActiveLinks();
+  });
+</script>
